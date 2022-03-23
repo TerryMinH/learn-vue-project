@@ -33,7 +33,7 @@ export default {
       this.msgForChild = data;
     }
   },
-  mounted(){
+  mounted () {
     console.log(this);
   }
 }

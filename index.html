@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:18:14
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-03-02 16:07:54
+ * @LastEditTime: 2022-03-23 14:28:20
  * @Description: file not
 -->
 <!DOCTYPE html>
@@ -12,7 +12,19 @@
   <title>横向滑动</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style type="text/css">
+    .bottom {
+      background: yellow;
+      width: 100px;
+      height: 100px;
+    }
 
+    .top {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   </style>
 </head>
 
@@ -20,11 +32,26 @@
 
 </body>
 <script>
- 
-function F(){
+  function Vue(options) {
+    this._init(options)
+  }
 
-}
-console.log(F);
+  function initMixin(Vue) {
+    Vue.prototype._init = function (options) {
+      const vm = this;
+      console.log(this);
+      this.options=options;
+      options.set = function () {
+        console.log(55)
+      }
+
+    }
+  }
+  initMixin(Vue);
+  const instance = new Vue({ name: 'test' });
+  console.log(instance);
+  instance.options.set();
+  
 </script>
 
 </html>
