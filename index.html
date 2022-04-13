@@ -2,56 +2,64 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:18:14
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-03-23 14:28:20
+ * @LastEditTime: 2022-04-12 16:01:53
  * @Description: file not
 -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>横向滑动</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style type="text/css">
-    .bottom {
-      background: yellow;
-      width: 100px;
-      height: 100px;
+  <meta charset="UTF-8">
+  <title>两栏布局——float</title>
+  <style>
+    .content {
+      position: relative
     }
 
-    .top {
-      width: 100px;
-      height: 100px;
+    .left {
+      background: red;
       position: absolute;
-      top: 0;
-      left: 0;
+      width: 200px;
+    }
+
+    .right {
+      background: yellow;
+      position: absolute;
+      width: 100%;
+
+      left: 200px;
+      right: 0;
+      /*没有right:0;时，无法自适应*/
+      /* margin-left:200px; */
     }
   </style>
 </head>
 
 <body>
-
+  <div class="content">
+    <div class="left">left.....</div>
+    <div class="right">right....</div>
+  </div>
 </body>
 <script>
-  function Vue(options) {
-    this._init(options)
+  function Parent(age) {
+    this.age = age;
+    this.clolor = ['red', 'yellow']
   }
 
-  function initMixin(Vue) {
-    Vue.prototype._init = function (options) {
-      const vm = this;
-      console.log(this);
-      this.options=options;
-      options.set = function () {
-        console.log(55)
-      }
+  function Child(age, like) {
+    Parent.call(this, age)
+    this.like = like;
 
-    }
   }
-  initMixin(Vue);
-  const instance = new Vue({ name: 'test' });
-  console.log(instance);
-  instance.options.set();
-  
+
+  Child.prototype = Object.create(Parent.prototype);
+  Child.prototype.constructor = Child;
+
+  const instance1 = new Child(12,'rr');
+  const instance2 = new Child(15,'yy');
+  console.log(instance1, instance2);
+
 </script>
 
 </html>

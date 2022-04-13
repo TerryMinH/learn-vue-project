@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:47
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-03-23 11:48:38
+ * @LastEditTime: 2022-03-25 09:48:46
  * @Description: file not
  */
 import Vue from 'vue'
@@ -19,6 +19,7 @@ const routes = [
   {
     path: '/home',
     name: 'Home',
+    title:'首页',
     component: Home
   },
   {

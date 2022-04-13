@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:47
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-03-24 14:42:17
+ * @LastEditTime: 2022-03-24 16:58:52
  * @Description: file not
 -->
 <template>
@@ -49,7 +49,11 @@
       <button @click="toast">显示taost弹出框</button>
     </div>
     <hr />
-    
+
+    <div>
+      <p ref="dom">{{message}}</p>
+      <button @click="changeValue">改变值</button>
+    </div>
     <!-- <div class="demo-height"></div> -->
     <div class="demo-2">
       <div
@@ -127,6 +131,13 @@ export default {
     },
     toast () {
       this.$toast("你好");
+    },
+    changeValue () {
+      this.message = 'hello zhangShan'
+      this.message = 'hello liShi'
+      this.message = 'hello wangWu'
+      this.message = 'hello chenLiu'
+      console.log(this.$refs.dom.innerText)
     }
   }
 }
