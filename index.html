@@ -2,64 +2,62 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:18:14
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-04-24 09:01:44
+ * @LastEditTime: 2022-04-28 15:50:47
  * @Description: file not
 -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>两栏布局——float</title>
-  <style>
-    .content {
-      position: relative
-    }
-
-    .left {
-      background: red;
-      position: absolute;
-      width: 200px;
-    }
-
-    .right {
-      background: yellow;
-      position: absolute;
-      width: 100%;
-
-      left: 200px;
-      right: 0;
-      /*没有right:0;时，无法自适应*/
-      /* margin-left:200px; */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>两栏布局——float</title>
+    <style>
+        .content {
+            position: relative
+        }
+        
+        .left {
+            background: red;
+            position: absolute;
+            width: 200px;
+        }
+        
+        .right {
+            background: yellow;
+            position: absolute;
+            width: 100%;
+            left: 200px;
+            right: 0;
+            /*没有right:0;时，无法自适应*/
+            /* margin-left:200px; */
+        }
+    </style>
 </head>
 
 <body>
-  <div class="content">
-    <div class="left">left.....</div>
-    <div class="right">right....</div>
-  </div>
+    <div class="content">
+        <div class="left">left.....</div>
+        <div class="right">right....</div>
+    </div>
 </body>
 <script>
-  function Parent(age) {
-    this.age = age;
-    this.clolor = ['red', 'yellow']
-  }
+    function Parent(age) {
+        this.age = age;
+        this.clolor = ['red', 'yellow']
+    }
 
-  function Child(age, like) {
-    Parent.call(this, age)
-    this.like = like;
+    function Child(age, like) {
+        Parent.call(this, age)
+        this.like = like;
 
-  }
+    }
 
-  Child.prototype = Object.create(Parent.prototype);
-  Child.prototype.constructor = Child;
+    Child.prototype = Object.create(Parent.prototype);
+    Child.prototype.constructor = Child;
 
-  const instance1 = new Child(12,'rr');
-  const instance2 = new Child(15,'yy');
-  console.log(instance1, instance2);
-
+    const instance1 = new Child(12, 'rr');
+    const instance2 = new Child(15, 'yy');
+    console.log(instance1, instance2);
 </script>
 
 </html>
