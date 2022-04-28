@@ -1,8 +1,16 @@
+/*
+ * @Author: TerryMin
+ * @Date: 2022-04-27 15:48:29
+ * @LastEditors: TerryMin
+ * @LastEditTime: 2022-04-28 11:36:48
+ * @Description: file not
+ */
 import { createSSRApp } from "vue";
 import { createRouter } from "./router";
 import { createStore, key } from "./store";
 import { RouteRecordNormalized } from "vue-router";
 import App from "./App.vue";
+import i18n from './locales/ i18n'
 
 export function createApp() {
     const app = createSSRApp(App);
@@ -34,7 +42,7 @@ export function createApp() {
     });
 
     app.use(store, key);
-    // app.use(store);
+    app.use(i18n);
     app.use(router);
     return { app, router, store };
 }
