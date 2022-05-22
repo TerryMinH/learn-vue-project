@@ -2,54 +2,32 @@
  * @Author: TerryMin
  * @Date: 2022-04-26 10:00:09
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-04-28 15:52:06
+ * @LastEditTime: 2022-05-05 14:46:19
  * @Description: file not
 -->
 <template>
 	<h1>{{ msg }}</h1>
 	<button type="button" @click="count++">count is: {{ count }}</button>
-
-	<button type="button" @click="changeBtn">{{ state.time }}</button>
 	<view @click="handleBtn" ref="box"> 点击新增 </view>
-	<!-- <p>
-    Recommended IDE setup:
-    <a
-      href="https://code.visualstudio.com/"
-      target="_blank"
-    >VSCode</a>
-    +
-    <a
-      href="https://github.com/johnsoncodehk/volar"
-      target="_blank"
-    >Volar</a>
-  </p>
-
-  <p>
-    <a
-      href="https://vitejs.dev/guide/features.html"
-      target="_blank"
-    >
-      Vite Documentation
-    </a>
-    |
-    <a
-      href="https://v3.vuejs.org/"
-      target="_blank"
-    >Vue 3 Documentation</a>
-  </p> -->
+	<button type="button" @click="changeBtn">{{ state.foo }}</button>
 </template>
 
 <script setup>
-import { ref, reactive, onMounted, defineEmits } from "vue";
+import { ref, reactive, onMounted, toRef } from "vue";
 
 defineProps({
 	msg: String,
 });
 
 const count = ref(0);
-const state = reactive({ time: "时光" });
 const emits = defineEmits(["onExport"]);
-const boxRef = ref(null);
+const state = reactive({
+	foo: 1,
+	bar: 2,
+});
+const color=ref('red');
+
+const fooRef = ref(state.foo);
 
 const handleBtn = () => {
 	emits("onExport", "emits---");
@@ -58,12 +36,16 @@ const handleBtn = () => {
 // 生命周期钩子
 onMounted(() => {
 	console.log(`The initial count is ${count.value}.`);
-	console.log(boxRef);
 });
 
 const changeBtn = () => {
-	state.time = "时光, 你好!";
+	fooRef.value++;
+	console.log(state, fooRef); // 2
 };
 </script>
 
-<style lang="" scoped></style>
+<style scoped>
+h1 {
+	color: v-bind(color);
+}
+</style>

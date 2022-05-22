@@ -1,3 +1,10 @@
+/*
+ * @Author: TerryMin
+ * @Date: 2022-04-27 15:48:29
+ * @LastEditors: TerryMin
+ * @LastEditTime: 2022-05-05 17:38:18
+ * @Description: file not
+ */
 const fs = require("fs");
 const path = require("path");
 const express = require("express");
@@ -6,6 +13,7 @@ const resolve = (p) => path.resolve(__dirname, p);
 async function createServer(root = process.cwd(), isProd = process.env.NODE_ENV === "production") {
     const app = express();
     let vite;
+    console.log(44, isProd)
     if (isProd) {
         // 生产环境
         app.use(require("compression")());
@@ -35,7 +43,7 @@ async function createServer(root = process.cwd(), isProd = process.env.NODE_ENV 
     // 映射文件
     const manifest = isProd ? require("./dist/client/ssr-manifest.json") : {};
 
-    app.use("*", async (req, res) => {
+    app.use("*", async(req, res) => {
         const { originalUrl: url } = req;
         console.log(`[server] ${new Date()} - ${url}`);
         try {

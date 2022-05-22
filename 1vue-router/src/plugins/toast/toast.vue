@@ -2,21 +2,23 @@
  * @Author: TerryMin
  * @Date: 2022-03-24 11:40:24
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-03-24 11:40:25
+ * @LastEditTime: 2022-05-22 08:40:53
  * @Description: file not
 -->
 <template>
-    <transition name="fade">
-        <div class="toast" v-show="show">
-            {{message}}
-        </div>
-
-    </transition>
+  <transition name="fade">
+    <div
+      class="toast"
+      v-show="show"
+    >
+      {{message}}
+    </div>
+  </transition>
 </template>
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       show: false,
       message: ""

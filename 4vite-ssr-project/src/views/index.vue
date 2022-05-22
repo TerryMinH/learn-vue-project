@@ -1,18 +1,16 @@
+<!--
+ * @Author: TerryMin
+ * @Date: 2022-04-27 15:48:29
+ * @LastEditors: TerryMin
+ * @LastEditTime: 2022-04-29 16:59:05
+ * @Description: file not
+-->
 <template>
-    <h2>首页</h2>
-    <router-view></router-view>
+	<h2>首页</h2>
+	<router-view></router-view>
 </template>
-<script lang="ts">
+<script setup lang="ts">
 import { defineComponent, reactive, toRefs } from "vue";
 
-export default defineComponent({
-    asyncData() {
-        console.log(">>> index [aysncData]");
-        return Promise.resolve();
-    },
-    setup(props, context) {
-        return {};
-    },
-});
 </script>
 <style lang="scss"></style>

@@ -2,12 +2,15 @@
  * @Author: TerryMin
  * @Date: 2022-04-27 15:48:29
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-04-28 14:38:02
+ * @LastEditTime: 2022-05-22 08:43:48
  * @Description: file not
 -->
 <template>
   <h3>客户端</h3>
-  client:{{ client }}
+  <div>
+    client:{{ client }}
+  </div>
+
   <div>
     <a
       href="javascript:;"
@@ -33,7 +36,7 @@ export default defineComponent({
   },
   setup(props, context) {
     const { client } = useStore<State>(key).state;
-    
+
     console.log(">>>", client, isReactive(client));
 
     const { t, locale } = useI18n();
@@ -59,9 +62,9 @@ export default defineComponent({
       client,
       t,
       locale,
-      setLocals,
+      setLocals
     };
-  },
+  }
 });
 </script>
 <style lang="scss"></style>

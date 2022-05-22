@@ -35,9 +35,18 @@
       "parser": "babel-eslint"
     },
     "rules": {
-      "vue/no-parsing-error": [2, { "x-invalid-end-tag": false }],
-      "no-unused-vars":["warn"],
-      "no-global-assign":["warn"]
+      "vue/no-parsing-error": [
+        2,
+        {
+          "x-invalid-end-tag": false
+        }
+      ],
+      "no-unused-vars": [
+        "warn"
+      ],
+      "no-global-assign": [
+        "warn"
+      ]
     }
   },
   "browserslist": [

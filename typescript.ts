@@ -2,30 +2,31 @@
  * @Author: TerryMin
  * @Date: 2021-11-12 13:56:46
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-04-28 15:49:53
+ * @LastEditTime: 2022-05-03 11:14:26
  * @Description: file not
  */
 
-interface foo {
-	x: number;
+interface Person {
+	name: string;
+	age: number;
+	gender?: string;
 }
 
-interface bar {
-	b: number;
+class Student {
+  constructor(private info: Person) {}
+
+  getInfo<T extends keyof Person>(key: T): Person[T] {
+    return this.info[key];
+  }
 }
+const student = new Student({
+  name: 'uuuu',
+  age: 20,
+  gender: 'male'
+})
+const test = student.getInfo('name');
+console.log(test)
 
-type intersection = foo & bar;
-
-const result: intersection = {
-	x: 10,
-	b: 3,
-};
-
-// 联合类型
-type arg = string | number | boolean;
-
-const foo = (arg: arg): any => {
-	console.log(arg);
-};
-
-foo(1);
+export {
+  Student
+}

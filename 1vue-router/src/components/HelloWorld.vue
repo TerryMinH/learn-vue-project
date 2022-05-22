@@ -2,12 +2,12 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:47
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-01-18 09:51:14
+ * @LastEditTime: 2022-05-22 08:41:42
  * @Description: file not
 -->
 <template>
   <div class="hello">
-  {{msg}}
+    {{msg}}
   </div>
 </template>
 
