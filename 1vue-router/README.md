@@ -1,3 +1,10 @@
+<!--
+ * @Author: TerryMin
+ * @Date: 2021-12-11 15:17:26
+ * @LastEditors: TerryMin
+ * @LastEditTime: 2022-06-24 16:13:18
+ * @Description: file not
+-->
 # vue-router
 
 ## Project setup
@@ -22,3 +29,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+[browserslist](https://blog.csdn.net/ap1005233/article/details/101687008)

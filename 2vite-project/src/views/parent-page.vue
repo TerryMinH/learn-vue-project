@@ -2,33 +2,29 @@
  * @Author: TerryMin
  * @Date: 2022-01-14 14:47:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-06-14 07:02:54
+ * @LastEditTime: 2022-06-16 17:28:36
  * @Description: file not
 -->
 
 <template>
-  <HelloWorld
-    msg="Hello Vue 3 + Vite"
-    @onExport="handleFn"
-  />
-  <DemoTest />
+  <ChildComponent />
 </template>
 
 <script setup>
 import { provide } from 'vue'
 import HelloWorld from "../components/HelloWorld.vue";
-// import TodoList from "../components/TodoList.vue";
-import DemoTest from '../components/demoTest.vue'
+import ChildComponent from '../components/ChildComponent.vue'
 
-provide('location', 'North Pole')
-provide('geolocation', {
-  longitude: 90,
-  latitude: 135
-})
+// provide('location', 'North Pole1')
+// provide('geolocation', {
+//   longitude: 90,
+//   latitude: 1351
+// })
 
-const handleFn = (e) => {
-  console.log(e);
-};
+// const handleFn = (e) => {
+//   console.log(e);
+  
+// };
 </script>
 
 <style scoped>
