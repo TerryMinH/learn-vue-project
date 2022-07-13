@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-11-10 10:20:00
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-03-24 16:56:34
+ * @LastEditTime: 2022-07-13 19:23:35
  * @Description: file not
 -->
 <template>
@@ -14,13 +14,33 @@
     <div class="main">
       <router-view />
     </div>
+    <!-- <div v-for="(item, index) in routerList" :key="index">
+      {{ item.title }}
+    </div> -->
+
   </div>
 </template>
+<script>
+import { routes } from './router';
 
+export default {
+  name: 'App',
+  data () {
+    return {
+      routerList: routes
+    }
+  },
+  mounted () {
+    console.log(this.routerList)
+  },
+}
+
+</script>
 <style>
 body {
   margin: 0;
 }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -47,6 +67,7 @@ body {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
 .main {
   flex: 1;
 }

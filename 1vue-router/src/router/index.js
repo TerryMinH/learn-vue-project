@@ -2,12 +2,12 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:47
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-03-25 09:48:46
+ * @LastEditTime: 2022-07-13 18:59:13
  * @Description: file not
  */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/directive/home.vue'
+import Home from '../views/home/home.vue'
 
 Vue.use(VueRouter)
 
@@ -25,6 +25,7 @@ const routes = [
   {
     path: '/about',
     name: 'About',
+    title:'About页面',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -38,4 +39,7 @@ const router = new VueRouter({
   routes
 })
 
-export default router
+export {
+  routes,
+  router
+}

@@ -7,7 +7,7 @@
  */
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
+import {router} from './router'
 import Directives from './directives/index.js'
 import Toast from './plugins/toast'
 import Loading from './plugins/loading'
