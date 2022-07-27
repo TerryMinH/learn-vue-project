@@ -2,12 +2,12 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:15
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-07-14 15:07:07
+ * @LastEditTime: 2022-07-14 15:59:51
  * @Description: file not
 -->
 # Vue 3 + Vite
-
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+[script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) 
+[附录:vue3中文翻译文档](https://staging-cn.vuejs.org/)
 
 # Vue3 API学习
 1. [Ref与Reactive区别](https://juejin.cn/post/6976611660161089543)

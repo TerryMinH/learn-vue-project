@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:18:14
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-05-22 08:40:25
+ * @LastEditTime: 2022-07-15 09:10:31
  * @Description: file not
 -->
 <!DOCTYPE html>
@@ -41,10 +41,18 @@
   </div>
 </body>
 <script>
-  const promise = new Promise((resolve) => {
-    console.log('11');
+  const arr = [1, 2, 5, 78, 3, 200,300,3];
 
-  })
+  let maxIndex = 0;
+  let maxValue = arr.reduce((prevalue, current, index, arr) => {
+    if (prevalue < current) {
+      maxIndex = index;
+     return prevalue = current;
+    }else{
+      return  prevalue
+    }
+  }, 0)
+console.log(maxIndex,maxValue);
 </script>
 
 </html>
