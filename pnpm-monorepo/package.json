@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:vue-project1": "pnpm run -C packages/vue-project1 dev",
-    "dev:vue-project2": "pnpm run -C packages/vue-project2 dev",
-    "build:vue-project1": "pnpm run -C packages/vue-project1 build",
-    "build:vue-project2": "pnpm run -C packages/vue-project2 build"
+    "dev:vue-project1": "pnpm run -C applications/vue-project1 dev",
+    "dev:vue-project2": "pnpm run -C applications/vue-project2 dev",
+    "build:vue-project1": "pnpm run -C applications/vue-project1 build",
+    "build:vue-project2": "pnpm run -C applications/vue-project2 build"
   },
   "keywords": [],
   "author": "",

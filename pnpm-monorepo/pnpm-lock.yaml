@@ -11,6 +11,23 @@ importers:
     devDependencies:
       '@types/lodash': 4.14.182
 
+  applications/vue-project1:
+    specifiers:
+      '@migu/common': workspace:^1.0.0
+      '@vitejs/plugin-vue': ^1.9.3
+      typescript: ^4.4.3
+      vite: ^2.6.4
+      vue: ^3.2.16
+      vue-tsc: ^0.3.0
+    dependencies:
+      vue: 3.2.37
+    devDependencies:
+      '@migu/common': link:../../packages/common
+      '@vitejs/plugin-vue': 1.10.2_vite@2.9.14
+      typescript: 4.7.4
+      vite: 2.9.14
+      vue-tsc: 0.3.0_typescript@4.7.4
+
   packages/vite-project:
     specifiers:
       '@typescript-eslint/eslint-plugin': ^5.31.0

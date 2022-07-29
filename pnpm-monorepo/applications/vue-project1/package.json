@@ -7,10 +7,10 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@migu/common": "workspace:^1.0.0",
     "vue": "^3.2.16"
   },
   "devDependencies": {
+    "@migu/common": "workspace:^1.0.0",
     "@vitejs/plugin-vue": "^1.9.3",
     "typescript": "^4.4.3",
     "vite": "^2.6.4",

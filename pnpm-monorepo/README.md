@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-07-27 18:06:28
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-07-29 16:02:15
+ * @LastEditTime: 2022-07-29 17:46:20
  * @Description: file not
 -->
 # monorepo + [pnpm](https://www.pnpm.cn/) + Vue3 + Vite + TypeScript 多项目管理
@@ -23,6 +23,13 @@ npm i lodash
 ```
 pnpm i lodash --filter vue-project1
 ```
+## 项目模块之间依赖
+```
+Amodule 依赖 Butils(对应package.json中的name), 在更目录下执行
+pnpm i Butils -D --filter Amodule
+
+```
+
 
 # migu-activity-project 重构
 
