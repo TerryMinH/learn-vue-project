@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-07-27 18:06:28
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-07-27 19:56:57
+ * @LastEditTime: 2022-07-29 15:19:44
  * @Description: file not
 -->
 # monorepo + [pnpm](https://www.pnpm.cn/) + Vue3 + Vite + TypeScript 多项目管理
@@ -22,4 +22,13 @@ npm i lodash
 2、--filter安装
 ```
 pnpm i lodash --filter vue-project1
+```
 
+# migu-activity-project 重构
+
+# monorepo多项目管理
+[monorepo进行多项目管理实践](https://juejin.cn/post/7043990636751503390)
+
+[monorepo多项目打包问题及方案分析](https://juejin.cn/post/6950082433647640612)
+
+[monorepo 源码管理总结](https://blog.csdn.net/QcloudCommunity/article/details/122994881)
