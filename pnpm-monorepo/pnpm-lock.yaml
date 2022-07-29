@@ -13,12 +13,14 @@ importers:
 
   packages/vue-project1:
     specifiers:
+      '@migu/common': workspace:^1.0.0
       '@vitejs/plugin-vue': ^1.9.3
       typescript: ^4.4.3
       vite: ^2.6.4
       vue: ^3.2.16
       vue-tsc: ^0.3.0
     dependencies:
+      '@migu/common': link:../common
       vue: 3.2.37
     devDependencies:
       '@vitejs/plugin-vue': 1.10.2_vite@2.9.14

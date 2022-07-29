@@ -2,12 +2,13 @@
  * @Author: TerryMin
  * @Date: 2022-07-27 17:49:01
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-07-27 19:57:05
+ * @LastEditTime: 2022-07-29 15:32:58
  * @Description: file not
 -->
 <script setup lang="ts">
 import { ref } from 'vue'
 import _ from 'lodash';
+import {add} from '@migu/common'
 
 defineProps<{ msg: string }>()
 
@@ -15,6 +16,7 @@ const count = ref(0);
 
 let array=[5];
 console.log(_.concat(array,2,3,[4]));
+console.log(add(1,2));
 
 </script>
 
