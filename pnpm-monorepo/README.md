@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-07-27 18:06:28
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-07-29 15:19:44
+ * @LastEditTime: 2022-07-29 16:02:15
  * @Description: file not
 -->
 # monorepo + [pnpm](https://www.pnpm.cn/) + Vue3 + Vite + TypeScript 多项目管理
@@ -32,3 +32,5 @@ pnpm i lodash --filter vue-project1
 [monorepo多项目打包问题及方案分析](https://juejin.cn/post/6950082433647640612)
 
 [monorepo 源码管理总结](https://blog.csdn.net/QcloudCommunity/article/details/122994881)
+
+[vue3+vite配置](https://juejin.cn/post/6975442828386107400)
