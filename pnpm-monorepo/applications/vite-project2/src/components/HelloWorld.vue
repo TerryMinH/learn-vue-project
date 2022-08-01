@@ -1,8 +1,8 @@
 <!--
  * @Author: TerryMin
- * @Date: 2022-07-29 15:47:01
+ * @Date: 2022-08-01 13:46:21
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-08-01 14:00:34
+ * @LastEditTime: 2022-08-01 16:08:19
  * @Description: file not
 -->
 <script setup lang="ts">
@@ -11,8 +11,8 @@ import { ref } from 'vue'
 defineProps<{ msg: string }>()
 
 const count = ref(0)
-var name=122
-
+let name = 12
+console.log(name)
 </script>
 
 <template>

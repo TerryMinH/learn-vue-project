@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-07-27 18:06:28
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-07-29 17:46:20
+ * @LastEditTime: 2022-08-01 14:22:15
  * @Description: file not
 -->
 # monorepo + [pnpm](https://www.pnpm.cn/) + Vue3 + Vite + TypeScript 多项目管理
@@ -27,7 +27,6 @@ pnpm i lodash --filter vue-project1
 ```
 Amodule 依赖 Butils(对应package.json中的name), 在更目录下执行
 pnpm i Butils -D --filter Amodule
-
 ```
 
 
@@ -41,3 +40,5 @@ pnpm i Butils -D --filter Amodule
 [monorepo 源码管理总结](https://blog.csdn.net/QcloudCommunity/article/details/122994881)
 
 [vue3+vite配置](https://juejin.cn/post/6975442828386107400)
+
+[vite+ vue3 +multipage](https://gitee.com/cheere/vite-vue3-multipage#https://gitee.com/link)
