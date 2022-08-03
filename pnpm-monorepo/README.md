@@ -2,10 +2,10 @@
  * @Author: TerryMin
  * @Date: 2022-07-27 18:06:28
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-08-01 14:22:15
+ * @LastEditTime: 2022-08-03 14:05:15
  * @Description: file not
 -->
-# monorepo + [pnpm](https://www.pnpm.cn/) + Vue3 + Vite + TypeScript 多项目管理
+# monorepo + [pnpm](https://pnpm.io/zh/motivation) + Vue3 + Vite + TypeScript 多项目管理
 
 ## 全局安装依赖
 比如所有的组件都需要使用到 lodash，就可以执行：
@@ -42,3 +42,5 @@ pnpm i Butils -D --filter Amodule
 [vue3+vite配置](https://juejin.cn/post/6975442828386107400)
 
 [vite+ vue3 +multipage](https://gitee.com/cheere/vite-vue3-multipage#https://gitee.com/link)
+
+[vue-cli脚手架原理](https://blog.csdn.net/six_six_six_666/article/details/82633731)

@@ -1,18 +1,9 @@
-<!--
- * @Author: TerryMin
- * @Date: 2022-07-29 15:47:01
- * @LastEditors: TerryMin
- * @LastEditTime: 2022-08-01 13:51:52
- * @Description: file not
--->
 <script setup lang="ts">
 import { ref } from 'vue'
 
 defineProps<{ msg: string }>()
 
 const count = ref(0)
-
-var name='22';
 </script>
 
 <template>
@@ -28,8 +19,9 @@ var name='22';
 
   <p>
     Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the official Vue + Vite
-    starter
+    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
+      >create-vue</a
+    >, the official Vue + Vite starter
   </p>
   <p>
     Install
