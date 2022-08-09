@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-05 16:28:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-08-05 18:28:30
+ * @LastEditTime: 2022-08-06 17:19:15
  * @Description: file not
 -->
 # typescript学习
@@ -15,9 +15,13 @@
 
 2. object Object 和 {} 类型
 
-object object 类型用于表示所有的非原始类型，即我们不能把 number、string、boolean、symbol等 原始类型赋值给 object。在严格模式下，null 和 undefined 类型也不能赋给 object。
+object object 类型用于表示所有的非原始类型，即我们不能把 number、string、boolean、symbol等 原始类型赋值给 object。在严格模式下，null 和 undefined 类型也不能赋给 object。object指的是non-primitive，可以理解为“随便一个对象”;
+
 
 大 Object 代表所有拥有 toString、hasOwnProperty 方法的类型 所以所有原始类型、非原始类型都可以赋给 Object(严格模式下 null 和 undefined 不可以)
+
+
+{}指的是non-nullish，可以理解为“随便一个值”，可以是1、"abc"、symbol("")等原始数据，但是不能是null和undefined
 
 3. 类型断言
 
@@ -44,4 +48,7 @@ let strLength: number = (str as string).length;
 
 
 
+# 项目规范
+[Eslint与Prettier区别](https://juejin.cn/post/7053365694619975711)
 
+[规范单词意义](https://juejin.cn/post/6860440041039069191)

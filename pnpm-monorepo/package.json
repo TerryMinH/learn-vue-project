@@ -4,19 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:vue-project1": "pnpm run -C app/vue-project1 dev",
+    "dev:vite-project": "pnpm run -C app/vite-project dev",
     "dev:vue-project2": "pnpm run -C app/vue-project2 dev",
-    "build:vue-project1": "pnpm run -C app/vue-project1 build",
+    "build:vite-project": "pnpm run -C app/vite-project build",
     "build:vue-project2": "pnpm run -C app/vue-project2 build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.21",
     "vue": "^3.2.37"
   },
   "devDependencies": {
-    "typescript": "^4.6.4"
+    "@vitejs/plugin-vue": "^3.0.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0",
+    "vue-tsc": "^0.38.4"
   }
 }

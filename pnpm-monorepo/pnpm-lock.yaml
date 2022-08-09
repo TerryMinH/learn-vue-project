@@ -1,17 +1,36 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 importers:
 
   .:
     specifiers:
-      lodash: ^4.17.21
+      '@vitejs/plugin-vue': ^3.0.0
       typescript: ^4.6.4
+      vite: ^3.0.0
       vue: ^3.2.37
+      vue-tsc: ^0.38.4
     dependencies:
-      lodash: 4.17.21
       vue: 3.2.37
     devDependencies:
+      '@vitejs/plugin-vue': 3.0.1_vite@3.0.3+vue@3.2.37
       typescript: 4.7.4
+      vite: 3.0.3
+      vue-tsc: 0.38.9_typescript@4.7.4
+
+  app/vite-project:
+    specifiers:
+      '@vitejs/plugin-vue': ^3.0.0
+      typescript: ^4.6.4
+      vite: ^3.0.0
+      vue: ^3.2.37
+      vue-tsc: ^0.38.4
+    dependencies:
+      vue: 3.2.37
+    devDependencies:
+      '@vitejs/plugin-vue': 3.0.1_vite@3.0.3+vue@3.2.37
+      typescript: 4.7.4
+      vite: 3.0.3
+      vue-tsc: 0.38.9_typescript@4.7.4
 
   applications/test:
     specifiers:
@@ -180,7 +199,6 @@ packages:
     dependencies:
       '@vue/reactivity': 3.2.37
       '@vue/shared': 3.2.37
-    dev: false
 
   /@vue/runtime-dom/3.2.37:
     resolution: {integrity: sha512-HimKdh9BepShW6YozwRKAYjYQWg9mQn63RGEiSswMbW+ssIht1MILYlVGkAGGQbkhSh31PCdoUcfiu4apXJoPw==}
@@ -188,7 +206,6 @@ packages:
       '@vue/runtime-core': 3.2.37
       '@vue/shared': 3.2.37
       csstype: 2.6.20
-    dev: false
 
   /@vue/server-renderer/3.2.37_vue@3.2.37:
     resolution: {integrity: sha512-kLITEJvaYgZQ2h47hIzPh2K3jG8c1zCVbp/o/bzQOyvzaKiCquKS7AaioPI28GNxIsE/zSx+EwWYsNxDCX95MA==}
@@ -198,7 +215,6 @@ packages:
       '@vue/compiler-ssr': 3.2.37
       '@vue/shared': 3.2.37
       vue: 3.2.37
-    dev: false
 
   /@vue/shared/3.2.37:
     resolution: {integrity: sha512-4rSJemR2NQIo9Klm1vabqWjD8rs/ZaJSzMxkMNeJS6lHiUjjUeYFbooN19NgFjztubEKh3WlZUeOLVdbbUWHsw==}
@@ -225,7 +241,6 @@ packages:
 
   /csstype/2.6.20:
     resolution: {integrity: sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA==}
-    dev: false
 
   /delayed-stream/1.0.0:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
@@ -587,7 +602,6 @@ packages:
     resolution: {integrity: sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: true
 
   /vant/3.5.3_vue@3.2.37:
     resolution: {integrity: sha512-/5BRYbOthBcS3YtgmYDJX2WOTHOyMRURnByBNGSe49UVEppXA9a1tmNWxiwnPSyuaiDdagIpvVySEW4KTgd7rQ==}
@@ -644,4 +658,3 @@ packages:
       '@vue/runtime-dom': 3.2.37
       '@vue/server-renderer': 3.2.37_vue@3.2.37
       '@vue/shared': 3.2.37
-    dev: false
