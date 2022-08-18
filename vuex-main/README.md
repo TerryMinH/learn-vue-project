@@ -2,70 +2,72 @@
  * @Author: TerryMin
  * @Date: 2022-05-28 23:28:01
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-07-05 16:32:31
+ * @LastEditTime: 2022-08-18 17:07:08
  * @Description: file not
 -->
+# [Vuex](https://vuex.vuejs.org/zh/guide/)
+1. State 
 
-# [Vuex使用](https://juejin.cn/post/7013325675129995272)
+state:单一状态树,用一个对象就包含了全部的应用层级状态。
 
+mapState辅助函数: 当一个组件需要获取多个状态的时候，将这些状态都声明为计算属性会有些重复和冗余。为了解决这个问题，我们可以使用 mapState 辅助函数帮助我们生成计算属性
 
-# Vuex
+2. Getter
 
-[![npm](https://img.shields.io/npm/v/vuex.svg)](https://npmjs.com/package/vuex)
-[![ci status](https://circleci.com/gh/vuejs/vuex/tree/main.png?style=shield)](https://circleci.com/gh/vuejs/vuex)
+getter:有时候我们需要从 store 中的 state 中派生出一些状态，例如对列表进行过滤并计数
 
----
-
-**Pinia is now the new default**
-
-The official state management library for Vue has changed to [Pinia](https://pinia.vuejs.org). Pinia has almost the exact same or enhanced API as Vuex 5, described in [Vuex 5 RFC](https://github.com/vuejs/rfcs/pull/271). You could simply consider Pinia as Vuex 5 with a different name. Pinia also works with Vue 2.x as well.
-
-Vuex 3 and 4 will still be maintained. However, it's unlikely to add new functionalities to it. Vuex and Pinia can be installed in the same project. If you're migrating existing Vuex app to Pinia, it might be a suitable option. However, if you're planning to start a new project, we highly recommend using Pinia instead.
-
----
-
-Vuex is a state management pattern + library for Vue.js applications. It serves as a centralized store for all the components in an application, with rules ensuring that the state can only be mutated in a predictable fashion. It also integrates with Vue's official [devtools extension](https://github.com/vuejs/vue-devtools) to provide advanced features such as zero-config time-travel debugging and state snapshot export / import.
-
-Learn more about Vuex at "[What is Vuex?](https://vuex.vuejs.org/)", or get started by looking into [full documentation](http://vuex.vuejs.org/).
-
-## Documentation
-
-To check out docs, visit [vuex.vuejs.org](https://vuex.vuejs.org/).
-
-## Examples
-
-You may find example applications built with Vuex under the `examples` directory.
-
-Running the examples:
-
-```bash
-$ npm install
-$ npm run dev # serve examples at localhost:8080
+```js
+computed: {
+  doneTodosCount () {
+    return this.$store.state.todos.filter(todo => todo.done).length
+  }
+}
 ```
+mapGetters 辅助函数仅仅是将 store 中的 getter 映射到局部计算属性
 
-## Questions
+3. Mutation
 
-For questions and support please use the [Discord chat server](https://chat.vuejs.org) or [the official forum](http://forum.vuejs.org). The issue list of this repo is **exclusively** for bug reports and feature requests.
+mutations:更改 Vuex 的 store 中的状态的唯一方法是提交 mutation
 
-## Issues
+**mutation 必须是同步函数。** 一般通过commit触发如:commit('account/login')
 
-Please make sure to read the [Issue Reporting Checklist](https://github.com/vuejs/vuex/blob/main/.github/contributing.md#issue-reporting-guidelines) before opening an issue. Issues not conforming to the guidelines may be closed immediately.
+mapMutations 辅助函数将组件中的 methods 映射为 store.commit 调用（需要在根节点注入 store）:
 
-## Changelog
+```js
+import { mapMutations } from 'vuex'
 
-Detailed changes for each release are documented in the [release notes](https://github.com/vuejs/vuex/releases).
+export default {
+  // ...
+  methods: {
+    ...mapMutations([
+      'increment', // 将 `this.increment()` 映射为 `this.$store.commit('increment')`
 
-## Stay In Touch
+      // `mapMutations` 也支持载荷：
+      'incrementBy' // 将 `this.incrementBy(amount)` 映射为 `this.$store.commit('incrementBy', amount)`
+    ]),
+    ...mapMutations({
+      add: 'increment' // 将 `this.add()` 映射为 `this.$store.commit('increment')`
+    })
+  }
+}
+```
+4. Action
 
-For latest releases and announcements, follow on Twitter: [@vuejs](https://twitter.com/vuejs).
+action:Action 类似于 mutation，不同在于：
+- Action 提交的是 mutation，而不是直接变更状态。
+- Action 可以包含任意异步操作。
+- 一般通过dispatch触发如: dispatch('account/login')
 
-## Contribution
+5. Module
 
-Please make sure to read the [Contributing Guide](https://github.com/vuejs/vuex/blob/main/.github/contributing.md) before making a pull request.
+为了解决应用的所有状态会集中到一个比较大的对象。最后变得臃肿。Vuex 允许我们将 store 分割成模块（module）。每个模块拥有自己的 state、mutation、action、getter、甚至是嵌套子模块——从上至下进行同样方式的分割：
 
-## License
+对于模块内部的getter或者action,根节点(rootState)状态会作为第三个参数暴露出来.
 
-[MIT](http://opensource.org/licenses/MIT)
+## [Vuex使用](https://juejin.cn/post/7013325675129995272)
 
-Copyright (c) 2015-present Evan You
+
+# [Pinia](https://pinia.vuejs.org)
+
+Pinia 等同于Vuex5
 
