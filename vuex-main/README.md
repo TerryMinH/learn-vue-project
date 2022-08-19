@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-05-28 23:28:01
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-08-18 17:07:08
+ * @LastEditTime: 2022-08-19 09:45:09
  * @Description: file not
 -->
 # [Vuex](https://vuex.vuejs.org/zh/guide/)
@@ -27,9 +27,9 @@ mapGetters 辅助函数仅仅是将 store 中的 getter 映射到局部计算属
 
 3. Mutation
 
-mutations:更改 Vuex 的 store 中的状态的唯一方法是提交 mutation
+mutations:更改 Vuex 的 store 中的状态的唯一方法是提交 mutation,即通过commit触发如:commit('account/login')
 
-**mutation 必须是同步函数。** 一般通过commit触发如:commit('account/login')
+**mutation 必须是同步函数。** 
 
 mapMutations 辅助函数将组件中的 methods 映射为 store.commit 调用（需要在根节点注入 store）:
 
@@ -67,7 +67,7 @@ action:Action 类似于 mutation，不同在于：
 ## [Vuex使用](https://juejin.cn/post/7013325675129995272)
 
 
-# [Pinia](https://pinia.vuejs.org)
+# [Pinia](https://pinia.web3doc.top/)
 
-Pinia 等同于Vuex5
+
 

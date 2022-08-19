@@ -2,12 +2,12 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:15
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-07-30 14:30:54
+ * @LastEditTime: 2022-08-18 17:22:54
  * @Description: file not
 -->
-# Vue 3 + Vite
-[script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) 
-[附录:vue3中文翻译文档](https://staging-cn.vuejs.org/)
+# [Vue 3]((https://staging-cn.vuejs.org/)) + [Vite](https://vitejs.bootcss.com/guide/#trying-vite-online)
+ 
+
 
 # Vue3 API学习
 1. [Ref与Reactive区别](https://juejin.cn/post/6976611660161089543)

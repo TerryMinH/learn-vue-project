@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-05-28 23:28:01
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-07-06 09:40:03
+ * @LastEditTime: 2022-08-18 17:15:34
  * @Description: file not
 -->
 <template>
@@ -14,6 +14,7 @@
     <button @click="incrementIfOdd">Increment if odd</button>
     <button @click="incrementAsync">Increment async</button>
     <button @click="changeName">修改姓名</button>
+    <button @click="say">say</button>
   </div>
 </template>
 
@@ -26,12 +27,17 @@ export default {
       'evenOrOdd'
     ])
   },
-  methods: mapActions([
+  methods: {
+    ...mapActions([
     'increment',
     'decrement',
     'incrementIfOdd',
     'incrementAsync',
     'changeName'
-  ])
+  ]),
+  say() {
+    console.log(22)
+  }
+  }
 }
 </script>
