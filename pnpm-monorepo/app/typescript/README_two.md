@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-05 16:28:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-08-06 17:19:15
+ * @LastEditTime: 2022-09-13 19:30:46
  * @Description: file not
 -->
 # typescript学习
@@ -45,6 +45,31 @@ let strLength: number = (str as string).length;
 不同点：type可以声明基本数据类型别名/联合类型/元组等，而interface不行; interface能够合并声明，而type不行
 
 6. 泛型 [泛型使用](https://juejin.cn/post/7064351631072526350)
+
+7. ts操作符
+- [ts空值合并运算符(??)](https://cloud.tencent.com/developer/article/1600583)
+
+8. typeof
+- JS 中提供了 typeof 操作符，用来在 JS 中获取数据的类型
+- TS 也提供了 typeof 操作符：可以用来获取变量或属性的类型
+- 使用场景:
+```
+{
+    const res = { name: 'Lucy', age: 18 }
+    type StuType = typeof res
+    function fn(obj: StuType) {
+        // 这里写obj. 有 name 和 age 的提示了
+        console.log(obj.name)
+    }
+    fn(res)
+}
+```
+- 总结:使用 typeof 操作符来获取变量 res 的类型，结果与第一种（对象字面量形式的类型）相同 注意：typeof 只能用来查询变量或属性的类型，无法查询其他形式的类型（比如，函数调用的类型）
+
+9. [高级类型Record](https://zhuanlan.zhihu.com/p/356662885)
+
+
+
 
 
 

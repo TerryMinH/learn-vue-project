@@ -3,37 +3,97 @@
 
 
 "@babel/parser@^7.15.0":
-  version "7.16.4"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.16.4.tgz#d5f92f57cf2c74ffe9b37981c0e72fee7311372e"
-  integrity sha512-6V0qdPUaiVHH3RtZeLIsc+6pDhbYzHR8ogA8w+f+Wc77DuXto19g2QUwveINoS34Uw+W8/hQDGJCx+i4n7xcng==
+  "integrity" "sha512-n2Q6i+fnJqzOaq2VkdXxy2TCPCWQZHiCo0XqmrCvDWcZQKRyZzYi4Z0yxlBuN0w+r2ZHmre+Q087DSrw3pbJDQ=="
+  "resolved" "https://registry.npmjs.org/@babel/parser/-/parser-7.17.10.tgz"
+  "version" "7.17.10"
+
+"@babel/runtime@^7.12.0":
+  "integrity" "sha512-lkqXDcvlFT5rvEjiu6+QYO+1GXrEHRo2LOtS7E4GtX5ESIZOgepqsZBVIj6Pv+a6zqsya9VCgiK1KAK4BvJDAw=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@babel/runtime/-/runtime-7.18.9.tgz"
+  "version" "7.18.9"
+  dependencies:
+    "regenerator-runtime" "^0.13.4"
+
+"@transloadit/prettier-bytes@0.0.7":
+  "integrity" "sha512-VeJbUb0wEKbcwaSlj5n+LscBl9IPgLPkHVGBkh00cztv6X4L/TJXK58LzFuBKX7/GAfiGhIwH67YTLTlzvIzBA=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@transloadit/prettier-bytes/-/prettier-bytes-0.0.7.tgz"
+  "version" "0.0.7"
+
+"@types/event-emitter@^0.3.3":
+  "integrity" "sha512-UfnOK1pIxO7P+EgPRZXD9jMpimd8QEFcEZ5R67R1UhGbv4zghU5+NE7U8M8G9H5Jc8FI51rqDWQs6FtUfq2e/Q=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@types/event-emitter/-/event-emitter-0.3.3.tgz"
+  "version" "0.3.3"
+
+"@uppy/companion-client@^2.2.2":
+  "integrity" "sha512-5mTp2iq97/mYSisMaBtFRry6PTgZA6SIL7LePteOV5x0/DxKfrZW3DEiQERJmYpHzy7k8johpm2gHnEKto56Og=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@uppy/companion-client/-/companion-client-2.2.2.tgz"
+  "version" "2.2.2"
+  dependencies:
+    "@uppy/utils" "^4.1.2"
+    "namespace-emitter" "^2.0.1"
+
+"@uppy/core@^2.0.3", "@uppy/core@^2.1.1", "@uppy/core@^2.1.4", "@uppy/core@^2.3.3":
+  "integrity" "sha512-oTFYZT02dIoUGm8Ar6+Tg/xbL8MliwiPQdiuoCimPBmY19ZhuJm/K4wEYZ6nOFeYsgBWYi1yWfsmdx8LvFVx4g=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@uppy/core/-/core-2.3.3.tgz"
+  "version" "2.3.3"
+  dependencies:
+    "@transloadit/prettier-bytes" "0.0.7"
+    "@uppy/store-default" "^2.1.1"
+    "@uppy/utils" "^4.1.2"
+    "lodash.throttle" "^4.1.1"
+    "mime-match" "^1.0.2"
+    "namespace-emitter" "^2.0.1"
+    "nanoid" "^3.1.25"
+    "preact" "^10.5.13"
+
+"@uppy/store-default@^2.1.1":
+  "integrity" "sha512-xnpTxvot2SeAwGwbvmJ899ASk5tYXhmZzD/aCFsXePh/v8rNvR2pKlcQUH7cF/y4baUGq3FHO/daKCok/mpKqQ=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@uppy/store-default/-/store-default-2.1.1.tgz"
+  "version" "2.1.1"
+
+"@uppy/utils@^4.1.2":
+  "integrity" "sha512-nTuMvwWYobnJcytDO3t+D6IkVq/Qs4Xv3vyoEZ+Iaf8gegZP+rEyoaFT2CK5XLRMienPyqRqNbIfRuFaOWSIFw=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@uppy/utils/-/utils-4.1.3.tgz"
+  "version" "4.1.3"
+  dependencies:
+    "lodash.throttle" "^4.1.1"
+
+"@uppy/xhr-upload@^2.0.3", "@uppy/xhr-upload@^2.0.7":
+  "integrity" "sha512-YWOQ6myBVPs+mhNjfdWsQyMRWUlrDLMoaG7nvf/G6Y3GKZf8AyjFDjvvJ49XWQ+DaZOftGkHmF1uh/DBeGivJQ=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@uppy/xhr-upload/-/xhr-upload-2.1.3.tgz"
+  "version" "2.1.3"
+  dependencies:
+    "@uppy/companion-client" "^2.2.2"
+    "@uppy/utils" "^4.1.2"
+    "nanoid" "^3.1.25"
 
 "@vitejs/plugin-vue@^1.9.3":
-  version "1.9.4"
-  resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-1.9.4.tgz#4f48485432cbb986a9fb9d254dc33ce30ddccbfa"
-  integrity sha512-0CZqaCoChriPTTtGkERy1LGPcYjGFpi2uYRhBPIkqJqUGV5JnJFhQAgh6oH9j5XZHfrRaisX8W0xSpO4T7S78A==
+  "integrity" "sha512-0CZqaCoChriPTTtGkERy1LGPcYjGFpi2uYRhBPIkqJqUGV5JnJFhQAgh6oH9j5XZHfrRaisX8W0xSpO4T7S78A=="
+  "resolved" "https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-1.9.4.tgz"
+  "version" "1.9.4"
 
 "@vue/compiler-core@3.2.22":
-  version "3.2.22"
-  resolved "https://registry.yarnpkg.com/@vue/compiler-core/-/compiler-core-3.2.22.tgz#5e3d3b983cc7f430ddbc6a8773c872dcf410dc89"
-  integrity sha512-uAkovrVeTcjzpiM4ECmVaMrv/bjdgAaLzvjcGqQPBEyUrcqsCgccT9fHJ/+hWVGhyMahmBwLqcn4guULNx7sdw==
+  "integrity" "sha512-uAkovrVeTcjzpiM4ECmVaMrv/bjdgAaLzvjcGqQPBEyUrcqsCgccT9fHJ/+hWVGhyMahmBwLqcn4guULNx7sdw=="
+  "resolved" "https://registry.npmjs.org/@vue/compiler-core/-/compiler-core-3.2.22.tgz"
+  "version" "3.2.22"
   dependencies:
     "@babel/parser" "^7.15.0"
     "@vue/shared" "3.2.22"
-    estree-walker "^2.0.2"
-    source-map "^0.6.1"
+    "estree-walker" "^2.0.2"
+    "source-map" "^0.6.1"
 
 "@vue/compiler-dom@3.2.22":
-  version "3.2.22"
-  resolved "https://registry.yarnpkg.com/@vue/compiler-dom/-/compiler-dom-3.2.22.tgz#221cc358a6c0651c04e1dd22a8470b21e56ee1a5"
-  integrity sha512-VZdsw/VuO1ODs8K7NQwnMQzKITDkIFlYYC03SVnunuf6eNRxBPEonSyqbWNoo6qNaHAEBTG6VVcZC5xC9bAx1g==
+  "integrity" "sha512-VZdsw/VuO1ODs8K7NQwnMQzKITDkIFlYYC03SVnunuf6eNRxBPEonSyqbWNoo6qNaHAEBTG6VVcZC5xC9bAx1g=="
+  "resolved" "https://registry.npmjs.org/@vue/compiler-dom/-/compiler-dom-3.2.22.tgz"
+  "version" "3.2.22"
   dependencies:
     "@vue/compiler-core" "3.2.22"
     "@vue/shared" "3.2.22"
 
 "@vue/compiler-sfc@3.2.22":
-  version "3.2.22"
-  resolved "https://registry.yarnpkg.com/@vue/compiler-sfc/-/compiler-sfc-3.2.22.tgz#ffd0e5e35479b6ade18d12fefec369cbaf2f7718"
-  integrity sha512-tWRQ5ge1tsTDhUwHgueicKJ8rYm6WUVAPTaIpFW3GSwZKcOEJ2rXdfkHFShNVGupeRALz2ET2H84OL0GeRxY0A==
+  "integrity" "sha512-tWRQ5ge1tsTDhUwHgueicKJ8rYm6WUVAPTaIpFW3GSwZKcOEJ2rXdfkHFShNVGupeRALz2ET2H84OL0GeRxY0A=="
+  "resolved" "https://registry.npmjs.org/@vue/compiler-sfc/-/compiler-sfc-3.2.22.tgz"
+  "version" "3.2.22"
   dependencies:
     "@babel/parser" "^7.15.0"
     "@vue/compiler-core" "3.2.22"
@@ -41,291 +101,509 @@
     "@vue/compiler-ssr" "3.2.22"
     "@vue/ref-transform" "3.2.22"
     "@vue/shared" "3.2.22"
-    estree-walker "^2.0.2"
-    magic-string "^0.25.7"
-    postcss "^8.1.10"
-    source-map "^0.6.1"
+    "estree-walker" "^2.0.2"
+    "magic-string" "^0.25.7"
+    "postcss" "^8.1.10"
+    "source-map" "^0.6.1"
 
 "@vue/compiler-ssr@3.2.22":
-  version "3.2.22"
-  resolved "https://registry.yarnpkg.com/@vue/compiler-ssr/-/compiler-ssr-3.2.22.tgz#23552c31b76b45baf5f244713c81d77ab59447d2"
-  integrity sha512-Cl6aoLJtXzzBkk1sKod8S0WBJLts3+ugVC91d22gGpbkw/64WnF12tOZi7Rg54PPLi1NovqyNWPsLH/SAFcu+w==
+  "integrity" "sha512-Cl6aoLJtXzzBkk1sKod8S0WBJLts3+ugVC91d22gGpbkw/64WnF12tOZi7Rg54PPLi1NovqyNWPsLH/SAFcu+w=="
+  "resolved" "https://registry.npmjs.org/@vue/compiler-ssr/-/compiler-ssr-3.2.22.tgz"
+  "version" "3.2.22"
   dependencies:
     "@vue/compiler-dom" "3.2.22"
     "@vue/shared" "3.2.22"
 
 "@vue/devtools-api@^6.0.0-beta.11":
-  version "6.0.0-beta.21.1"
-  resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.0.0-beta.21.1.tgz#f1410f53c42aa67fa3b01ca7bdba891f69d7bc97"
-  integrity sha512-FqC4s3pm35qGVeXRGOjTsRzlkJjrBLriDS9YXbflHLsfA9FrcKzIyWnLXoNm+/7930E8rRakXuAc2QkC50swAw==
+  "integrity" "sha512-FqC4s3pm35qGVeXRGOjTsRzlkJjrBLriDS9YXbflHLsfA9FrcKzIyWnLXoNm+/7930E8rRakXuAc2QkC50swAw=="
+  "resolved" "https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-6.0.0-beta.21.1.tgz"
+  "version" "6.0.0-beta.21.1"
+
+"@vue/devtools-api@^6.0.0":
+  "integrity" "sha512-IiA0SvDrJEgXvVxjNkHPFfDx6SXw0b/TUkqMcDZWNg9fnCAHbTpoo59YfJ9QLFkwa3raau5vSlRVzMSLDnfdtQ=="
+  "resolved" "https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-6.1.4.tgz"
+  "version" "6.1.4"
 
 "@vue/reactivity@3.2.22":
-  version "3.2.22"
-  resolved "https://registry.yarnpkg.com/@vue/reactivity/-/reactivity-3.2.22.tgz#88655c0b4febc561136e6550e329039f860caa0a"
-  integrity sha512-xNkLAItjI0xB+lFeDgKCrSItmrHTaAzSnt8LmdSCPQnDyarmzbi/u4ESQnckWvlL7lSRKiEaOvblaNyqAa7OnQ==
+  "integrity" "sha512-xNkLAItjI0xB+lFeDgKCrSItmrHTaAzSnt8LmdSCPQnDyarmzbi/u4ESQnckWvlL7lSRKiEaOvblaNyqAa7OnQ=="
+  "resolved" "https://registry.npmjs.org/@vue/reactivity/-/reactivity-3.2.22.tgz"
+  "version" "3.2.22"
   dependencies:
     "@vue/shared" "3.2.22"
 
 "@vue/ref-transform@3.2.22":
-  version "3.2.22"
-  resolved "https://registry.yarnpkg.com/@vue/ref-transform/-/ref-transform-3.2.22.tgz#16b03994eac71528cceff4cf76178ed9b44ac90a"
-  integrity sha512-qalVWbq5xWWxLZ0L9OroBg/JZhzavQuCcDXblfErxyDEH6Xc5gIJ4feo1SVCICFzhAUgLgQTdSFLpgjBawbFpw==
+  "integrity" "sha512-qalVWbq5xWWxLZ0L9OroBg/JZhzavQuCcDXblfErxyDEH6Xc5gIJ4feo1SVCICFzhAUgLgQTdSFLpgjBawbFpw=="
+  "resolved" "https://registry.npmjs.org/@vue/ref-transform/-/ref-transform-3.2.22.tgz"
+  "version" "3.2.22"
   dependencies:
     "@babel/parser" "^7.15.0"
     "@vue/compiler-core" "3.2.22"
     "@vue/shared" "3.2.22"
-    estree-walker "^2.0.2"
-    magic-string "^0.25.7"
+    "estree-walker" "^2.0.2"
+    "magic-string" "^0.25.7"
 
 "@vue/runtime-core@3.2.22":
-  version "3.2.22"
-  resolved "https://registry.yarnpkg.com/@vue/runtime-core/-/runtime-core-3.2.22.tgz#111f1bc97f20249e05ca2189856d99c82d72de32"
-  integrity sha512-e7WOC55wmHPvmoVUk9VBe/Z9k5bJfWJfVIlkUkiADJn0bOgQD29oh/GS14Kb3aEJXIHLI17Em6+HxNut1sIh7Q==
+  "integrity" "sha512-e7WOC55wmHPvmoVUk9VBe/Z9k5bJfWJfVIlkUkiADJn0bOgQD29oh/GS14Kb3aEJXIHLI17Em6+HxNut1sIh7Q=="
+  "resolved" "https://registry.npmjs.org/@vue/runtime-core/-/runtime-core-3.2.22.tgz"
+  "version" "3.2.22"
   dependencies:
     "@vue/reactivity" "3.2.22"
     "@vue/shared" "3.2.22"
 
 "@vue/runtime-dom@3.2.22":
-  version "3.2.22"
-  resolved "https://registry.yarnpkg.com/@vue/runtime-dom/-/runtime-dom-3.2.22.tgz#c11d75dd51375ee4c74e339f6523ca05e37faa37"
-  integrity sha512-w7VHYJoliLRTLc5beN77wxuOjla4v9wr2FF22xpZFYBmH4U1V7HkYhoHc1BTuNghI15CXT1tNIMhibI1nrQgdw==
+  "integrity" "sha512-w7VHYJoliLRTLc5beN77wxuOjla4v9wr2FF22xpZFYBmH4U1V7HkYhoHc1BTuNghI15CXT1tNIMhibI1nrQgdw=="
+  "resolved" "https://registry.npmjs.org/@vue/runtime-dom/-/runtime-dom-3.2.22.tgz"
+  "version" "3.2.22"
   dependencies:
     "@vue/runtime-core" "3.2.22"
     "@vue/shared" "3.2.22"
-    csstype "^2.6.8"
+    "csstype" "^2.6.8"
 
 "@vue/server-renderer@3.2.22":
-  version "3.2.22"
-  resolved "https://registry.yarnpkg.com/@vue/server-renderer/-/server-renderer-3.2.22.tgz#049c91a495cb0fcdac02dec485c31cb99410885f"
-  integrity sha512-jCwbQgKPXiXoH9VS9F7K+gyEvEMrjutannwEZD1R8fQ9szmOTqC+RRbIY3Uf2ibQjZtZ8DV9a4FjxICvd9zZlQ==
+  "integrity" "sha512-jCwbQgKPXiXoH9VS9F7K+gyEvEMrjutannwEZD1R8fQ9szmOTqC+RRbIY3Uf2ibQjZtZ8DV9a4FjxICvd9zZlQ=="
+  "resolved" "https://registry.npmjs.org/@vue/server-renderer/-/server-renderer-3.2.22.tgz"
+  "version" "3.2.22"
   dependencies:
     "@vue/compiler-ssr" "3.2.22"
     "@vue/shared" "3.2.22"
 
 "@vue/shared@3.2.22":
-  version "3.2.22"
-  resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.22.tgz#26dcbe5e530f6c1f2de5ca9aeab92ab00f523b41"
-  integrity sha512-qWVav014mpjEtbWbEgl0q9pEyrrIySKum8UVYjwhC6njrKzknLZPvfuYdQyVbApsqr94tf/3dP4pCuZmmjdCWQ==
+  "integrity" "sha512-qWVav014mpjEtbWbEgl0q9pEyrrIySKum8UVYjwhC6njrKzknLZPvfuYdQyVbApsqr94tf/3dP4pCuZmmjdCWQ=="
+  "resolved" "https://registry.npmjs.org/@vue/shared/-/shared-3.2.22.tgz"
+  "version" "3.2.22"
 
-csstype@^2.6.8:
-  version "2.6.19"
-  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.19.tgz#feeb5aae89020bb389e1f63669a5ed490e391caa"
-  integrity sha512-ZVxXaNy28/k3kJg0Fou5MiYpp88j7H9hLZp8PDC3jV0WFjfH5E9xHb56L0W59cPbKbcHXeP4qyT8PrHp8t6LcQ==
+"@wangeditor/basic-modules@^1.1.3", "@wangeditor/basic-modules@1.x":
+  "integrity" "sha512-TGJix4UelO46yAgwI946ctx4lSIJbYBwNvjSJ9Tf8mKr0WMCeLVBV+MV85rXPsfcmWtR4wBNwSg648Z+RbqRUg=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@wangeditor/basic-modules/-/basic-modules-1.1.3.tgz"
+  "version" "1.1.3"
+  dependencies:
+    "is-url" "^1.2.4"
 
-esbuild-android-arm64@0.13.14:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild-android-arm64/-/esbuild-android-arm64-0.13.14.tgz#c85083ece26be3d67e6c720e088968a98409e023"
-  integrity sha512-Q+Xhfp827r+ma8/DJgpMRUbDZfefsk13oePFEXEIJ4gxFbNv5+vyiYXYuKm43/+++EJXpnaYmEnu4hAKbAWYbA==
+"@wangeditor/code-highlight@^1.0.2":
+  "integrity" "sha512-SCtOcUxjKqIso/LSxGSOaYr3G6MC2En0gNTyHIMCG928T0fo0ufaqp/vIXKQzVL2Y+X/CSAOB2EbrFlgGvr0AQ=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@wangeditor/code-highlight/-/code-highlight-1.0.2.tgz"
+  "version" "1.0.2"
+  dependencies:
+    "prismjs" "^1.23.0"
 
-esbuild-darwin-64@0.13.14:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild-darwin-64/-/esbuild-darwin-64-0.13.14.tgz#8e4e237ad847cc54a1d3a5caee26a746b9f0b81f"
-  integrity sha512-YmOhRns6QBNSjpVdTahi/yZ8dscx9ai7a6OY6z5ACgOuQuaQ2Qk2qgJ0/siZ6LgD0gJFMV8UINFV5oky5TFNQQ==
+"@wangeditor/core@^1.1.12", "@wangeditor/core@1.x":
+  "integrity" "sha512-u6NBap1fHldFkxTLYdpezsGsi+a8F3ES0Bg6pu2TCQm4Qwl6xV0yvehFxZnOPomL+GrVGuCrvvOLnr9T3zntEg=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@wangeditor/core/-/core-1.1.12.tgz"
+  "version" "1.1.12"
+  dependencies:
+    "@types/event-emitter" "^0.3.3"
+    "event-emitter" "^0.3.5"
+    "html-void-elements" "^2.0.0"
+    "i18next" "^20.4.0"
+    "scroll-into-view-if-needed" "^2.2.28"
+    "slate-history" "^0.66.0"
 
-esbuild-darwin-arm64@0.13.14:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.13.14.tgz#b3b5ebd40b2cb06ee0f6fb342dd4bdcca54ad273"
-  integrity sha512-Lp00VTli2jqZghSa68fx3fEFCPsO1hK59RMo1PRap5RUjhf55OmaZTZYnCDI0FVlCtt+gBwX5qwFt4lc6tI1xg==
+"@wangeditor/editor-for-vue@^5.1.12":
+  "integrity" "sha512-0Ds3D8I+xnpNWezAeO7HmPRgTfUxHLMd9JKcIw+QzvSmhC5xUHbpCcLU+KLmeBKTR/zffnS5GQo6qi3GhTMJWQ=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@wangeditor/editor-for-vue/-/editor-for-vue-5.1.12.tgz"
+  "version" "5.1.12"
 
-esbuild-freebsd-64@0.13.14:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild-freebsd-64/-/esbuild-freebsd-64-0.13.14.tgz#175ecb2fa8141428cf70ea2d5f4c27534bad53e0"
-  integrity sha512-BKosI3jtvTfnmsCW37B1TyxMUjkRWKqopR0CE9AF2ratdpkxdR24Vpe3gLKNyWiZ7BE96/SO5/YfhbPUzY8wKw==
+"@wangeditor/editor@^5.1.15", "@wangeditor/editor@>=5.1.0":
+  "integrity" "sha512-3QuxzBewDa3/yfVQxIXy6xMJg/oLZ3049MtcNI1Vzovozd57LUrU8160k+rB6bS2bq3mr7UkGTL4HxOMuMcYpw=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@wangeditor/editor/-/editor-5.1.15.tgz"
+  "version" "5.1.15"
+  dependencies:
+    "@uppy/core" "^2.1.1"
+    "@uppy/xhr-upload" "^2.0.3"
+    "@wangeditor/basic-modules" "^1.1.3"
+    "@wangeditor/code-highlight" "^1.0.2"
+    "@wangeditor/core" "^1.1.12"
+    "@wangeditor/list-module" "^1.0.2"
+    "@wangeditor/table-module" "^1.1.1"
+    "@wangeditor/upload-image-module" "^1.0.1"
+    "@wangeditor/video-module" "^1.1.2"
+    "dom7" "^3.0.0"
+    "is-hotkey" "^0.2.0"
+    "lodash.camelcase" "^4.3.0"
+    "lodash.clonedeep" "^4.5.0"
+    "lodash.debounce" "^4.0.8"
+    "lodash.foreach" "^4.5.0"
+    "lodash.isequal" "^4.5.0"
+    "lodash.throttle" "^4.1.1"
+    "lodash.toarray" "^4.4.0"
+    "nanoid" "^3.2.0"
+    "slate" "^0.72.0"
+    "snabbdom" "^3.1.0"
 
-esbuild-freebsd-arm64@0.13.14:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.13.14.tgz#a7d64e41d1fa581f8db7775e5200f18e67d70c4d"
-  integrity sha512-yd2uh0yf+fWv5114+SYTl4/1oDWtr4nN5Op+PGxAkMqHfYfLjFKpcxwCo/QOS/0NWqPVE8O41IYZlFhbEN2B8Q==
+"@wangeditor/list-module@^1.0.2":
+  "integrity" "sha512-VfENZEFvsLTiLxN/cj8cibFGy9NVV+/cfATTiLiH9ef+8lgKv8apttXYVlqIAfnlJLLuCk0cIm8c/zH+hbtrZg=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@wangeditor/list-module/-/list-module-1.0.2.tgz"
+  "version" "1.0.2"
 
-esbuild-linux-32@0.13.14:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild-linux-32/-/esbuild-linux-32-0.13.14.tgz#14bdd4f6b6cfd35c65c835894651ba335c2117da"
-  integrity sha512-a8rOnS1oWSfkkYWXoD2yXNV4BdbDKA7PNVQ1klqkY9SoSApL7io66w5H44mTLsfyw7G6Z2vLlaLI2nz9MMAowA==
+"@wangeditor/table-module@^1.1.1":
+  "integrity" "sha512-VPjEWQtncS2DsXYXiHUxPSxn2Xhc8GdhG3la7N5YhvxQde1+4N0SZLXeWsYvbGzOq4um5XToq5pktLLbE8G+EA=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@wangeditor/table-module/-/table-module-1.1.1.tgz"
+  "version" "1.1.1"
 
-esbuild-linux-64@0.13.14:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild-linux-64/-/esbuild-linux-64-0.13.14.tgz#7fd56851b2982fdd0cd8447ee9858c2c5711708a"
-  integrity sha512-yPZSoMs9W2MC3Dw+6kflKt5FfQm6Dicex9dGIr1OlHRsn3Hm7yGMUTctlkW53KknnZdOdcdd5upxvbxqymczVQ==
+"@wangeditor/upload-image-module@^1.0.1":
+  "integrity" "sha512-vgUV4ENttTITblqtVuzleIq732OmzmzzgrIvX6b3GRGPSw5u8glJ/87tOEhvHjHECc4oFo18B7xzJ1GpBj79/w=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@wangeditor/upload-image-module/-/upload-image-module-1.0.1.tgz"
+  "version" "1.0.1"
 
-esbuild-linux-arm64@0.13.14:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild-linux-arm64/-/esbuild-linux-arm64-0.13.14.tgz#a55634d70679ba509adeafd68eebb9fd1ec5af6c"
-  integrity sha512-Lvo391ln9PzC334e+jJ2S0Rt0cxP47eoH5gFyv/E8HhOnEJTvm7A+RRnMjjHnejELacTTfYgFGQYPjLsi/jObQ==
+"@wangeditor/video-module@^1.1.2":
+  "integrity" "sha512-y8pMejpQ/AnAQZx+A86sGFo+ockg4tSc3oKpuN+1xFbnYMF6Tb+t7yt3+qY/ZJ2FffL635wxZpYbQWOboNUn9g=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@wangeditor/video-module/-/video-module-1.1.2.tgz"
+  "version" "1.1.2"
 
-esbuild-linux-arm@0.13.14:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild-linux-arm/-/esbuild-linux-arm-0.13.14.tgz#bb96a99677e608b31ff61f37564326d38e846ca2"
-  integrity sha512-8chZE4pkKRvJ/M/iwsNQ1KqsRg2RyU5eT/x2flNt/f8F2TVrDreR7I0HEeCR50wLla3B1C3wTIOzQBmjuc6uWg==
+"compute-scroll-into-view@^1.0.17":
+  "integrity" "sha512-j4dx+Fb0URmzbwwMUrhqWM2BEWHdFGx+qZ9qqASHRPqvTYdqvWnHg0H1hIbcyLnvgnoNAVMlwkepyqM3DaIFUg=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/compute-scroll-into-view/-/compute-scroll-into-view-1.0.17.tgz"
+  "version" "1.0.17"
 
-esbuild-linux-mips64le@0.13.14:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild-linux-mips64le/-/esbuild-linux-mips64le-0.13.14.tgz#6a55362a8fd1e593dea2ecc41877beed8b8184b9"
-  integrity sha512-MZhgxbmrWbpY3TOE029O6l5tokG9+Yoj2hW7vdit/d/VnmneqeGrSHADuDL6qXM8L5jaCiaivb4VhsyVCpdAbQ==
+"csstype@^2.6.8":
+  "integrity" "sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA=="
+  "resolved" "https://registry.npmjs.org/csstype/-/csstype-2.6.20.tgz"
+  "version" "2.6.20"
 
-esbuild-linux-ppc64le@0.13.14:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.13.14.tgz#9e0048587ece0a7f184ab147f20d077098045e7f"
-  integrity sha512-un7KMwS7fX1Un6BjfSZxTT8L5cV/8Uf4SAhM7WYy2XF8o8TI+uRxxD03svZnRNIPsN2J5cl6qV4n7Iwz+yhhVw==
+"d@^1.0.1", "d@1":
+  "integrity" "sha512-m62ShEObQ39CfralilEQRjH6oAMtNCV1xJyEx5LpRYUVN+EviphDgUc/F3hnYbADmkiNs67Y+3ylmlG7Lnu+FA=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/d/-/d-1.0.1.tgz"
+  "version" "1.0.1"
+  dependencies:
+    "es5-ext" "^0.10.50"
+    "type" "^1.0.1"
 
-esbuild-netbsd-64@0.13.14:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild-netbsd-64/-/esbuild-netbsd-64-0.13.14.tgz#dcab16a4bbcfa16e2e8535dadc5f64fdc891c63b"
-  integrity sha512-5ekKx/YbOmmlTeNxBjh38Uh5TGn5C4uyqN17i67k18pS3J+U2hTVD7rCxcFcRS1AjNWumkVL3jWqYXadFwMS0Q==
+"dom7@^3.0.0":
+  "integrity" "sha512-oNlcUdHsC4zb7Msx7JN3K0Nro1dzJ48knvBOnDPKJ2GV9wl1i5vydJZUSyOfrkKFDZEud/jBsTk92S/VGSAe/g=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/dom7/-/dom7-3.0.0.tgz"
+  "version" "3.0.0"
+  dependencies:
+    "ssr-window" "^3.0.0-alpha.1"
 
-esbuild-openbsd-64@0.13.14:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild-openbsd-64/-/esbuild-openbsd-64-0.13.14.tgz#3c7453b155ebb68dc34d5aec3bd6505337bdda08"
-  integrity sha512-9bzvwewHjct2Cv5XcVoE1yW5YTW12Sk838EYfA46abgnhxGoFSD1mFcaztp5HHC43AsF+hQxbSFG/RilONARUA==
+"es5-ext@^0.10.35", "es5-ext@^0.10.50", "es5-ext@~0.10.14":
+  "integrity" "sha512-BHLqn0klhEpnOKSrzn/Xsz2UIW8j+cGmo9JLzr8BiUapV8hPL9+FliFqjwr9ngW7jWdnxv6eO+/LqyhJVqgrjA=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/es5-ext/-/es5-ext-0.10.62.tgz"
+  "version" "0.10.62"
+  dependencies:
+    "es6-iterator" "^2.0.3"
+    "es6-symbol" "^3.1.3"
+    "next-tick" "^1.1.0"
 
-esbuild-sunos-64@0.13.14:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild-sunos-64/-/esbuild-sunos-64-0.13.14.tgz#85addf5fef6b5db154a955d4f2e88953359d75ce"
-  integrity sha512-mjMrZB76M6FmoiTvj/RGWilrioR7gVwtFBRVugr9qLarXMIU1W/pQx+ieEOtflrW61xo8w1fcxyHsVVGRvoQ0w==
+"es6-iterator@^2.0.3":
+  "integrity" "sha512-zw4SRzoUkd+cl+ZoE15A9o1oQd920Bb0iOJMQkQhl3jNc03YqVjAhG7scf9C5KWRU/R13Orf588uCC6525o02g=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/es6-iterator/-/es6-iterator-2.0.3.tgz"
+  "version" "2.0.3"
+  dependencies:
+    "d" "1"
+    "es5-ext" "^0.10.35"
+    "es6-symbol" "^3.1.1"
 
-esbuild-windows-32@0.13.14:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild-windows-32/-/esbuild-windows-32-0.13.14.tgz#f77f98f30a5c636c44db2428ecdf9bcbbaedb1a7"
-  integrity sha512-GZa6mrx2rgfbH/5uHg0Rdw50TuOKbdoKCpEBitzmG5tsXBdce+cOL+iFO5joZc6fDVCLW3Y6tjxmSXRk/v20Hg==
+"es6-symbol@^3.1.1", "es6-symbol@^3.1.3":
+  "integrity" "sha512-NJ6Yn3FuDinBaBRWl/q5X/s4koRHBrgKAu+yGI6JCBeiu3qrcbJhwT2GeR/EXVfylRk8dpQVJoLEFhK+Mu31NA=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/es6-symbol/-/es6-symbol-3.1.3.tgz"
+  "version" "3.1.3"
+  dependencies:
+    "d" "^1.0.1"
+    "ext" "^1.1.2"
 
-esbuild-windows-64@0.13.14:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild-windows-64/-/esbuild-windows-64-0.13.14.tgz#bc778674c40d65150d12385e0f23eb3a0badbd0d"
-  integrity sha512-Lsgqah24bT7ClHjLp/Pj3A9wxjhIAJyWQcrOV4jqXAFikmrp2CspA8IkJgw7HFjx6QrJuhpcKVbCAe/xw0i2yw==
+"esbuild-darwin-64@0.13.14":
+  "integrity" "sha512-YmOhRns6QBNSjpVdTahi/yZ8dscx9ai7a6OY6z5ACgOuQuaQ2Qk2qgJ0/siZ6LgD0gJFMV8UINFV5oky5TFNQQ=="
+  "resolved" "https://registry.npmjs.org/esbuild-darwin-64/-/esbuild-darwin-64-0.13.14.tgz"
+  "version" "0.13.14"
 
-esbuild-windows-arm64@0.13.14:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild-windows-arm64/-/esbuild-windows-arm64-0.13.14.tgz#91a8dad35ab2c4dd27cd83860742955b25a354d7"
-  integrity sha512-KP8FHVlWGhM7nzYtURsGnskXb/cBCPTfj0gOKfjKq2tHtYnhDZywsUG57nk7TKhhK0fL11LcejHG3LRW9RF/9A==
-
-esbuild@^0.13.2:
-  version "0.13.14"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.13.14.tgz#98a3f7f42809abdc2b57c84565d0f713382dc1a5"
-  integrity sha512-xu4D+1ji9x53ocuomcY+KOrwAnWzhBu/wTEjpdgZ8I1c8i5vboYIeigMdzgY1UowYBKa2vZgVgUB32bu7gkxeg==
+"esbuild@^0.13.2":
+  "integrity" "sha512-xu4D+1ji9x53ocuomcY+KOrwAnWzhBu/wTEjpdgZ8I1c8i5vboYIeigMdzgY1UowYBKa2vZgVgUB32bu7gkxeg=="
+  "resolved" "https://registry.npmjs.org/esbuild/-/esbuild-0.13.14.tgz"
+  "version" "0.13.14"
   optionalDependencies:
-    esbuild-android-arm64 "0.13.14"
-    esbuild-darwin-64 "0.13.14"
-    esbuild-darwin-arm64 "0.13.14"
-    esbuild-freebsd-64 "0.13.14"
-    esbuild-freebsd-arm64 "0.13.14"
-    esbuild-linux-32 "0.13.14"
-    esbuild-linux-64 "0.13.14"
-    esbuild-linux-arm "0.13.14"
-    esbuild-linux-arm64 "0.13.14"
-    esbuild-linux-mips64le "0.13.14"
-    esbuild-linux-ppc64le "0.13.14"
-    esbuild-netbsd-64 "0.13.14"
-    esbuild-openbsd-64 "0.13.14"
-    esbuild-sunos-64 "0.13.14"
-    esbuild-windows-32 "0.13.14"
-    esbuild-windows-64 "0.13.14"
-    esbuild-windows-arm64 "0.13.14"
+    "esbuild-android-arm64" "0.13.14"
+    "esbuild-darwin-64" "0.13.14"
+    "esbuild-darwin-arm64" "0.13.14"
+    "esbuild-freebsd-64" "0.13.14"
+    "esbuild-freebsd-arm64" "0.13.14"
+    "esbuild-linux-32" "0.13.14"
+    "esbuild-linux-64" "0.13.14"
+    "esbuild-linux-arm" "0.13.14"
+    "esbuild-linux-arm64" "0.13.14"
+    "esbuild-linux-mips64le" "0.13.14"
+    "esbuild-linux-ppc64le" "0.13.14"
+    "esbuild-netbsd-64" "0.13.14"
+    "esbuild-openbsd-64" "0.13.14"
+    "esbuild-sunos-64" "0.13.14"
+    "esbuild-windows-32" "0.13.14"
+    "esbuild-windows-64" "0.13.14"
+    "esbuild-windows-arm64" "0.13.14"
 
-estree-walker@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-2.0.2.tgz#52f010178c2a4c117a7757cfe942adb7d2da4cac"
-  integrity sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==
+"estree-walker@^2.0.2":
+  "integrity" "sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w=="
+  "resolved" "https://registry.npmjs.org/estree-walker/-/estree-walker-2.0.2.tgz"
+  "version" "2.0.2"
 
-fsevents@~2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
-  integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
-
-function-bind@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
-  integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
-
-has@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/has/-/has-1.0.3.tgz#722d7cbfc1f6aa8241f16dd814e011e1f41e8796"
-  integrity sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
+"event-emitter@^0.3.5":
+  "integrity" "sha512-D9rRn9y7kLPnJ+hMq7S/nhvoKwwvVJahBi2BPmx3bvbsEdK3W9ii8cBSGjP+72/LnM4n6fo3+dkCX5FeTQruXA=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/event-emitter/-/event-emitter-0.3.5.tgz"
+  "version" "0.3.5"
   dependencies:
-    function-bind "^1.1.1"
+    "d" "1"
+    "es5-ext" "~0.10.14"
 
-is-core-module@^2.2.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.8.0.tgz#0321336c3d0925e497fd97f5d95cb114a5ccd548"
-  integrity sha512-vd15qHsaqrRL7dtH6QNuy0ndJmRDrS9HAM1CAiSifNUFv4x1a0CCVsj18hJ1mShxIG6T2i1sO78MkP56r0nYRw==
+"ext@^1.1.2":
+  "integrity" "sha512-6hxeJYaL110a9b5TEJSj0gojyHQAmA2ch5Os+ySCiA1QGdS697XWY1pzsrSjqA9LDEEgdB/KypIlR59RcLuHYw=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/ext/-/ext-1.7.0.tgz"
+  "version" "1.7.0"
   dependencies:
-    has "^1.0.3"
+    "type" "^2.7.2"
 
-magic-string@^0.25.7:
-  version "0.25.7"
-  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.25.7.tgz#3f497d6fd34c669c6798dcb821f2ef31f5445051"
-  integrity sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==
+"fsevents@~2.3.2":
+  "integrity" "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="
+  "resolved" "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
+  "version" "2.3.2"
+
+"function-bind@^1.1.1":
+  "integrity" "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A=="
+  "resolved" "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz"
+  "version" "1.1.1"
+
+"has@^1.0.3":
+  "integrity" "sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw=="
+  "resolved" "https://registry.npmjs.org/has/-/has-1.0.3.tgz"
+  "version" "1.0.3"
   dependencies:
-    sourcemap-codec "^1.4.4"
+    "function-bind" "^1.1.1"
 
-nanoid@^3.1.30:
-  version "3.1.30"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.30.tgz#63f93cc548d2a113dc5dfbc63bfa09e2b9b64362"
-  integrity sha512-zJpuPDwOv8D2zq2WRoMe1HsfZthVewpel9CAvTfc/2mBD1uUT/agc5f7GHGWXlYkFvi1mVxe4IjvP2HNrop7nQ==
+"html-void-elements@^2.0.0":
+  "integrity" "sha512-0quDb7s97CfemeJAnW9wC0hw78MtW7NU3hqtCD75g2vFlDLt36llsYD7uB7SUzojLMP24N5IatXf7ylGXiGG9A=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/html-void-elements/-/html-void-elements-2.0.1.tgz"
+  "version" "2.0.1"
 
-path-parse@^1.0.6:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
-  integrity sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==
-
-picocolors@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.0.0.tgz#cb5bdc74ff3f51892236eaf79d68bc44564ab81c"
-  integrity sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==
-
-postcss@^8.1.10, postcss@^8.3.8:
-  version "8.3.11"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.3.11.tgz#c3beca7ea811cd5e1c4a3ec6d2e7599ef1f8f858"
-  integrity sha512-hCmlUAIlUiav8Xdqw3Io4LcpA1DOt7h3LSTAC4G6JGHFFaWzI6qvFt9oilvl8BmkbBRX1IhM90ZAmpk68zccQA==
+"i18next@^20.4.0":
+  "integrity" "sha512-yCMYTMEJ9ihCwEQQ3phLo7I/Pwycf8uAx+sRHwwk5U9Aui/IZYgQRyMqXafQOw5QQ7DM1Z+WyEXWIqSuJHhG2A=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/i18next/-/i18next-20.6.1.tgz"
+  "version" "20.6.1"
   dependencies:
-    nanoid "^3.1.30"
-    picocolors "^1.0.0"
-    source-map-js "^0.6.2"
+    "@babel/runtime" "^7.12.0"
 
-resolve@^1.20.0:
-  version "1.20.0"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.20.0.tgz#629a013fb3f70755d6f0b7935cc1c2c5378b1975"
-  integrity sha512-wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr067wjbmzOG8byDPBX63A==
+"immer@^9.0.6":
+  "integrity" "sha512-2eB/sswms9AEUSkOm4SbV5Y7Vmt/bKRwByd52jfLkW4OLYeaTP3EEiJ9agqU0O/tq6Dk62Zfj+TJSqfm1rLVGQ=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/immer/-/immer-9.0.15.tgz"
+  "version" "9.0.15"
+
+"is-core-module@^2.2.0":
+  "integrity" "sha512-+5FPy5PnwmO3lvfMb0AsoPaBG+5KHUI0wYFXOtYPnVVVspTFUuMZNfNaNVRt3FZadstu2c8x23vykRW/NBoU6A=="
+  "resolved" "https://registry.npmjs.org/is-core-module/-/is-core-module-2.9.0.tgz"
+  "version" "2.9.0"
   dependencies:
-    is-core-module "^2.2.0"
-    path-parse "^1.0.6"
+    "has" "^1.0.3"
 
-rollup@^2.57.0:
-  version "2.60.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.60.0.tgz#4ee60ab7bdd0356763f87d7099f413e5460fc193"
-  integrity sha512-cHdv9GWd58v58rdseC8e8XIaPUo8a9cgZpnCMMDGZFDZKEODOiPPEQFXLriWr/TjXzhPPmG5bkAztPsOARIcGQ==
+"is-hotkey@^0.2.0":
+  "integrity" "sha512-UknnZK4RakDmTgz4PI1wIph5yxSs/mvChWs9ifnlXsKuXgWmOkY/hAE0H/k2MIqH0RlRye0i1oC07MCRSD28Mw=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/is-hotkey/-/is-hotkey-0.2.0.tgz"
+  "version" "0.2.0"
+
+"is-plain-object@^5.0.0":
+  "integrity" "sha512-VRSzKkbMm5jMDoKLbltAkFQ5Qr7VDiTFGXxYFXXowVj387GeGNOCsOH6Msy00SGZ3Fp84b1Naa1psqgcCIEP5Q=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/is-plain-object/-/is-plain-object-5.0.0.tgz"
+  "version" "5.0.0"
+
+"is-url@^1.2.4":
+  "integrity" "sha512-ITvGim8FhRiYe4IQ5uHSkj7pVaPDrCTkNd3yq3cV7iZAcJdHTUMPMEHcqSOy9xZ9qFenQCvi+2wjH9a1nXqHww=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/is-url/-/is-url-1.2.4.tgz"
+  "version" "1.2.4"
+
+"lodash.camelcase@^4.3.0":
+  "integrity" "sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz"
+  "version" "4.3.0"
+
+"lodash.clonedeep@^4.5.0":
+  "integrity" "sha512-H5ZhCF25riFd9uB5UCkVKo61m3S/xZk1x4wA6yp/L3RFP6Z/eHH1ymQcGLo7J3GMPfm0V/7m1tryHuGVxpqEBQ=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz"
+  "version" "4.5.0"
+
+"lodash.debounce@^4.0.8":
+  "integrity" "sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/lodash.debounce/-/lodash.debounce-4.0.8.tgz"
+  "version" "4.0.8"
+
+"lodash.foreach@^4.5.0":
+  "integrity" "sha512-aEXTF4d+m05rVOAUG3z4vZZ4xVexLKZGF0lIxuHZ1Hplpk/3B6Z1+/ICICYRLm7c41Z2xiejbkCkJoTlypoXhQ=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/lodash.foreach/-/lodash.foreach-4.5.0.tgz"
+  "version" "4.5.0"
+
+"lodash.isequal@^4.5.0":
+  "integrity" "sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/lodash.isequal/-/lodash.isequal-4.5.0.tgz"
+  "version" "4.5.0"
+
+"lodash.throttle@^4.1.1":
+  "integrity" "sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/lodash.throttle/-/lodash.throttle-4.1.1.tgz"
+  "version" "4.1.1"
+
+"lodash.toarray@^4.4.0":
+  "integrity" "sha512-QyffEA3i5dma5q2490+SgCvDN0pXLmRGSyAANuVi0HQ01Pkfr9fuoKQW8wm1wGBnJITs/mS7wQvS6VshUEBFCw=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/lodash.toarray/-/lodash.toarray-4.4.0.tgz"
+  "version" "4.4.0"
+
+"magic-string@^0.25.7":
+  "integrity" "sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ=="
+  "resolved" "https://registry.npmjs.org/magic-string/-/magic-string-0.25.9.tgz"
+  "version" "0.25.9"
+  dependencies:
+    "sourcemap-codec" "^1.4.8"
+
+"mime-match@^1.0.2":
+  "integrity" "sha512-VXp/ugGDVh3eCLOBCiHZMYWQaTNUHv2IJrut+yXA6+JbLPXHglHwfS/5A5L0ll+jkCY7fIzRJcH6OIunF+c6Cg=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/mime-match/-/mime-match-1.0.2.tgz"
+  "version" "1.0.2"
+  dependencies:
+    "wildcard" "^1.1.0"
+
+"namespace-emitter@^2.0.1":
+  "integrity" "sha512-N/sMKHniSDJBjfrkbS/tpkPj4RAbvW3mr8UAzvlMHyun93XEm83IAvhWtJVHo+RHn/oO8Job5YN4b+wRjSVp5g=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/namespace-emitter/-/namespace-emitter-2.0.1.tgz"
+  "version" "2.0.1"
+
+"nanoid@^3.1.25", "nanoid@^3.1.30", "nanoid@^3.2.0":
+  "integrity" "sha512-p1sjXuopFs0xg+fPASzQ28agW1oHD7xDsd9Xkf3T15H3c/cifrFHVwrh74PdoklAPi+i7MdRsE47vm2r6JoB+w=="
+  "resolved" "https://registry.npmjs.org/nanoid/-/nanoid-3.3.3.tgz"
+  "version" "3.3.3"
+
+"next-tick@^1.1.0":
+  "integrity" "sha512-CXdUiJembsNjuToQvxayPZF9Vqht7hewsvy2sOWafLvi2awflj9mOC6bHIg50orX8IJvWKY9wYQ/zB2kogPslQ=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/next-tick/-/next-tick-1.1.0.tgz"
+  "version" "1.1.0"
+
+"path-parse@^1.0.6":
+  "integrity" "sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw=="
+  "resolved" "https://registry.npmjs.org/path-parse/-/path-parse-1.0.7.tgz"
+  "version" "1.0.7"
+
+"picocolors@^1.0.0":
+  "integrity" "sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ=="
+  "resolved" "https://registry.npmjs.org/picocolors/-/picocolors-1.0.0.tgz"
+  "version" "1.0.0"
+
+"postcss@^8.1.10", "postcss@^8.3.8":
+  "integrity" "sha512-hCmlUAIlUiav8Xdqw3Io4LcpA1DOt7h3LSTAC4G6JGHFFaWzI6qvFt9oilvl8BmkbBRX1IhM90ZAmpk68zccQA=="
+  "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.3.11.tgz"
+  "version" "8.3.11"
+  dependencies:
+    "nanoid" "^3.1.30"
+    "picocolors" "^1.0.0"
+    "source-map-js" "^0.6.2"
+
+"preact@^10.5.13":
+  "integrity" "sha512-w0mCL5vICUAZrh1DuHEdOWBjxdO62lvcO++jbzr8UhhYcTbFkpegLH9XX+7MadjTl/y0feoqwQ/zAnzkc/EGog=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/preact/-/preact-10.10.6.tgz"
+  "version" "10.10.6"
+
+"prismjs@^1.23.0":
+  "integrity" "sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/prismjs/-/prismjs-1.29.0.tgz"
+  "version" "1.29.0"
+
+"regenerator-runtime@^0.13.4":
+  "integrity" "sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz"
+  "version" "0.13.9"
+
+"resolve@^1.20.0":
+  "integrity" "sha512-wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr067wjbmzOG8byDPBX63A=="
+  "resolved" "https://registry.npmjs.org/resolve/-/resolve-1.20.0.tgz"
+  "version" "1.20.0"
+  dependencies:
+    "is-core-module" "^2.2.0"
+    "path-parse" "^1.0.6"
+
+"rollup@^2.57.0":
+  "integrity" "sha512-cHdv9GWd58v58rdseC8e8XIaPUo8a9cgZpnCMMDGZFDZKEODOiPPEQFXLriWr/TjXzhPPmG5bkAztPsOARIcGQ=="
+  "resolved" "https://registry.npmjs.org/rollup/-/rollup-2.60.0.tgz"
+  "version" "2.60.0"
   optionalDependencies:
-    fsevents "~2.3.2"
+    "fsevents" "~2.3.2"
 
-source-map-js@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-0.6.2.tgz#0bb5de631b41cfbda6cfba8bd05a80efdfd2385e"
-  integrity sha512-/3GptzWzu0+0MBQFrDKzw/DvvMTUORvgY6k6jd/VS6iCR4RDTKWH6v6WPwQoUO8667uQEf9Oe38DxAYWY5F/Ug==
-
-source-map@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
-  integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
-
-sourcemap-codec@^1.4.4:
-  version "1.4.8"
-  resolved "https://registry.yarnpkg.com/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz#ea804bd94857402e6992d05a38ef1ae35a9ab4c4"
-  integrity sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==
-
-vite@^2.6.4:
-  version "2.6.14"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-2.6.14.tgz#35c09a15e4df823410819a2a239ab11efb186271"
-  integrity sha512-2HA9xGyi+EhY2MXo0+A2dRsqsAG3eFNEVIo12olkWhOmc8LfiM+eMdrXf+Ruje9gdXgvSqjLI9freec1RUM5EA==
+"scroll-into-view-if-needed@^2.2.28":
+  "integrity" "sha512-hxpAR6AN+Gh53AdAimHM6C8oTN1ppwVZITihix+WqalywBeFcQ6LdQP5ABNl26nX8GTEL7VT+b8lKpdqq65wXg=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.29.tgz"
+  "version" "2.2.29"
   dependencies:
-    esbuild "^0.13.2"
-    postcss "^8.3.8"
-    resolve "^1.20.0"
-    rollup "^2.57.0"
-  optionalDependencies:
-    fsevents "~2.3.2"
+    "compute-scroll-into-view" "^1.0.17"
 
-vue@^3.2.16:
-  version "3.2.22"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.22.tgz#46e4dd89e98cc4b851ae1eb35f00ced413a34bb7"
-  integrity sha512-KD5nZpXVZquOC6926Xnp3zOvswrUyO9Rya7ZUoxWFQEjFDW4iACtwzubRB4Um2Om9kj6CaJOqAVRDSFlqLpdgw==
+"slate-history@^0.66.0":
+  "integrity" "sha512-6MWpxGQZiMvSINlCbMW43E2YBSVMCMCIwQfBzGssjWw4kb0qfvj0pIdblWNRQZD0hR6WHP+dHHgGSeVdMWzfng=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/slate-history/-/slate-history-0.66.0.tgz"
+  "version" "0.66.0"
+  dependencies:
+    "is-plain-object" "^5.0.0"
+
+"slate@^0.72.0", "slate@>=0.65.3":
+  "integrity" "sha512-/nJwTswQgnRurpK+bGJFH1oM7naD5qDmHd89JyiKNT2oOKD8marW0QSBtuFnwEbL5aGCS8AmrhXQgNOsn4osAw=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/slate/-/slate-0.72.8.tgz"
+  "version" "0.72.8"
+  dependencies:
+    "immer" "^9.0.6"
+    "is-plain-object" "^5.0.0"
+    "tiny-warning" "^1.0.3"
+
+"snabbdom@^3.1.0":
+  "integrity" "sha512-wHMNIOjkm/YNE5EM3RCbr/+DVgPg6AqQAX1eOxO46zYNvCXjKP5Y865tqQj3EXnaMBjkxmQA5jFuDpDK/dbfiA=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/snabbdom/-/snabbdom-3.5.1.tgz"
+  "version" "3.5.1"
+
+"source-map-js@^0.6.2":
+  "integrity" "sha512-/3GptzWzu0+0MBQFrDKzw/DvvMTUORvgY6k6jd/VS6iCR4RDTKWH6v6WPwQoUO8667uQEf9Oe38DxAYWY5F/Ug=="
+  "resolved" "https://registry.npmjs.org/source-map-js/-/source-map-js-0.6.2.tgz"
+  "version" "0.6.2"
+
+"source-map@^0.6.1":
+  "integrity" "sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g=="
+  "resolved" "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz"
+  "version" "0.6.1"
+
+"sourcemap-codec@^1.4.8":
+  "integrity" "sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA=="
+  "resolved" "https://registry.npmjs.org/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz"
+  "version" "1.4.8"
+
+"ssr-window@^3.0.0-alpha.1":
+  "integrity" "sha512-q+8UfWDg9Itrg0yWK7oe5p/XRCJpJF9OBtXfOPgSJl+u3Xd5KI328RUEvUqSMVM9CiQUEf1QdBzJMkYGErj9QA=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/ssr-window/-/ssr-window-3.0.0.tgz"
+  "version" "3.0.0"
+
+"tiny-warning@^1.0.3":
+  "integrity" "sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/tiny-warning/-/tiny-warning-1.0.3.tgz"
+  "version" "1.0.3"
+
+"type@^1.0.1":
+  "integrity" "sha512-+5nt5AAniqsCnu2cEQQdpzCAh33kVx8n0VoFidKpB1dVVLAN/F+bgVOqOJqOnEnrhp222clB5p3vUlD+1QAnfg=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/type/-/type-1.2.0.tgz"
+  "version" "1.2.0"
+
+"type@^2.7.2":
+  "integrity" "sha512-dzlvlNlt6AXU7EBSfpAscydQ7gXB+pPGsPnfJnZpiNJBDj7IaJzQlBZYGdEi4R9HmPdBv2XmWJ6YUtoTa7lmCw=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/type/-/type-2.7.2.tgz"
+  "version" "2.7.2"
+
+"vite@^2.5.10", "vite@^2.6.4":
+  "integrity" "sha512-2HA9xGyi+EhY2MXo0+A2dRsqsAG3eFNEVIo12olkWhOmc8LfiM+eMdrXf+Ruje9gdXgvSqjLI9freec1RUM5EA=="
+  "resolved" "https://registry.npmjs.org/vite/-/vite-2.6.14.tgz"
+  "version" "2.6.14"
+  dependencies:
+    "esbuild" "^0.13.2"
+    "postcss" "^8.3.8"
+    "resolve" "^1.20.0"
+    "rollup" "^2.57.0"
+  optionalDependencies:
+    "fsevents" "~2.3.2"
+
+"vue-router@^4.0.13":
+  "integrity" "sha512-LmXrC+BkDRLak+d5xTMgUYraT3Nj0H/vCbP+7usGvIl9Viqd1UP6AsP0i69pSbn9O0dXK/xCdp4yPw21HqV9Jw=="
+  "resolved" "https://registry.npmjs.org/vue-router/-/vue-router-4.0.13.tgz"
+  "version" "4.0.13"
+  dependencies:
+    "@vue/devtools-api" "^6.0.0"
+
+"vue@^3.0.2", "vue@^3.0.5", "vue@^3.2.0", "vue@^3.2.16", "vue@3.2.22":
+  "integrity" "sha512-KD5nZpXVZquOC6926Xnp3zOvswrUyO9Rya7ZUoxWFQEjFDW4iACtwzubRB4Um2Om9kj6CaJOqAVRDSFlqLpdgw=="
+  "resolved" "https://registry.npmjs.org/vue/-/vue-3.2.22.tgz"
+  "version" "3.2.22"
   dependencies:
     "@vue/compiler-dom" "3.2.22"
     "@vue/compiler-sfc" "3.2.22"
@@ -333,9 +611,14 @@ vue@^3.2.16:
     "@vue/server-renderer" "3.2.22"
     "@vue/shared" "3.2.22"
 
-vuex@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/vuex/-/vuex-4.0.2.tgz#f896dbd5bf2a0e963f00c67e9b610de749ccacc9"
-  integrity sha512-M6r8uxELjZIK8kTKDGgZTYX/ahzblnzC4isU1tpmEuOIIKmV+TRdc+H4s8ds2NuZ7wpUTdGRzJRtoj+lI+pc0Q==
+"vuex@^4.0.2":
+  "integrity" "sha512-M6r8uxELjZIK8kTKDGgZTYX/ahzblnzC4isU1tpmEuOIIKmV+TRdc+H4s8ds2NuZ7wpUTdGRzJRtoj+lI+pc0Q=="
+  "resolved" "https://registry.npmjs.org/vuex/-/vuex-4.0.2.tgz"
+  "version" "4.0.2"
   dependencies:
     "@vue/devtools-api" "^6.0.0-beta.11"
+
+"wildcard@^1.1.0":
+  "integrity" "sha512-DXukZJxpHA8LuotRwL0pP1+rS6CS7FF2qStDDE1C7DDg2rLud2PXRMuEDYIPhgEezwnlHNL4c+N6MfMTjCGTng=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/wildcard/-/wildcard-1.1.2.tgz"
+  "version" "1.1.2"

@@ -13,6 +13,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",
+    "@wangeditor/editor": "^5.1.15",
+    "@wangeditor/editor-for-vue": "^5.1.12",
     "vite": "^2.6.4"
   }
 }
