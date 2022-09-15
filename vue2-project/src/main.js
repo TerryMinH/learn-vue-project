@@ -1,27 +1,29 @@
 /*
  * @Author: TerryMin
- * @Date: 2021-12-11 15:17:47
+ * @Date: 2022-09-15 09:28:35
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-07-14 10:08:30
+ * @LastEditTime: 2022-09-15 09:51:04
  * @Description: file not
  */
-import Vue from 'vue'
-import App from './App.vue'
-import {router} from './router'
-import Directives from './directives/index.js'
-import Toast from './plugins/toast'
-import Loading from './plugins/loading'
+import Vue from "vue";
+import { createPinia, PiniaVuePlugin } from "pinia";
+import "./assets/main.css";
+import App from "./App.vue";
+import router from "./router";
 
-Vue.use(Toast)
-Vue.use(Loading)
+import Directives from "./directives/index.js";
+import Toast from "./plugins/toast";
+import Loading from "./plugins/loading";
 
-Vue.use(Directives) // 注册指令
+Vue.use(Toast);
+Vue.use(Loading);
 
-Vue.config.productionTip = true;
+Vue.use(Directives); // 注册指令
 
-const app=new Vue({
+Vue.use(PiniaVuePlugin);
+
+new Vue({
   router,
-  render: h => h(App)
-});
-
-app.$mount('#app')
+  pinia: createPinia(),
+  render: (h) => h(App),
+}).$mount("#app");
