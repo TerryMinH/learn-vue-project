@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-19 11:00:27
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-08-29 09:39:43
+ * @LastEditTime: 2022-09-24 17:21:13
  * @Description: file not
  */
 interface Boy {
@@ -46,11 +46,19 @@ type P1 = Omit<Person, "age" | "gender">;
 const user: P1 = {
   name: "树哥",
 };
-enum str {A,B,C};
-type strUnion=keyof typeof str;
-const strInstance:strUnion='C';
+enum str {
+  A,
+  B,
+  C,
+}
+type strUnion = keyof typeof str;
+const strInstance: strUnion = "C";
 
+type arr1 = Array<string>;
+type arr2 = number[];
 
+type OrNull<Type> = Type | null;
 
+type OneOrMany<Type> = Type | Type[];
 
-
+type OneOrManyOrNull<Type> = OrNull<OneOrMany<Type>>;

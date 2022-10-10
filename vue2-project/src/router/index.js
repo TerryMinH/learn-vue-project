@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-09-15 09:28:35
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-09-15 09:32:31
+ * @LastEditTime: 2022-09-15 14:32:44
  * @Description: file not
  */
 import Vue from "vue";
@@ -17,6 +17,11 @@ const router = new VueRouter({
   routes: [
     {
       path: "/",
+      redirect: "/home",
+      component: HomeView,
+    },
+    {
+      path: "/home",
       name: "home",
       component: HomeView,
     },

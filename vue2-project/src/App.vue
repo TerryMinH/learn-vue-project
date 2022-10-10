@@ -2,12 +2,10 @@
  * @Author: TerryMin
  * @Date: 2022-09-15 09:28:35
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-09-15 11:03:38
+ * @LastEditTime: 2022-09-15 14:42:05
  * @Description: file not
 -->
-<script setup>
-console.log("app");
-</script>
+<script setup></script>
 
 <template>
   <div id="app">

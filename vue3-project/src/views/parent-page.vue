@@ -2,19 +2,18 @@
  * @Author: TerryMin
  * @Date: 2022-01-14 14:47:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-09-02 15:36:09
+ * @LastEditTime: 2022-09-17 11:09:59
  * @Description: file not
 -->
 
 <template>
-  <RichEditor />
+  <ChildComponent />
 </template>
 
 <script setup>
 import { provide } from 'vue'
 import HelloWorld from "../components/HelloWorld.vue";
 import ChildComponent from '../components/ChildComponent.vue'
-import RichEditor from '../components/RichEditor/RichEditor.vue'
 
 // provide('location', 'North Pole1')
 // provide('geolocation', {
