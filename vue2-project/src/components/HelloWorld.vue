@@ -2,23 +2,22 @@
  * @Author: TerryMin
  * @Date: 2022-09-15 09:28:35
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-10-10 18:55:17
+ * @LastEditTime: 2022-10-12 07:28:33
  * @Description: file not
 -->
-<script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true,
-  },
-});
-</script>
-
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
   </div>
 </template>
+<script>
+export default {
+  name: "HelloWorld",
+  props: {
+    msg: String,
+  },
+};
+</script>
 
 <style scoped>
 h1 {
