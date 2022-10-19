@@ -1,3 +1,10 @@
+<!--
+ * @Author: TerryMin
+ * @Date: 2022-10-12 07:26:39
+ * @LastEditors: TerryMin
+ * @LastEditTime: 2022-10-12 07:42:23
+ * @Description: file not
+-->
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
@@ -36,6 +43,9 @@ export default {
   props: {
     msg: String
   }
+  mounted() {
+    
+  },
 }
 </script>
 

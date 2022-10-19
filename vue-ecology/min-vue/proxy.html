@@ -1,0 +1,73 @@
+<!--
+ * @Author: TerryMin
+ * @Date: 2022-10-15 07:34:20
+ * @LastEditors: TerryMin
+ * @LastEditTime: 2022-10-15 10:53:44
+ * @Description: file not
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proxy数据代理</title>
+  </head>
+  <body>
+    <button onclick="setFn()">设置数据值</button>
+    <div id="div"></div>
+  </body>
+  <script>
+    const divEle = document.getElementById("div");
+
+    const data = { text: "Hello World!" };
+    // let text = "Hello World555!";
+    const effect = () => {
+      divEle.innerText = obj.text;
+    };
+
+    const bucket = new Set();
+    const obj = new Proxy(data, {
+      get(target, key) {
+        bucket.add(effect);
+        return target[key];
+      },
+      set(target, key, newValue,receiver) {
+        console.log(target,key,receiver);
+        target[key] = newValue;
+        bucket.forEach((fn) => fn());
+        return true;
+      },
+    });
+
+    // Object.defineProperty(data, "text", {
+    //   get() {
+    //     console.log('get');
+    //     return text;
+    //   },
+    //   set(newValue) {
+    //     console.log('set');
+    //     text = newValue;
+    //   },
+    // });
+
+    // Object.defineProperties(data, {
+    //   text: {
+    //     get() {
+    //       console.log("get");
+    //       return text;
+    //     },
+    //     set(newValue) {
+    //         console.log('set');
+    //       text = newValue;
+    //     },
+    //   },
+    // });
+
+    effect();
+
+    const setFn = () => {
+      obj.text = 'Hello Vue3';
+    };
+  </script>
+</html>

@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-05-28 23:28:01
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-08-18 17:15:34
+ * @LastEditTime: 2022-10-17 17:33:18
  * @Description: file not
 -->
 <template>
@@ -36,7 +36,7 @@ export default {
     'changeName'
   ]),
   say() {
-    console.log(22)
+    console.log(this.evenOrOdd)
   }
   }
 }

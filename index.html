@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-05 16:13:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-09-26 14:12:37
+ * @LastEditTime: 2022-10-16 17:21:36
  * @Description: file not
 -->
 <!DOCTYPE html>
@@ -22,110 +22,14 @@
     <button onclick="throttledScrollHandler()">点击按钮</button>
   </body>
   <script>
-    const isDate = (value) => {
-      if (!value) return false;
-      return (
-        typeof value.getTime === "function" &&
-        typeof value.getMonth === "function" &&
-        typeof value.getYear === "function"
-      );
+    const userInfo = { name: "TerryMin", age: 22 };
+    const num = 12;
+    window.localStorage.setItem("test", JSON.stringify(num));
+    
+    const throttledScrollHandler = () => {
+      const value = localStorage.getItem("test");
+      console.log(value, JSON.parse(value));
+      window.localStorage.removeItem("test23");
     };
-
-    const isObject = (value) => {
-      return Object.prototype.toString.call(value) === "[object Object]";
-    };
-    const isArray = (value) => {
-      return Object.prototype.toString.call(value) === "[object Array]";
-    };
-
-    const obj = {
-      name: "TerryMin",
-      age: 12,
-      sex: "boy",
-      secondObj: [123, 4],
-      multiObj: {
-        arr: [
-          1,
-          {
-            v: 2,
-            as: {
-              ab: "inner",
-            },
-          },
-        ],
-        data: {
-          arr: ["a", { b: 12 }],
-          str: "test",
-        },
-      },
-    };
-
-    /**
-     * 前端传递: requestBody + sign
-     * 后端获取到requestBody和sign: 自己生成 backSign 与前端sign 对比; 如果backSign==sign 通过, 反之不通过
-     *
-     * 具体流程
-     * 签名sign生成规则:
-     * 拼接对象为请求字符串: 加密参数必须是对象,加密规则：
-     * 1 将对象转成字符串&格式拼接
-     * 2 当对象属性是 对象 数组 日期类型  格式 定义为一个字符串 如:'MIGUPROJECT'
-     * 3 参数转换成字符串格式后 使用encodeURIComponent编码生成字符串 encodeUrlStr
-     * 4 sign=md5(encodeUrlStr)
-     */
-
-    // 递归对象处理成字典序
-    const recursionFn = (propKey, obj) => {
-      let upperArr = [];
-      Object.keys(obj).forEach((key) => {
-        let tempArr = [];
-        if (isObject(obj[key])) {
-          tempArr = recursionFn(`${propKey}.${key}`, obj[key]);
-        }
-        if (isArray(obj[key])) {
-          tempArr = [`${propKey}.${key}=MIGUOBJECT`];
-        }
-        if (!isObject(obj[key]) && !isArray(obj[key])) {
-          tempArr = [`${propKey}.${key}=${obj[key]}`];
-        }
-        upperArr.push(...tempArr)
-      });
-      return upperArr;
-    };
-
-    const encodeSearchParams = (propKey, obj) => {
-      if (!isObject(obj)) {
-        console.log("参数必须为Object");
-        return "";
-      }
-
-      let upperArr = [];
-      let sortObjToString = "";
-      let count = 0;
-      Object.keys(obj).forEach((key) => {
-        let tempArr = [];
-        if (isObject(obj[key])) {
-          tempArr = recursionFn(`${propKey}.${key}`, obj[key]);
-        }
-        if (isArray(obj[key])) {
-          tempArr = [`${propKey}.${key}=MIGUOBJECT`];
-        }
-        if (!isObject(obj[key]) && !isArray(obj[key])) {
-          tempArr = [`${propKey}.${key}=${obj[key]}`];
-        }
-        upperArr.push(...tempArr)
-      });
-      console.log(upperArr);
-      const sortKeys = upperArr.sort();
-
-      console.log('排序值:',sortKeys);
-      const LEN = sortKeys.length - 1;
-      sortKeys.forEach((key, index) => {
-        sortObjToString += `${key}${index < LEN ? "&" : ""}`;
-      });
-      return sortObjToString;
-      // return encodeURIComponent(sortObjToString);
-    };
-
-    console.log(encodeSearchParams("param", obj));
   </script>
 </html>

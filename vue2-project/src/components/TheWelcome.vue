@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:47
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-10-12 07:09:19
+ * @LastEditTime: 2022-10-18 18:08:10
  * @Description: file not
 -->
 <template>
@@ -96,17 +96,21 @@
         </div>
       </div>
     </div>
+
+    <AnswerDialog @onClose="handleModal" :isShow="isShow" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
+import AnswerDialog from "@/components/AnswerDialog.vue";
 
 export default {
   name: "TheWelcome",
   components: {
     HelloWorld,
+    AnswerDialog,
   },
   data: () => {
     return {
@@ -116,6 +120,7 @@ export default {
       list: [],
       isScrollPopShow: false,
       show: false,
+      isShow: false, // 是否展示续答弹窗
     };
   },
   mounted() {
@@ -129,6 +134,9 @@ export default {
     },
   },
   methods: {
+    handleModal(type) {
+      console.log(type);
+    },
     submit() {
       this.list.push(this.value);
       this.value = "";
