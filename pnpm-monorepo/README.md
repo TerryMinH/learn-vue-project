@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-07-27 18:06:28
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-08-12 17:05:42
+ * @LastEditTime: 2022-10-21 17:23:57
  * @Description: file not
 -->
 # monorepo + [pnpm](https://pnpm.io/zh/) + Vue3 + [Vite](https://vitejs.bootcss.com/) + TypeScript 多项目管理
