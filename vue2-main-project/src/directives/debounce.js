@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-03-23 10:26:06
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-09-15 15:14:03
+ * @LastEditTime: 2022-10-22 09:47:39
  * @Description: vue自定义指令及原理 https://juejin.cn/post/6939185485667532814
  */
 
@@ -29,7 +29,6 @@ const debounce = {
       Object.keys(vnode).join(", ");
   },
   inserted: function (el, { value: { fn, event, time } }) {
-    console.log(el);
     //没绑定函数直接返回
     if (typeof fn !== "function") return;
     el._timer = null;

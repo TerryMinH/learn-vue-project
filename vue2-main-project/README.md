@@ -1,41 +1,19 @@
-# vue2-project
+<!--
+ * @Author: TerryMin
+ * @Date: 2022-09-15 09:28:35
+ * @LastEditors: TerryMin
+ * @LastEditTime: 2022-10-22 10:01:14
+ * @Description: file not
+-->
+# Vue2 API学习
 
-This template should help get you started developing with Vue 3 in Vite.
+1. [computed与watch的区别](https://www.jianshu.com/p/5f83e06ae32f)
 
-## Recommended IDE Setup
+ - computed 是计算属性: 支持缓存不支持异步。如果computed属性值是函数，那么默认会走get方法。一般可用于页面有大量或者复杂的表达式去处理数据时使用。
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+ - watch 是侦听属性: 不支持缓存支持异步,一般可用于组件属性值变化的动态监听, watch函数有两个配置项deep(深度监听) immediate(组件加载立即触发回调函数的执行)
 
-## Customize configuration
+2. [Vue中$set的使用场景](https://blog.csdn.net/Web_J/article/details/86361105)
+   [Vue中$set的实现原理](https://juejin.cn/post/7015214879330172964)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```

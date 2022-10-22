@@ -2,11 +2,11 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:47
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-10-18 18:08:10
+ * @LastEditTime: 2022-10-22 09:47:18
  * @Description: https://www.cnblogs.com/amor17/p/10157313.html
 -->
 <template>
-  <div class="ex_dialog" v-if="isShowModal">
+  <div class="ex_dialog" v-if="isShow">
     <div class="ex_dialog-content">
       <div class="confirm_dialog-wrapper">
         <div class="confirm_dialog">
@@ -39,29 +39,25 @@ export default {
   data() {
     return {};
   },
+
   computed: {
-    isShowModal: function () {
-      return this.isShow;
+    // isShowModal: function () {
+    //   return this.isShow;
+    // },
+  },
+
+  watch: {
+    isShow(newValue, oldValue) {
+      console.log(newValue, oldValue);
     },
   },
 
-  mounted() {
-    console.log(91, this);
-  },
+  mounted() {},
+
   methods: {
     closeModal(type) {
       this.$emit("onClose", type);
     },
-    // goStart() {
-    // 	this.dialogOpen = false;
-    // 	Bus.$emit('isNewStart', true);
-    // },
-    // goTo() {
-    // 	this.dialogOpen = false;
-    // 	if (this.bool === 1) {
-    // 		Bus.$emit('isNewStart', false);
-    // 	}
-    // }
   },
 };
 </script>
