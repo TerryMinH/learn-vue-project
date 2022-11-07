@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-05-28 23:28:01
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-10-17 17:33:18
+ * @LastEditTime: 2022-10-27 13:27:44
  * @Description: file not
 -->
 <template>
@@ -13,7 +13,7 @@
     <button @click="decrement">-</button>
     <button @click="incrementIfOdd">Increment if odd</button>
     <button @click="incrementAsync">Increment async</button>
-    <button @click="changeName">修改姓名</button>
+    <button @click="changeName">修改姓名1</button>
     <button @click="say">say</button>
   </div>
 </template>
@@ -26,6 +26,9 @@ export default {
     ...mapGetters([
       'evenOrOdd'
     ])
+  },
+  mounted() {
+    console.log(22, this.evenOrOdd)
   },
   methods: {
     ...mapActions([

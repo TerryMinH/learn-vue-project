@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-10-15 07:34:20
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-10-15 10:53:44
+ * @LastEditTime: 2022-10-22 11:09:25
  * @Description: file not
 -->
 <!DOCTYPE html>
@@ -20,54 +20,77 @@
   <script>
     const divEle = document.getElementById("div");
 
-    const data = { text: "Hello World!" };
-    // let text = "Hello World555!";
-    const effect = () => {
-      divEle.innerText = obj.text;
+    let activeEffect;
+    const effect = (fn) => {
+      activeEffect = fn;
+      fn();
     };
 
-    const bucket = new Set();
+    // 存储副作用函数的桶
+    const bucket = new WeakMap();
+
+    // 原始数据
+    const data = { text: "hello world", name: "zhangsan" };
+
+    // 第二版 对原始数据的代理
+    const track = (target, key) => {
+      if (!activeEffect) return;
+      let depsMap = bucket.get(target);
+      if (!depsMap) {
+        bucket.set(target, (depsMap = new Map()));
+      }
+      let deps = depsMap.get(key);
+      if (!deps) {
+        deps.set(key, (deps = new Set()));
+      }
+      deps.add(activeEffect);
+    };
+    const trigger = (target, key) => {
+      const depsMap = bucket.get(target);
+      if (!depsMap) return;
+      const effects = depsMap.get(key);
+      effects && effects.forEach((fn) => fn());
+    };
+    
     const obj = new Proxy(data, {
       get(target, key) {
-        bucket.add(effect);
+        track(target, key);
         return target[key];
       },
-      set(target, key, newValue,receiver) {
-        console.log(target,key,receiver);
+      set(target, key, newValue) {
         target[key] = newValue;
-        bucket.forEach((fn) => fn());
-        return true;
+        trigger(target, key);
       },
     });
 
-    // Object.defineProperty(data, "text", {
-    //   get() {
-    //     console.log('get');
-    //     return text;
+    // 第一版 对原始数据的代理
+    // const obj = new Proxy(data, {
+    //   // 拦截读取操作
+    //   get(target, key) {
+    //     console.log(target, key);
+    //     // 将副作用函数 effect 添加到存储副作用函数的桶中
+    //     bucket.add(activeEffect);
+    //     // 返回属性值
+    //     return target[key];
     //   },
-    //   set(newValue) {
-    //     console.log('set');
-    //     text = newValue;
-    //   },
-    // });
-
-    // Object.defineProperties(data, {
-    //   text: {
-    //     get() {
-    //       console.log("get");
-    //       return text;
-    //     },
-    //     set(newValue) {
-    //         console.log('set');
-    //       text = newValue;
-    //     },
+    //   // 拦截设置操作
+    //   set(target, key, newVal) {
+    //     // 设置属性值
+    //     target[key] = newVal;
+    //     // 把副作用函数从桶里取出并执行
+    //     bucket.forEach((fn) => fn());
+    //     // 返回 true 代表设置操作成功
+    //     return true;
     //   },
     // });
 
-    effect();
+    effect(() => {
+      console.log("effect run");
+      divEle.innerText = obj.text;
+    });
 
     const setFn = () => {
-      obj.text = 'Hello Vue3';
+      obj.notText = "Hello Vue3";
     };
   </script>
 </html>
