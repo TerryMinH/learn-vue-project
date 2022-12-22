@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-05-28 23:28:01
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-07-05 16:47:05
+ * @LastEditTime: 2022-12-14 10:54:21
  * @Description: file not
  */
 import { createStore } from "vuex"
@@ -55,7 +55,7 @@ const actions = {
 // getters are functions.
 const getters = {
 	evenOrOdd: (state) => {
-		console.log(55, state)
+		console.log(551, state)
 		return state.count % 2 === 0 ? "even" : "odd"
 	}
 }

@@ -2,32 +2,32 @@
  * @Author: TerryMin
  * @Date: 2022-03-23 10:26:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-03-23 11:08:31
+ * @LastEditTime: 2022-12-13 19:13:06
  * @Description: file not
  */
 const throttle = {
   bind: function (el, { value: { fn, time } }) {
-    if (typeof fn !== 'function') return
-    el._flag = true;//开关默认为开
-    el._timer = null
+    if (typeof fn !== "function") return;
+    el._flag = true; //开关默认为开
+    el._timer = null;
     el.handler = function () {
       if (!el._flag) return;
       //执行之后开关关闭
-      el._flag && fn()
-      el._flag = false
+      el._flag && fn();
+      el._flag = false;
       if (el._timer !== null) {
-        clearTimeout(el._timer)
-        el._timer = null
+        clearTimeout(el._timer);
+        el._timer = null;
       }
       el._timer = setTimeout(() => {
-        el._flag = true;//三秒后开关开启
+        el._flag = true; //三秒后开关开启
       }, time);
-    }
-    el.addEventListener('click', el.handler)
+    };
+    el.addEventListener("click", el.handler);
   },
   unbind: function (el, binding) {
-    el.removeEventListener('click', el.handler)
-  }
-}
+    el.removeEventListener("click", el.handler);
+  },
+};
 
-export default throttle
+export default throttle;

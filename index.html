@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-05 16:13:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-11-04 11:06:06
+ * @LastEditTime: 2022-12-16 15:29:34
  * @Description: file not
 -->
 <!DOCTYPE html>
@@ -13,13 +13,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      img {
-        display: block;
+      .contaier {
+        width:400px;
+        height:400px;
+        border:1px solid rgb(64, 107, 64);
+      }
+      .second-content{
+        width:200px;
+        height:200px;
+        border:1px solid red;
+      }
+      .three-content{
+        width:100px;
+        height:100px;
+        border:1px solid green;
       }
     </style>
   </head>
   <body>
-    <button onclick="throttledScrollHandler()">点击按钮</button>
+    <div class="contaier">
+      <div class="second-content">
+        <div class="three-content">内容</div>
+      </div>
+    </div>
   </body>
   <script>
     const obj1 = { name: "as", number: 11 };

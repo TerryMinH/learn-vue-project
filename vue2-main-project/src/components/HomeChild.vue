@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:47
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-10-22 09:50:15
+ * @LastEditTime: 2022-12-13 19:24:26
  * @Description: file not
 -->
 <template>
@@ -44,6 +44,15 @@
       <span>{{ message | componentFilter }}</span>
     </div>
 
+    <div class="app-content">
+      <div
+        id="app"
+        v-imageLoad="item.url"
+        v-for="(item, index) in imageList"
+        :key="index"
+      ></div>
+    </div>
+
     <AnswerDialog @onClose="handleModal" :isShow="isShow" />
   </div>
 </template>
@@ -67,6 +76,17 @@ export default {
       isScrollPopShow: false,
       show: false,
       isShow: false, // 是否展示续答弹窗
+      imageList: [
+        {
+          url: "http://consumer-img.huawei.com/content/dam/huawei-cbg-site/greate-china/cn/mkt/homepage/section4/home-s4-p10-plus.jpg",
+        },
+        {
+          url: "http://consumer-img.huawei.com/content/dam/huawei-cbg-site/greate-china/cn/mkt/homepage/section4/home-s4-watch2-pro-banner.jpg",
+        },
+        {
+          url: "http://consumer-img.huawei.com/content/dam/huawei-cbg-site/en/mkt/homepage/section4/home-s4-matebook-x.jpg",
+        },
+      ],
     };
   },
 
