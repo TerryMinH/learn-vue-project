@@ -2,63 +2,42 @@
  * @Author: TerryMin
  * @Date: 2022-08-19 11:00:27
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-09-24 17:21:13
+ * @LastEditTime: 2022-12-24 16:24:21
  * @Description: file not
  */
-interface Boy {
-  sex: string;
-  age: number;
-}
-interface Girl {
-  sex: Array<number>;
-  hobbit: string;
-}
 
-type People = Boy | Girl;
+// Record实现
+type MyRecord<K extends keyof any, T> = {
+  [P in K]?: T;
+};
 
-function greet(person: People) {
-  if ("age" in person) {
-    console.log(`age: ${person.age}`);
-  }
-  if ("hobbit" in person) {
-    console.log(`hobbit ${person.hobbit}`);
-  }
-}
-
-const foo: {
-  [index: string]: { message: string };
-} = {};
-foo["a"] = { message: "some message" };
-
-// ts内置类型
-interface Person {
+type petsGroup = "dog" | "cat" | "fish";
+interface IPetInfo {
   name: string;
   age: number;
-  gender: string;
 }
-type User = Partial<Person>;
+// type keyExclude=Exclude<petsGroup,"fish">;
+// type IPets = Record<keyExclude, IPetInfo>; // 排除
 
-const shuge: User = {
-  name: "树哥",
+type IPets = Record<petsGroup, IPetInfo>;
+
+// type IPetsOptions = Partial<IPets>; // 可选的
+
+type IPetsPick=Omit<IPets,"fish">;
+
+const animalsInfo: IPetsPick = {
+  dog: {
+    name: "dogName",
+    age: 2,
+  },
+  cat: {
+    name: "catName",
+    age: 3,
+  },
+  // fish: {
+  //   name: "catName",
+  //   age: 3,
+  // },
 };
 
-type P1 = Omit<Person, "age" | "gender">;
-const user: P1 = {
-  name: "树哥",
-};
-enum str {
-  A,
-  B,
-  C,
-}
-type strUnion = keyof typeof str;
-const strInstance: strUnion = "C";
-
-type arr1 = Array<string>;
-type arr2 = number[];
-
-type OrNull<Type> = Type | null;
-
-type OneOrMany<Type> = Type | Type[];
-
-type OneOrManyOrNull<Type> = OrNull<OneOrMany<Type>>;
+type T0 = Extract<"a" | "b" | "c", "a" | "f">; // "a" 
