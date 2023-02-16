@@ -2,11 +2,11 @@
  * @Author: TerryMin
  * @Date: 2022-03-23 10:28:24
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-09-15 15:03:13
+ * @LastEditTime: 2023-02-16 11:34:43
  * @Description: file not
  */
 const focus = {
-  bind: function (el, binding, vnode) {
+  bind: function (_el, _binding, _vnode) {
     // console.log(el, binding, vnode);
   },
   inserted: function (el) {

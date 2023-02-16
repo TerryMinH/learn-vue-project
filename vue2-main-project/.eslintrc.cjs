@@ -1,11 +1,21 @@
+/*
+ * @Author: TerryMin
+ * @Date: 2022-09-15 09:28:35
+ * @LastEditors: TerryMin
+ * @LastEditTime: 2023-02-16 11:33:32
+ * @Description: file not
+ */
 /* eslint-env node */
 require("@rushstack/eslint-patch/modern-module-resolution");
 
 module.exports = {
-  "root": true,
-  "extends": [
+  root: true,
+  extends: [
     "plugin:vue/essential",
     "eslint:recommended",
-    "@vue/eslint-config-prettier"
-  ]
-}
+    "@vue/eslint-config-prettier",
+  ],
+  rules: {
+    "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+  },
+};

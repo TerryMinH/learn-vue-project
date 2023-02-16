@@ -2,18 +2,39 @@
  * @Author: TerryMin
  * @Date: 2022-09-15 09:28:35
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-10-22 10:01:14
+ * @LastEditTime: 2023-02-16 11:07:54
  * @Description: file not
 -->
-# Vue2 API学习
 
-1. [computed与watch的区别](https://www.jianshu.com/p/5f83e06ae32f)
+# Vue2 API 学习
 
- - computed 是计算属性: 支持缓存不支持异步。如果computed属性值是函数，那么默认会走get方法。一般可用于页面有大量或者复杂的表达式去处理数据时使用。
+1. [computed 与 watch 的区别](https://www.jianshu.com/p/5f83e06ae32f)
 
- - watch 是侦听属性: 不支持缓存支持异步,一般可用于组件属性值变化的动态监听, watch函数有两个配置项deep(深度监听) immediate(组件加载立即触发回调函数的执行)
+- computed 是计算属性: 支持缓存不支持异步。如果 computed 属性值是函数，那么默认会走 get 方法。一般可用于页面有大量或者复杂的表达式去处理数据时使用。
 
-2. [Vue中$set的使用场景](https://blog.csdn.net/Web_J/article/details/86361105)
-   [Vue中$set的实现原理](https://juejin.cn/post/7015214879330172964)
+- watch 是侦听属性: 不支持缓存支持异步,一般可用于组件属性值变化的动态监听, watch 函数有两个配置项 deep(深度监听) immediate(组件加载立即触发回调函数的执行)
 
+2. [Vue 中$set 的使用场景](https://blog.csdn.net/Web_J/article/details/86361105)
+   [Vue 中$set 的实现原理](https://juejin.cn/post/7015214879330172964)
 
+3. [Vue 组件通信](https://juejin.cn/post/6844903845642911752)
+
+```js
+// 监听值的动态变化:
+// 方式1 computed监听
+computed: {
+   // isPropShow 新定义的监听变量
+    isPropShow: function () {
+      return this.isShow; // 子组件props定义的属性
+    },
+  },
+
+// 方式2 watch监听
+  watch: {
+   // 子组件props定义的属性
+    isShow(newValue, oldValue) {
+      console.log(newValue, oldValue);
+    },
+  },
+
+```

@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:47
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-10-22 09:47:18
+ * @LastEditTime: 2023-02-16 11:15:30
  * @Description: https://www.cnblogs.com/amor17/p/10157313.html
 -->
 <template>
@@ -12,6 +12,9 @@
         <div class="confirm_dialog">
           <div class="tip">
             <p class="tip_title">是否要继续上次答题？</p>
+          </div>
+          <div>
+            发撒地方撒发发撒地方撒发发撒地方撒发发撒地方撒发发撒地方撒发发撒地方撒发
           </div>
           <div class="btns">
             <div class="cancel_btn" @click.stop="closeModal('restart')">
@@ -40,11 +43,11 @@ export default {
     return {};
   },
 
-  computed: {
-    // isShowModal: function () {
-    //   return this.isShow;
-    // },
-  },
+  // computed: {
+  //   isPropShow: function () {
+  //     return this.isShow;
+  //   },
+  // },
 
   watch: {
     isShow(newValue, oldValue) {
@@ -79,32 +82,29 @@ export default {
   }
 }
 .confirm_dialog-wrapper {
-  width: 6rem;
-  // height:2.72rem;
+  height: 200px;
+  overflow: auto;
   background: rgba(255, 255, 255, 1);
-  border-radius: 0.2rem;
+  border-radius: 2px;
   .confirm_dialog {
-    padding-top: 0.4rem;
     .tip {
       .tip_title {
-        height: 0.42rem;
-        line-height: 0.42rem;
-        font-size: 0.3rem;
+        height: 420px;
+        font-size: 30px;
         font-weight: 700;
         text-align: center;
         color: rgba(51, 51, 51, 1);
-        padding-bottom: 80px;
       }
       .tip_use,
       .tip_have {
-        height: 0.4rem;
-        line-height: 0.4rem;
-        font-size: 0.28rem;
+        height: 40px;
+        line-height: 40px;
+        font-size: 28px;
         text-align: center;
         font-weight: 400;
         color: rgba(108, 108, 108, 1);
         .amount {
-          margin: 0 0.03rem;
+          margin: 0 3px;
           color: rgba(255, 98, 62, 1);
         }
       }
@@ -117,23 +117,23 @@ export default {
       }
     }
     .btns {
-      height: 1.24rem;
-      padding: 0.28rem 0.68rem;
+      height: 124px;
+      padding: 28px 68px;
       font-size: 0;
       box-shadow: 0 -0.02rem 0.1rem 0 rgba(78, 82, 101, 0.1);
       .cancel_btn,
       .recharge_btn {
         display: inline-block;
-        width: 2.14rem;
-        height: 0.68rem;
-        line-height: 0.68rem;
-        font-size: 0.3rem;
+        width: 214px;
+        height: 68px;
+        line-height: 68px;
+        font-size: 30px;
         text-align: center;
       }
       .cancel_btn {
         color: rgba(51, 51, 51, 1);
         background: rgba(239, 243, 247, 1);
-        border-radius: 0.4rem;
+        border-radius: 40px;
       }
       .recharge_btn {
         margin-left: 0.28rem;

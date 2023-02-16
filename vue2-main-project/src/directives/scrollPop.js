@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-03-23 11:14:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-09-15 15:01:44
+ * @LastEditTime: 2023-02-16 11:29:56
  * @Description: file not
  */
 const scrollPop = {
@@ -27,7 +27,7 @@ const scrollPop = {
     document.body.scrollTop = el.st;
     if (value !== "smooth") return;
     //如果传了滚动方式为smooth平稳滚动即有感滚动，当滚动完毕后，把auto改回smooth
-    let timer = setTimeout(() => {
+    setTimeout(() => {
       cssStr = `overflow: auto; height: 100%; position: relative; top: 0px; scroll-behavior: ${
         value || "smooth"
       }`;

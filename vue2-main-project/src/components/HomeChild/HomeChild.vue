@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:47
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-12-13 19:24:26
+ * @LastEditTime: 2023-02-16 11:22:46
  * @Description: file not
 -->
 <template>
@@ -53,7 +53,11 @@
       ></div>
     </div>
 
-    <AnswerDialog @onClose="handleModal" :isShow="isShow" />
+    <AnswerDialog
+      @onClose="handleModal"
+      :isShow="isScrollPopShow"
+      v-scrollPop
+    />
   </div>
 </template>
 
@@ -69,7 +73,7 @@ export default {
   },
   data: () => {
     return {
-      message: "test",
+      message: "test22",
       msg: "LIMin",
       value: "",
       list: ["a", "b", "c"],
@@ -106,6 +110,7 @@ export default {
   methods: {
     handleModal(type) {
       console.log(type);
+      this.isScrollPopShow = false;
     },
     submit() {
       this.list.push(this.value);

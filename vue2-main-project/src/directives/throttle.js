@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-03-23 10:26:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-12-13 19:13:06
+ * @LastEditTime: 2023-02-16 11:34:49
  * @Description: file not
  */
 const throttle = {
@@ -25,7 +25,7 @@ const throttle = {
     };
     el.addEventListener("click", el.handler);
   },
-  unbind: function (el, binding) {
+  unbind: function (el, _binding) {
     el.removeEventListener("click", el.handler);
   },
 };
