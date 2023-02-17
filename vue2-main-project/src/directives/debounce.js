@@ -2,12 +2,13 @@
  * @Author: TerryMin
  * @Date: 2022-03-23 10:26:06
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-10-22 09:47:39
+ * @LastEditTime: 2023-02-17 11:30:52
  * @Description: vue自定义指令及原理 https://juejin.cn/post/6939185485667532814
  */
 
 const debounce = {
   bind: function (el, binding, vnode) {
+    console.log(el, binding, vnode);
     var s = JSON.stringify;
     el.innerHTML =
       "name: " +
