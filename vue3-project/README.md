@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:15
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-17 11:41:53
+ * @LastEditTime: 2023-02-17 16:49:06
  * @Description: file not
 -->
 
@@ -15,7 +15,7 @@
 
 4. [Vue2与Vue3 最大的区别 — Vue2使用选项类型API（Options API）对比Vue3合成型API（Composition API） 组合API使用](https://juejin.cn/post/6976830388580646942)
 
-5. [vue3全局变量定义](https://www.yisu.com/zixun/724950.html)
+5. [vue3全局变量定义](https://blog.csdn.net/weixin_50077637/article/details/118693210)
 
 
 # Vite学习

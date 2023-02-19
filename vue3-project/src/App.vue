@@ -2,16 +2,16 @@
  * @Author: TerryMin
  * @Date: 2022-01-14 14:47:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-09-02 15:36:12
+ * @LastEditTime: 2023-02-17 17:27:42
  * @Description: file not
 -->
 
 <template>
-  <ParentPage />
+  <Home />
 </template>
 
 <script setup>
-import ParentPage from "./views/parent-page.vue";
+import Home from "./views/home.vue";
 </script>
 
 <style scoped>

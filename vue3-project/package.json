@@ -13,6 +13,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
     "vite": "^2.6.4"
   }
 }
