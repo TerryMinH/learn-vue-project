@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-09-15 09:28:35
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-16 11:33:32
+ * @LastEditTime: 2023-02-20 11:15:51
  * @Description: file not
  */
 /* eslint-env node */
@@ -16,6 +16,6 @@ module.exports = {
     "@vue/eslint-config-prettier",
   ],
   rules: {
-    "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+    "no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
   },
 };

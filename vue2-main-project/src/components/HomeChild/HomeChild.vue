@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:47
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-16 11:22:46
+ * @LastEditTime: 2023-02-20 11:33:29
  * @Description: file not
 -->
 <template>
@@ -53,6 +53,8 @@
       ></div>
     </div>
 
+    <div class="my-element">jquery按钮测试</div>
+
     <AnswerDialog
       @onClose="handleModal"
       :isShow="isScrollPopShow"
@@ -62,6 +64,7 @@
 </template>
 
 <script>
+import $ from "jquery";
 import HelloWorld from "@/components/HelloWorld.vue";
 import AnswerDialog from "@/components/AnswerDialog.vue";
 
@@ -116,7 +119,11 @@ export default {
       this.list.push(this.value);
       this.value = "";
       console.log(this.value);
-      this.isScrollPopShow = true;
+      // this.isScrollPopShow = true;
+      console.log($);
+      if ($) {
+        $(".my-element").append("Some appended text.");
+      }
     },
     debounce() {
       console.log("debounce 防抖");

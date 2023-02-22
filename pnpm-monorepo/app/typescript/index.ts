@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-19 11:00:27
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-10 10:47:55
+ * @LastEditTime: 2023-02-20 16:57:32
  * @Description: file not
  */
 
@@ -58,6 +58,32 @@ export const enum ShapeFlags {
 
 const type = ShapeFlags.STATEFUL_COMPONENT || ShapeFlags.FUNCTIONAL_COMPONENT;
 
-if(type & ShapeFlags.COMPONENT){
+if (type & ShapeFlags.COMPONENT) {
   console.log(33);
 }
+
+interface A {
+  name: string;
+  age: number;
+}
+interface B {
+  name: string;
+  id: string;
+}
+
+type Union = A | B;
+const c: Union = {
+  name: 'terrymin1',
+  id: "rr",
+};
+const b: Union = {
+  name: "terrymin",
+  age: 45,
+};
+
+type Intersetion = A & B;
+const d: Intersetion = {
+  id: "yuie",
+  age: 32,
+  name:'terrymin'
+};

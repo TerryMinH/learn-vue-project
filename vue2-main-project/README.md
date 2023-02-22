@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-09-15 09:28:35
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-17 13:37:20
+ * @LastEditTime: 2023-02-22 09:28:26
  * @Description: file not
 -->
 
@@ -45,3 +45,9 @@ computed: {
 5. [Vue插件](https://juejin.cn/post/6844903946343940104)
 - 插件 (Plugins) 是一种能为 Vue 添加全局功能的工具代码,插件可以是一个带 install() 方法的对象，亦或直接是一个将被用作 install() 方法的函数.
 
+
+6. Vue项目优化
+[Vue打包优化external](https://juejin.cn/post/6844904190083350542)
+
+
+测试：https://blog.csdn.net/weixin_39547883/article/details/109387571
