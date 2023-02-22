@@ -49,5 +49,3 @@ computed: {
 6. Vue项目优化
 [Vue打包优化external](https://juejin.cn/post/6844904190083350542)
 
-
-测试：https://blog.csdn.net/weixin_39547883/article/details/109387571

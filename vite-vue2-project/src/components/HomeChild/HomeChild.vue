@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:47
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-20 11:33:29
+ * @LastEditTime: 2023-02-22 17:35:00
  * @Description: file not
 -->
 <template>
@@ -53,26 +53,26 @@
       ></div>
     </div>
 
-    <div class="my-element">jquery按钮测试</div>
+    <button class="my-element" @click="handleSync">异步加载组件</button>
 
-    <AnswerDialog
+    <!-- <AnswerDialog
       @onClose="handleModal"
       :isShow="isScrollPopShow"
       v-scrollPop
-    />
+    /> -->
   </div>
 </template>
 
 <script>
 import $ from "jquery";
 import HelloWorld from "@/components/HelloWorld.vue";
-import AnswerDialog from "@/components/AnswerDialog.vue";
+// import AnswerDialog from "@/components/AnswerDialog.vue";
 
 export default {
   name: "HomeChild",
   components: {
     HelloWorld,
-    AnswerDialog,
+    // AnswerDialog,
   },
   data: () => {
     return {
@@ -115,6 +115,7 @@ export default {
       console.log(type);
       this.isScrollPopShow = false;
     },
+
     submit() {
       this.list.push(this.value);
       this.value = "";

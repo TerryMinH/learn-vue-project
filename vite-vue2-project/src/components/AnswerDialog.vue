@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:47
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-16 11:15:30
+ * @LastEditTime: 2023-02-22 17:36:53
  * @Description: https://www.cnblogs.com/amor17/p/10157313.html
 -->
 <template>
@@ -36,7 +36,7 @@ export default {
   props: {
     isShow: {
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
   data() {
