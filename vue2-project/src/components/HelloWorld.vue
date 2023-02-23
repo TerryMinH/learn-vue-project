@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-10-12 07:26:39
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-22 17:59:13
+ * @LastEditTime: 2023-02-22 18:58:25
  * @Description: file not
 -->
 <template>
@@ -10,7 +10,7 @@
     <h1>{{ msg }}</h1>
     <button class="my-element" @click="handleSync">异步加载组件</button>
     <component :is="apps" v-if="showComp"></component>
-    <!-- <Child></Child> -->
+    <Child></Child>
   </div>
 </template>
 

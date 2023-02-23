@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-01-14 14:47:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-09-17 11:09:59
+ * @LastEditTime: 2023-02-23 10:42:00
  * @Description: file not
 -->
 
@@ -11,9 +11,16 @@
 </template>
 
 <script setup>
-import { provide } from 'vue'
+import { provide ,getCurrentInstance,defineAsyncComponent} from 'vue'
 import HelloWorld from "../components/HelloWorld.vue";
 import ChildComponent from '../components/ChildComponent.vue'
+
+const internalInstance = getCurrentInstance();
+// 搂一眼，看看注册的组件名字是啥
+console.log(internalInstance.appContext.components);
+
+
+// const ChildComponent=internalInstance.appContext.components['ChildComponent']
 
 // provide('location', 'North Pole1')
 // provide('geolocation', {

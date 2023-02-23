@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-01-14 14:47:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-17 17:27:42
+ * @LastEditTime: 2023-02-23 10:04:36
  * @Description: file not
 -->
 
@@ -11,7 +11,9 @@
 </template>
 
 <script setup>
+
 import Home from "./views/home.vue";
+
 </script>
 
 <style scoped>

@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-09-15 09:28:35
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-10-22 09:26:52
+ * @LastEditTime: 2023-02-22 19:19:26
  * @Description: file not
  */
 import Vue from "vue";
@@ -18,12 +18,14 @@ const router = new VueRouter({
     {
       path: "/",
       redirect: "/home",
-      component: HomeView,
+      // component: HomeView,
+      component: () => import("../views/HomeView.vue"),
     },
     {
       path: "/home",
       name: "home",
-      component: HomeView,
+      // component: HomeView,
+      component: () => import("../views/HomeView.vue"),
     },
     {
       path: "/about",

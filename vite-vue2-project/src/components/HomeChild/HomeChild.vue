@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:47
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-22 17:35:00
+ * @LastEditTime: 2023-02-22 19:21:25
  * @Description: file not
 -->
 <template>
@@ -53,7 +53,7 @@
       ></div>
     </div>
 
-    <button class="my-element" @click="handleSync">异步加载组件</button>
+    <button class="my-element">异步加载组件</button>
 
     <!-- <AnswerDialog
       @onClose="handleModal"
