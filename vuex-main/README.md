@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-05-28 23:28:01
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-08-19 09:45:09
+ * @LastEditTime: 2023-03-01 15:30:01
  * @Description: file not
 -->
 # [Vuex](https://vuex.vuejs.org/zh/guide/)
@@ -63,6 +63,11 @@ action:Action 类似于 mutation，不同在于：
 为了解决应用的所有状态会集中到一个比较大的对象。最后变得臃肿。Vuex 允许我们将 store 分割成模块（module）。每个模块拥有自己的 state、mutation、action、getter、甚至是嵌套子模块——从上至下进行同样方式的分割：
 
 对于模块内部的getter或者action,根节点(rootState)状态会作为第三个参数暴露出来.
+
+6. 模块化详解 
+
+模块化 [Object.create与new Object区别](https://blog.csdn.net/wuxian_wj/article/details/122048927)
+
 
 ## [Vuex使用](https://juejin.cn/post/7013325675129995272)
 

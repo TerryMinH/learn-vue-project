@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-19 11:02:06
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-12-24 16:36:39
+ * @LastEditTime: 2023-03-01 18:50:52
  * @Description: file not
 -->
 
@@ -121,8 +121,10 @@ type Person = {
   age: number;
   gender: string;
 };
+
 // 3 Pick从某个类型中挑出一些属性出来
 type P1 = Pick<Person, "name" | "age">; // { name: string; age: number; }
+
 // 4 Omit 与Pick相反，Omit<T,K> 从T中取出除去K的其他所有属性
 type P2 = Omit<Person, "age" | "gender">; // {name:string}
 
@@ -144,3 +146,5 @@ const test: ReturnType<Func> = "1";
 // 8 Parameters 用于获得函数的参数类型所组成的元组类型。
 type U1 = Parameters<(a: number, b: string) => void>; // [number, string]
 ```
+
+## TS继承

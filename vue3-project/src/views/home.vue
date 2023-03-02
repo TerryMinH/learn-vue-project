@@ -2,23 +2,21 @@
  * @Author: TerryMin
  * @Date: 2022-01-14 14:47:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-23 10:42:00
+ * @LastEditTime: 2023-03-02 17:05:16
  * @Description: file not
 -->
 
 <template>
-  <ChildComponent />
+  <PiniaComponent />
 </template>
 
 <script setup>
-import { provide ,getCurrentInstance,defineAsyncComponent} from 'vue'
-import HelloWorld from "../components/HelloWorld.vue";
-import ChildComponent from '../components/ChildComponent.vue'
+import { provide, getCurrentInstance, defineAsyncComponent, ref } from "vue";
+import { PiniaComponent ,PinaBasicSetUp} from "@/components";
 
 const internalInstance = getCurrentInstance();
 // 搂一眼，看看注册的组件名字是啥
 console.log(internalInstance.appContext.components);
-
 
 // const ChildComponent=internalInstance.appContext.components['ChildComponent']
 
@@ -30,7 +28,7 @@ console.log(internalInstance.appContext.components);
 
 // const handleFn = (e) => {
 //   console.log(e);
-  
+
 // };
 </script>
 

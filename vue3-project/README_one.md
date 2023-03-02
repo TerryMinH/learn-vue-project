@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:15
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-17 16:49:06
+ * @LastEditTime: 2023-03-02 16:47:54
  * @Description: file not
 -->
 
@@ -18,7 +18,10 @@
 5. [vue3全局变量定义](https://blog.csdn.net/weixin_50077637/article/details/118693210)
 
 
-# Vite学习
-[vite依赖预构建](https://juejin.cn/post/6930407545374785543)
 
+# Pinia使用
+1. 基本使用示例
+- [Pinia基本使用](https://juejin.cn/post/7068113574043844622#heading-10)
+
+- [Pinia函数式处理](https://juejin.cn/post/7057439040911441957)
 

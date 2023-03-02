@@ -73,10 +73,10 @@
   "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@types/json-schema/-/json-schema-7.0.11.tgz"
   "version" "7.0.11"
 
-"@types/node@*":
-  "integrity" "sha512-gC3TazRzGoOnoKAhUx+Q0t8S9Tzs74z7m0ipwGpSqQrleP14hKxP4/JUeEQcD3W1/aIpnWl8pHowI7WokuZpXg=="
-  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@types/node/-/node-18.13.0.tgz"
-  "version" "18.13.0"
+"@types/node@*", "@types/node@^18.14.2":
+  "integrity" "sha512-1uEQxww3DaghA0RxqHx0O0ppVlo43pJhepY51OxuQIKHpjbnYLA7vcdwioNPzIqmC2u3I/dmylcqjlh0e7AyUA=="
+  "resolved" "http://nexus.cmvideo.cn:8081/repository/npm-public/@types/node/-/node-18.14.2.tgz"
+  "version" "18.14.2"
 
 "@vitejs/plugin-vue@^1.9.3":
   "integrity" "sha512-0CZqaCoChriPTTtGkERy1LGPcYjGFpi2uYRhBPIkqJqUGV5JnJFhQAgh6oH9j5XZHfrRaisX8W0xSpO4T7S78A=="
