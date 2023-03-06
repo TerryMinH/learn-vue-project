@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-05 16:28:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-21 10:22:04
+ * @LastEditTime: 2023-03-06 16:33:27
  * @Description: file not
 -->
 
@@ -58,10 +58,13 @@ const d: Intersetion = {
 };
 ```
 
-5. 接口 与 type(类型别名) 区别：
+5. 接口 与 type(类型别名) 区别：(https://juejin.cn/post/6844904114925600776)
+- type 会给一个类型起个新名字。 type 有时和 interface 很像，但是可以作用于原始值（基本类型），联合类型，元组以及其它任何你需要手写的类型
 
 - 都允许扩展：interface 用 extends 来实现扩展;type 使用 & 实现扩展
 - 不同点：type 可以声明基本数据类型别名/联合类型/元组等，而 interface 不行; interface 能够合并声明，而 type 不行
+- 公共的用 interface 实现，不能用 interface 实现的再用 type 实现。
+
 
 6. ts 操作符
 
@@ -124,3 +127,5 @@ const shoe: SHOEBOX.Shoe = {
 4. declare
 
 - declare:声明全局变量、全局函数、全局类或全局枚举类型等。工作中你可能已经用过的 eval、isNaN、encodeURI 和 parseInt 等函数也是在 lib.es5.d.ts 声明文件中声明的.[declare 用法](https://juejin.cn/post/7105644010668032030)
+
+[.d.ts描述文件的使用](https://blog.csdn.net/zy21131437/article/details/121946978)

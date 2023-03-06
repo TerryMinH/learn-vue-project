@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-19 11:02:06
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-01 18:50:52
+ * @LastEditTime: 2023-03-06 16:13:00
  * @Description: file not
 -->
 
@@ -43,7 +43,7 @@ function print<T>(arg: T) {
 const myPrint: Iprint<number> = print;
 ```
 
-## ts 常用操作符
+## ts 关键字(https://juejin.cn/post/6985296521495314445#heading-28)
 
 1. typeof : 获取变量或属性的类型,一般和其他类型操作符搭配使用
 
@@ -91,21 +91,19 @@ let strLength: number = (<string>someValue).length;
 let strAsLength: number = (someValue as string).length;
 ```
 
-## ts 泛型工具类型
+4. extends: K extend keyof T: 表示 K 是 T 的子类型，这里是一个类型约束声明。(https://blog.csdn.net/qq_36503569/article/details/119383782)
+5. in: in 可以理解为 for ... in，表示从 keyof T 中去遍历每一个类型
 
-1. extends: K extend keyof T: 表示 K 是 T 的子类型，这里是一个类型约束声明。(https://blog.csdn.net/qq_36503569/article/details/119383782)
-2. in: in 可以理解为 for ... in，表示从 keyof T 中去遍历每一个类型
-
-3. infer 占位符式的关键字:表示在 extends 条件语句中以占位符出现的用来修饰数据类型的关键字，被修饰的数据类型等用到的时候才能被推断出来
+6. infer 占位符式的关键字:表示在 extends 条件语句中以占位符出现的用来修饰数据类型的关键字，被修饰的数据类型等用到的时候才能被推断出来
 
 - 作用:获取参数、返回值、泛型的类型
 - 出现位置:参数、返回值、类型的泛型具体化类型上
 - 泛型与 infer 区别: 出现位置的不同:1 泛型出现在函数，接口，类中。2infer 出现在 extends 后的表达式中
 - [infer 使用](https://blog.csdn.net/lcl130/article/details/125352331)
 
-## Ts 进阶
 
-- [条件类型](https://blog.csdn.net/lcl130/article/details/125244779)
+7. [条件类型](https://blog.csdn.net/lcl130/article/details/125244779)
+
 
 ## [内置工具类型实现](https://juejin.cn/post/6896043465801793550)
 

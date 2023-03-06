@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-05 16:13:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-21 10:39:02
+ * @LastEditTime: 2023-03-04 11:27:37
  * @Description: file not
 -->
 <!DOCTYPE html>
@@ -38,53 +38,31 @@
     </div>
   </body>
   <script>
-    function queryToObject(str) {
-      if (!str || str == "") return {};
-      var o = {},
-        list = str.split("&"),
-        i = 0,
-        item;
-      console.log(list);
-      while (list[i]) {
-        item = list[i].split("=");
-        o[item[0]] = item[1];
-        i++;
-      }
-      return o;
-    }
-     function getUrlParams(queryString) {
-      let result = {};
-      let reg = /[?&][^?&]+=[^?&]+/g;
-      let newSearch = queryString.match(reg);
-      console.log(newSearch);
-      if (newSearch) {
-        newSearch.forEach((item) => {
-          let temp = item.substring(1).split("=");
-          console.log(temp);
-          let key = temp[0];
-          let value = temp[1];
-          result[key] = value;
-        });
-      }
-      return result;
-    }
+    // const a = new String("Hello world"); // a === "Hello world" is false
+    // const b = String("Hello world"); // b === "Hello world" is true
+    // a instanceof String; // is true
+    // b instanceof String; // is false
+    // typeof a; // "object"
+    // typeof b; // "string"
+    // console.log(a);
+    // console.log(b);
 
-    const url =
-      "http://local.miguvideo.com/promotion/provincevml/dist/index.html?needLazyimg=1&pageId=6fd20aaf1fe24c8a933240311d58687d&isLeGao=1#/";
-    console.log(queryToObject(url));
-    console.log(getUrlParams(url));
-
-    function objectToQuery(o) {
-      var set = [];
-      for (var i in o) {
-        set.push(i + "=" + encodeURIComponent(o[i]));
-      }
-      return set.join("&");
+    //普通函数
+    function person(name, age, sex) {
+      this.name = name;
+      this.age = age;
+      this.sex = sex;
+      this.sayHello = function () {
+        console.log("你好，我叫" + this.name);
+      };
     }
-    const urlObj = {
-      name: "terrymin",
-      age: 12,
-    };
-    console.log(objectToQuery(urlObj));
+    //普通函数的调用方法
+    person("lab", 18, "男");
+    window.sayHello(); //你好,我叫lab
+    console.log(age); //18
+
+    var arr = new Int16Array([21, 31]);
+    console.log(arr[1]); // 31
+    console.log(arr);
   </script>
 </html>

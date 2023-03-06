@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:15
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-02 16:47:54
+ * @LastEditTime: 2023-03-02 17:15:45
  * @Description: file not
 -->
 
@@ -21,7 +21,4 @@
 
 # Pinia使用
 1. 基本使用示例
-- [Pinia基本使用](https://juejin.cn/post/7068113574043844622#heading-10)
-
-- [Pinia函数式处理](https://juejin.cn/post/7057439040911441957)
 

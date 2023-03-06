@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-06-14 06:54:49
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-02 15:07:13
+ * @LastEditTime: 2023-03-02 17:16:07
  * @Description: file not
 -->
 <template>
@@ -15,7 +15,7 @@
   </div>
 </template>
 
-<script setup name="ChildComponent">
+<script setup>
 import { ref, onMounted, getCurrentInstance } from "vue";
 import { storeToRefs } from "pinia";
 import { useCounterStore } from "@/stores/counter";

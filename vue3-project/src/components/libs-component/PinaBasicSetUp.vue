@@ -2,8 +2,8 @@
  * @Author: TerryMin
  * @Date: 2023-03-02 14:40:02
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-02 16:59:44
- * @Description: file not
+ * @LastEditTime: 2023-03-02 17:14:06
+ * @Description: [Pinia函数式处理](https://juejin.cn/post/7057439040911441957)
 -->
 <template>
   <div class="box-styl">
@@ -21,7 +21,8 @@
   </div>
 </template>
 
-<script setup lang="ts" name="PinaBasicSetUp">
+<script setup>
+import { ref, onMounted, getCurrentInstance } from "vue";
 import { storeToRefs } from "pinia";
 import { useCounterStoreForSetup } from "@/stores/counterForSetup";
 

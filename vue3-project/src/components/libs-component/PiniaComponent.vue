@@ -2,8 +2,8 @@
  * @Author: TerryMin
  * @Date: 2022-06-14 06:54:49
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-02 14:23:40
- * @Description: file not
+ * @LastEditTime: 2023-03-02 17:15:34
+ * @Description: Pinia基本使用](https://juejin.cn/post/7068113574043844622#heading-10)
 -->
 <template>
   <div>
