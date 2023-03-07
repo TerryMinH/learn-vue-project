@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-19 11:02:06
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-06 16:13:00
+ * @LastEditTime: 2023-03-07 14:04:58
  * @Description: file not
 -->
 
@@ -144,5 +144,3 @@ const test: ReturnType<Func> = "1";
 // 8 Parameters 用于获得函数的参数类型所组成的元组类型。
 type U1 = Parameters<(a: number, b: string) => void>; // [number, string]
 ```
-
-## TS继承

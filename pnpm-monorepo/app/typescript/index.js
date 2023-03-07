@@ -1,23 +1,21 @@
 "use strict";
-/*
- * @Author: TerryMin
- * @Date: 2022-08-19 11:00:27
- * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-10 10:46:00
- * @Description: file not
- */
 exports.__esModule = true;
-var animalsInfo = {
-    dog: {
-        name: "dogName",
-        age: 2
-    },
-    cat: {
-        name: "catName",
-        age: 3
-    }
+exports.FRUITS_LIST = exports.FRUITS_OBJECT = void 0;
+exports.FRUITS_OBJECT = {
+    apple: "苹果",
+    banana: "香蕉",
+    pear: "梨",
+    2: '两个未知水果'
 };
-var type = 256 /* ShapeFlags.COMPONENT_SHOULD_KEEP_ALIVE */ || 2 /* ShapeFlags.FUNCTIONAL_COMPONENT */;
-if (type & 6 /* ShapeFlags.COMPONENT */) {
-    console.log(33);
+function mapObjectToArray(o) {
+    var arr = [];
+    for (var item in o) {
+        arr.push({ label: o[item], value: item });
+    }
+    // Object.keys(o).forEach((item) => {
+    //   arr.push({ label: o[item], value: item });
+    // });
+    return arr;
 }
+exports.FRUITS_LIST = mapObjectToArray(exports.FRUITS_OBJECT);
+console.log(exports.FRUITS_LIST);
