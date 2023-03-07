@@ -2,17 +2,18 @@
  * @Author: TerryMin
  * @Date: 2022-01-14 14:47:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-02 17:05:16
+ * @LastEditTime: 2023-03-07 19:01:37
  * @Description: file not
 -->
 
 <template>
-  <PiniaComponent />
+  <BaseComponent />
+  <HookComponent />
 </template>
 
 <script setup>
 import { provide, getCurrentInstance, defineAsyncComponent, ref } from "vue";
-import { PiniaComponent ,PinaBasicSetUp} from "@/components";
+import { BaseComponent ,HookComponent} from "@/components";
 
 const internalInstance = getCurrentInstance();
 // 搂一眼，看看注册的组件名字是啥

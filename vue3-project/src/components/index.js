@@ -2,15 +2,16 @@
  * @Author: TerryMin
  * @Date: 2023-02-23 10:32:36
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-02 17:04:44
+ * @LastEditTime: 2023-03-07 19:01:23
  * @Description: https://juejin.cn/post/7137562715676999710
  */
 
 export { default as ChildComponent } from "./libs-component/ChildComponent.vue";
-export { default as HelloWorld } from "./libs-component/HelloWorld.vue";
+export { default as BaseComponent } from "./libs-component/BaseComponent.vue";
 export { default as TodoList } from "./libs-component/TodoList.vue";
 export { default as PiniaComponent } from "./libs-component/PiniaComponent.vue";
 export { default as PinaBasicSetUp } from "./libs-component/PinaBasicSetUp.vue";
+export { default as HookComponent } from "./libs-component/HookComponent.vue";
 
 
 // export default (app, defineAsyncComponent) => {
