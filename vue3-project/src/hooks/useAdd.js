@@ -2,22 +2,42 @@
  * @Author: TerryMin
  * @Date: 2023-03-07 15:51:08
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-07 16:04:49
+ * @LastEditTime: 2023-03-10 08:10:16
  * @Description: file not
  */
-import { ref, watch } from "vue";
+import { reactive, toRefs } from "vue";
 
-const useAdd = ({ num1, num2 }) => {
-  const addNum = ref(0);
-  watch([num1, num2], ([num1, num2]) => {
-    addFn(num1, num2);
-  });
-  const addFn = (num1, num2) => {
-    addNum.value = num1 + num2;
+const store = reactive({
+  state: {
+    name: "Eduardo",
+    isAdmin: true,
+  },
+  number: 2,
+});
+
+const logout = async () => {
+  store.state.isAdmin = false;
+  store.state.name = "";
+  store.number = 3;
+  console.log(store.state);
+};
+
+const login = async (user) => {
+  store.state.isAdmin = true;
+  store.state.name = user;
+  console.log(store.state);
+};
+
+export const useUserStore = (obj) => {
+  const paramsObj = reactive(obj);
+  const changeNumber = () => {
+    paramsObj.testNumber = 6;
   };
   return {
-    addNum,
-    addFn,
+    ...toRefs(store),
+    logout,
+    login,
+    paramsObj,
+    changeNumber
   };
 };
-export { useAdd };

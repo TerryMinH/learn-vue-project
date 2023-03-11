@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-05 16:28:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-06 16:33:27
+ * @LastEditTime: 2023-03-08 17:35:40
  * @Description: file not
 -->
 
@@ -10,9 +10,25 @@
 
 [typescript 基础学习](https://juejin.cn/post/7124117404187099172#heading-58)
 
-1. unknown 与 any 的最大区别是：
+1. [unknown 与 any 的最大区别](https://juejin.cn/post/7021676475434663966)
 
 任何类型的值可以赋值给 any，同时 any 类型的值也可以赋值给任何类型。unknown 任何类型的值都可以赋值给它，但它只能赋值给 unknown 和 any
+
+```js
+function invokeAnything(callback: unknown) {
+  // 可以将任何东西赋给 `unknown` 类型，
+  // 但在进行类型检查或类型断言之前，不能对 `unknown` 进行操作
+  if (typeof callback === "function") {
+    callback();
+  }
+}
+invokeAnything(1); // You can assign anything to `unknown` type
+
+function invokeAny(callback: any) {
+  callback();
+}
+invokeAny(1); // throws "TypeError: callback is not a function"
+```
 
 2. object Object 和 {} 类型
 
@@ -59,18 +75,19 @@ const d: Intersetion = {
 ```
 
 5. 接口 与 type(类型别名) 区别：(https://juejin.cn/post/6844904114925600776)
+
 - type 会给一个类型起个新名字。 type 有时和 interface 很像，但是可以作用于原始值（基本类型），联合类型，元组以及其它任何你需要手写的类型
 
 - 都允许扩展：interface 用 extends 来实现扩展;type 使用 & 实现扩展
 - 不同点：type 可以声明基本数据类型别名/联合类型/元组等，而 interface 不行; interface 能够合并声明，而 type 不行
 - 公共的用 interface 实现，不能用 interface 实现的再用 type 实现。
 
-
 6. ts 操作符
 
 - [ts 空值合并运算符(??)](https://cloud.tencent.com/developer/article/1600583)
+
 ```js
-const foo = null ?? 'default string';
+const foo = null ?? "default string";
 console.log(foo); // 输出："default string"
 
 const baz = 0 ?? 42;
@@ -128,4 +145,4 @@ const shoe: SHOEBOX.Shoe = {
 
 - declare:声明全局变量、全局函数、全局类或全局枚举类型等。工作中你可能已经用过的 eval、isNaN、encodeURI 和 parseInt 等函数也是在 lib.es5.d.ts 声明文件中声明的.[declare 用法](https://juejin.cn/post/7105644010668032030)
 
-[.d.ts描述文件的使用](https://blog.csdn.net/zy21131437/article/details/121946978)
+[.d.ts 描述文件的使用](https://blog.csdn.net/zy21131437/article/details/121946978)

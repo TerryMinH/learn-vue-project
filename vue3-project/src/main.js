@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-01-14 14:57:53
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-02 16:27:55
+ * @LastEditTime: 2023-03-08 09:18:26
  * @Description: file not
  */
 import { createApp,defineAsyncComponent } from "vue";
@@ -12,7 +12,7 @@ import App from "./App.vue";
 import plugin from "./plugins/plugin-child.js";
 
 const app = createApp(App);
-
+console.log(app);
 // store
 app.use(createPinia());
 

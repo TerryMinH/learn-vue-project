@@ -2,12 +2,13 @@
  * @Author: TerryMin
  * @Date: 2022-01-14 14:47:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-07 19:01:37
+ * @LastEditTime: 2023-03-08 10:15:43
  * @Description: file not
 -->
 
 <template>
   <BaseComponent />
+  <hr>
   <HookComponent />
 </template>
 

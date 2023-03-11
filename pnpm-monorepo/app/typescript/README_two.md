@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-19 11:02:06
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-07 14:04:58
+ * @LastEditTime: 2023-03-08 17:09:48
  * @Description: file not
 -->
 
@@ -101,9 +101,7 @@ let strAsLength: number = (someValue as string).length;
 - 泛型与 infer 区别: 出现位置的不同:1 泛型出现在函数，接口，类中。2infer 出现在 extends 后的表达式中
 - [infer 使用](https://blog.csdn.net/lcl130/article/details/125352331)
 
-
 7. [条件类型](https://blog.csdn.net/lcl130/article/details/125244779)
-
 
 ## [内置工具类型实现](https://juejin.cn/post/6896043465801793550)
 
@@ -144,3 +142,9 @@ const test: ReturnType<Func> = "1";
 // 8 Parameters 用于获得函数的参数类型所组成的元组类型。
 type U1 = Parameters<(a: number, b: string) => void>; // [number, string]
 ```
+
+- [Exclude 与 Omit 区别总结](https://www.fullstackbb.com/typescript/difference-between-omit-and-exclude-in-typescript)
+
+  Exclude 是用在联合类型上的，而 Omit 是用在对象类型或者 interface 上的。Omit 的内部使用了 Exclude 来取 Keys.
+
+  Extract 与 Pick 类似:都是提取指定的配置项

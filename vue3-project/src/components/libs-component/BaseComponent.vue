@@ -2,49 +2,26 @@
  * @Author: TerryMin
  * @Date: 2022-04-26 10:00:09
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-07 19:29:17
+ * @LastEditTime: 2023-03-08 10:01:36
  * @Description: file not
 -->
 <template>
   <div>
     <button type="button" @click="changeBtn('1')">
-      按钮{{ state1.nested.bar }}
+      按钮1
     </button>
+    <button @click="changeBtn('2')"> 按钮2 </button>
   </div>
-  <h1>{{ msg }}</h1>
-  <button type="button" @click="count++">count is: {{ count }}</button>
-  <view @click="handleBtn" ref="box"> 点击新增 </view>
+  <div class="content">
+  {{ newObj }}
+  </div>
 </template>
 
 <script setup>
 import { ref, reactive, onMounted, toRefs, toRef, shallowReactive } from "vue";
 
-defineProps({
-  msg: String,
-});
-
-const count = ref(0);
-const emits = defineEmits(["onExport"]);
-const state = reactive({
-  foo: 1,
-  bar: 2,
-});
-const color = ref("red");
-const state1 = shallowReactive({
-  foo: 1,
-  nested: {
-    bar: 2,
-  },
-});
-
-const students = toRefs(state1);
-students.foo=2;
-console.log(students, state1);
-
-// 生命周期钩子
-onMounted(() => {
-  console.log(`The initial count is ${count.value}.`);
-});
+let obj = { name: "alice", age: 12 };
+let newObj = toRef(obj, 'name');
 
 const changeBtn = (type) => {
   switch (type) {
@@ -52,11 +29,11 @@ const changeBtn = (type) => {
       state1.foo++;
       state1.nested.bar++;
       break;
+    case "2":
+      newObj.value = "Tom";
+      console.log(obj,newObj);
+      break;
   }
-};
-
-const handleBtn = () => {
-  emits("onExport", "emits---");
 };
 </script>
 

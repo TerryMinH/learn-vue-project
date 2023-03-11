@@ -1,38 +1,50 @@
 <!--
  * @Author: TerryMin
- * @Date: 2022-04-26 10:00:09
+ * @Date: 2023-03-07 15:56:46
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-07 16:04:17
+ * @LastEditTime: 2023-03-10 08:23:41
  * @Description: file not
 -->
+
 <template>
   <div>
-    <button type="button" @click="changeBtn">Hooks按钮</button>
+    <p>是否登录：{{ state.isAdmin }}</p>
+    <p>name:{{ state.name }}</p>
+    <p>数字:{{ number }} {{ ReactvieObj.testNumber }}</p>
+
+    <hr />
+    <button @click="toggleLogin">切换登录</button>
   </div>
-  <div>num1:<input v-model.number="num1" /></div>
-  <div>加法等于:{{ addNum }}</div>
 </template>
 
 <script setup>
-import { ref, reactive, onMounted, toRef } from "vue";
-import { useAdd } from "@/hooks/useAdd";
+import { toRefs, toRef } from "vue";
+// import { useStorage } from "@vueuse/core";
+import { useUserStore } from "@/hooks/useAdd";
+const obj = {
+  testNumber: 5,
+};
+const { state, number, login, logout, changeNumber,paramsObj } = useUserStore(obj);
+console.log(22,obj);
+const ReactvieObj = toRefs(paramsObj);
+// const numStore = toRef(store, 'number');
 
-const num1 = ref(2);
-const num2 = ref(1);
-const { addNum, addFn } = useAdd({ num1, num2 });
-
-// 生命周期钩子
-onMounted(() => {
-  console.log(`The initial count is ${addNum.value}.`);
-});
-
-const changeBtn = () => {
-  addFn(num1.value, num2.value);
+// console.log(numStore);
+const toggleLogin = async () => {
+  console.log(state);
+  // console.log("toggleLogin", store, testStore);
+  await logout();
+  changeNumber();
+  console.log(66,obj);
+  // console.log(store.state.isAdmin);
+  // if (store.state.isAdmin) {
+  //   console.log(111);
+  //   await logout();
+  // } else {
+  //   console.log(222);
+  //   await login("ed", "ed");
+  // }
+  console.log("store", state);
+  // console.log("testStore", testStore);
 };
 </script>
-
-<style scoped>
-h1 {
-  color: v-bind(color);
-}
-</style>

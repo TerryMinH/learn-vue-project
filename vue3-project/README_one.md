@@ -2,22 +2,41 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:15
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-07 19:31:07
+ * @LastEditTime: 2023-03-08 16:05:32
  * @Description: file not
 -->
 
 # Vue3 API 学习
 
-1. [Ref 与 Reactive 区别](https://juejin.cn/post/6976611660161089543)
+1. [Ref 与 Reactive 区别](https://blog.csdn.net/cookcyq__/article/details/121618833)
 
-- toRef 与 toRefs 两者区别:
+一 ref、 toRef 、 toRefs
+ref 的本质是拷贝，与原始数据没有引用关系.响应式数据发生改变，而原始数据并不会改变,界面会自动更新.
 
-  toRef 与 toRefs 都是将 reactive 的 json 内节点提取出来，做为独立的响应式结构。
+toRef 的本质是引用，与原始数据有关联,并不会触发 UI 界面的更新
 
-  oRef 是指定某一节点提取出来，toRefs 是一次性将所有节点提取出来。但 toRefs 只能提取一级节点！
+toRefs 接收一个对象作为参数，它会遍历对象身上的所有属性，然后挨个调用 toRef 执行
 
-  toRefs 返回的变量修改，与原始值无任何响应式关联。toRefs 只提取第一级子节点示例：
+toRef 与 toRefs 两者区别:
 
+toRef 与 toRefs 都是将 reactive 的 json 内节点提取出来，做为独立的响应式结构。
+
+toRef 是指定某一节点提取出来，toRefs 是一次性将所有节点提取出来。但 toRefs 只能提取一级节点！
+
+toRefs 返回的变量修改，与原始值无任何响应式关联。toRefs 只提取第一级子节点
+
+
+```js
+let obj = { name: "alice", age: 12 };
+let newObj = ref(obj.name);
+let newObj2 = toRef(obj, "name");
+let newObj3= toRefs(obj);
+
+function change() {
+  newObj.value = "Tom";
+  console.log(obj, newObj);
+}
+```
 
 2. [defineComponent 解决的问题](https://blog.csdn.net/qq_36157085/article/details/109498473)
 
