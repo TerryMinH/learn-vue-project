@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-19 11:02:06
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-08 17:09:48
+ * @LastEditTime: 2023-03-24 10:14:40
  * @Description: file not
 -->
 
@@ -91,7 +91,10 @@ let strLength: number = (<string>someValue).length;
 let strAsLength: number = (someValue as string).length;
 ```
 
-4. extends: K extend keyof T: 表示 K 是 T 的子类型，这里是一个类型约束声明。(https://blog.csdn.net/qq_36503569/article/details/119383782)
+4. extends: K extends keyof T: 表示 K 是 T 的子类型，这里是一个类型约束声明。
+   [Record 中 extends](https://blog.csdn.net/qq_36503569/article/details/119383782)
+   [extends 关键字一般用法](https://juejin.cn/post/6998736350841143326)
+
 5. in: in 可以理解为 for ... in，表示从 keyof T 中去遍历每一个类型
 
 6. infer 占位符式的关键字:表示在 extends 条件语句中以占位符出现的用来修饰数据类型的关键字，被修饰的数据类型等用到的时候才能被推断出来
@@ -109,7 +112,7 @@ let strAsLength: number = (someValue as string).length;
 // 1 Exclude<T, U> 的作用是将某个类型中属于另一个的类型移除掉,剩余的属性构成新的类型
 type T0 = Exclude<"a" | "b" | "c", "a">; // "b" | "c"
 
-// 2 Extract和 Exclude 相反，Extract<T,U> 从 T 中提取出 U。
+// 2 Extract 和 Exclude 相反，Extract<T,U> 从 T 中提取出 U。
 type T1 = Extract<"a" | "b" | "c", "a" | "f">; // "a"
 
 type Person = {

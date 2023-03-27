@@ -1,18 +1,30 @@
-// Pass in a string literal
-var url = new URL("https://example.com?foo=1&bar=2");
-// Retrieve from window.location
-// var url2 = new URL(window.location);
+const objTarget = {
+  name: "terrymin",
+  age: 20,
+};
+var obj = new Proxy(objTarget, {
+  get: function (target, propKey, receiver) {
+    console.log(11, target, propKey, receiver);
+    return Reflect.get(target, propKey, receiver);
+  },
+  set: function (target, propKey, value, receiver) {
+    console.log(`setting ${propKey}!`);
+    return Reflect.set(target, propKey, value, receiver);
+  },
+  apply:()=>{
+    console.log('I am apply');
+  }
+});
+// obj.sex='boy';
+// console.log(obj.name);
 
-// Retrieve params via url.search, passed into ctor
-var params = new URLSearchParams(url.search);
-// var params2 = new URLSearchParams(url2.search);
+var target = function () { return 'I am the target'; };
+var handler = {
+  apply: function () {
+    return 'I am the proxy';
+  }
+};
 
-// Pass in a sequence
-var params3 = new URLSearchParams([
-  ["foo", 1],
-  ["bar", 2],
-]);
+var p = new Proxy(target, handler);
 
-// Pass in a record
-var params4 = new URLSearchParams({ foo: 1, bar: 2 });
-console.log(params,params3,params4);
+console.log(p());

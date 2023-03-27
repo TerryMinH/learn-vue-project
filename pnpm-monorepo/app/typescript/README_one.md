@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-05 16:28:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-08 17:35:40
+ * @LastEditTime: 2023-03-23 20:08:05
  * @Description: file not
 -->
 
@@ -60,6 +60,7 @@ type Union = A | B;
 const c: Union = {
   name: "terrymin1",
   id: "rr",
+  age:22,
 };
 const b: Union = {
   name: "terrymin",

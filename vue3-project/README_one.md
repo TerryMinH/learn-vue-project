@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:15
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-08 16:05:32
+ * @LastEditTime: 2023-03-15 11:05:49
  * @Description: file not
 -->
 
@@ -25,12 +25,11 @@ toRef 是指定某一节点提取出来，toRefs 是一次性将所有节点提�
 
 toRefs 返回的变量修改，与原始值无任何响应式关联。toRefs 只提取第一级子节点
 
-
 ```js
 let obj = { name: "alice", age: 12 };
 let newObj = ref(obj.name);
 let newObj2 = toRef(obj, "name");
-let newObj3= toRefs(obj);
+let newObj3 = toRefs(obj);
 
 function change() {
   newObj.value = "Tom";
@@ -40,7 +39,9 @@ function change() {
 
 2. [defineComponent 解决的问题](https://blog.csdn.net/qq_36157085/article/details/109498473)
 
-3. [Vue3 父子组件通信](https://www.cnblogs.com/nangezi/p/16175091.html)
+3. Vue 组件间通信
+   [Vue3 父子组件通信](https://juejin.cn/post/7069251532339806238#heading-34)
+   [mitt 事件总线分析](https://juejin.cn/post/7056688469719908388)
 
 4. [Vue2 与 Vue3 最大的区别 — Vue2 使用选项类型 API（Options API）对比 Vue3 合成型 API（Composition API） 组合 API 使用](https://juejin.cn/post/6976830388580646942)
 

@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-02-22 17:53:00
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-27 17:06:05
+ * @LastEditTime: 2023-03-23 16:44:04
  * @Description: file not
 -->
 <template lang="">
@@ -30,7 +30,7 @@ export default {
     }
   },
   mounted() {
-    console.log(44);
+    // console.log(44);
   },
 };
 </script>

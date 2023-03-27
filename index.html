@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-05 16:13:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-04 11:27:37
+ * @LastEditTime: 2023-03-23 20:32:53
  * @Description: file not
 -->
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .contaier {
+      #contaier {
         width: 400px;
         height: 400px;
         border: 1px solid rgb(64, 107, 64);
@@ -31,38 +31,20 @@
     </style>
   </head>
   <body>
-    <div class="contaier">
+    <div id="contaier">
       <div class="second-content">
         <div class="three-content">内容</div>
       </div>
     </div>
   </body>
   <script>
-    // const a = new String("Hello world"); // a === "Hello world" is false
-    // const b = String("Hello world"); // b === "Hello world" is true
-    // a instanceof String; // is true
-    // b instanceof String; // is false
-    // typeof a; // "object"
-    // typeof b; // "string"
-    // console.log(a);
-    // console.log(b);
-
-    //普通函数
-    function person(name, age, sex) {
-      this.name = name;
-      this.age = age;
-      this.sex = sex;
-      this.sayHello = function () {
-        console.log("你好，我叫" + this.name);
-      };
+    function Fn() {
+      return new Promise((resolve, reject) => {
+        resolve("www");
+      });
     }
-    //普通函数的调用方法
-    person("lab", 18, "男");
-    window.sayHello(); //你好,我叫lab
-    console.log(age); //18
-
-    var arr = new Int16Array([21, 31]);
-    console.log(arr[1]); // 31
-    console.log(arr);
+    Fn().then((res) => {
+      console.log(res);
+    });
   </script>
 </html>

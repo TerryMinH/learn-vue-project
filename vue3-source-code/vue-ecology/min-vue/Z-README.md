@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-10-01 11:16:29
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-10-22 10:17:16
+ * @LastEditTime: 2023-03-26 08:53:27
  * @Description: file not
 -->
 # Vuejs 设计与实现
@@ -21,8 +21,6 @@
 
 3. 编译器:Vue.js 的模板会被一个叫作编译器的程序编译为渲染函数
 
-
-### 第二篇 响应式系统的作用于实现
 
 
 

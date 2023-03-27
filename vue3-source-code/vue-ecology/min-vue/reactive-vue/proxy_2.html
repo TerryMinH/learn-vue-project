@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-10-15 07:34:20
  * @LastEditors: TerryMin
- * @LastEditTime: 2022-10-22 11:09:25
+ * @LastEditTime: 2023-03-26 10:46:53
  * @Description: file not
 -->
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proxy数据代理</title>
+    <title>4.3设计一个完善的响应式系统 对象每个属性触发一一对应</title>
   </head>
   <body>
     <button onclick="setFn()">设置数据值</button>
@@ -27,12 +27,12 @@
     };
 
     // 存储副作用函数的桶
-    const bucket = new WeakMap();
+    const bucket = new WeakMap(); // 收集每个对象下面每个属性对应的数组依赖
 
     // 原始数据
     const data = { text: "hello world", name: "zhangsan" };
 
-    // 第二版 对原始数据的代理
+    // 追踪器
     const track = (target, key) => {
       if (!activeEffect) return;
       let depsMap = bucket.get(target);
@@ -41,17 +41,19 @@
       }
       let deps = depsMap.get(key);
       if (!deps) {
-        deps.set(key, (deps = new Set()));
+        depsMap.set(key, (deps = new Set()));
       }
       deps.add(activeEffect);
     };
+
+    // 触发器
     const trigger = (target, key) => {
       const depsMap = bucket.get(target);
       if (!depsMap) return;
       const effects = depsMap.get(key);
       effects && effects.forEach((fn) => fn());
     };
-    
+
     const obj = new Proxy(data, {
       get(target, key) {
         track(target, key);
@@ -63,34 +65,25 @@
       },
     });
 
-    // 第一版 对原始数据的代理
-    // const obj = new Proxy(data, {
-    //   // 拦截读取操作
-    //   get(target, key) {
-    //     console.log(target, key);
-    //     // 将副作用函数 effect 添加到存储副作用函数的桶中
-    //     bucket.add(activeEffect);
-    //     // 返回属性值
-    //     return target[key];
-    //   },
-    //   // 拦截设置操作
-    //   set(target, key, newVal) {
-    //     // 设置属性值
-    //     target[key] = newVal;
-    //     // 把副作用函数从桶里取出并执行
-    //     bucket.forEach((fn) => fn());
-    //     // 返回 true 代表设置操作成功
-    //     return true;
-    //   },
-    // });
-
     effect(() => {
       console.log("effect run");
       divEle.innerText = obj.text;
     });
 
     const setFn = () => {
-      obj.notText = "Hello Vue3";
+      obj.text = "Hello Vue3";
+
+      setTimeout(() => {
+        obj.notExist = "hello vue3";
+      }, 2000);
+    };
+
+    const setFn2 = () => {
+      obj.text = "Hello Vue3";
+
+      setTimeout(() => {
+        obj.notExist = "hello vue3";
+      }, 2000);
     };
   </script>
 </html>

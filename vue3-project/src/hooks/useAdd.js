@@ -2,10 +2,10 @@
  * @Author: TerryMin
  * @Date: 2023-03-07 15:51:08
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-10 08:10:16
+ * @LastEditTime: 2023-03-23 17:47:34
  * @Description: file not
  */
-import { reactive, toRefs } from "vue";
+import { reactive, toRefs, computed } from "vue";
 
 const store = reactive({
   state: {
@@ -33,11 +33,18 @@ export const useUserStore = (obj) => {
   const changeNumber = () => {
     paramsObj.testNumber = 6;
   };
+
+  const testComputed = computed(() => {
+    console.log(1111);
+    return "www";
+  });
+
   return {
     ...toRefs(store),
+    testComputed,
     logout,
     login,
     paramsObj,
-    changeNumber
+    changeNumber,
   };
 };
