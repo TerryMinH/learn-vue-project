@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-19 11:02:06
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-24 10:14:40
+ * @LastEditTime: 2023-03-28 20:01:00
  * @Description: file not
 -->
 
@@ -47,6 +47,8 @@ const myPrint: Iprint<number> = print;
 
 1. typeof : 获取变量或属性的类型,一般和其他类型操作符搭配使用
 
+- 总结:使用 typeof 操作符来获取变量 res 的类型，结果与第一种（对象字面量形式的类型）相同 注意：typeof 只能用来查询变量或属性的类型，无法查询其他形式的类型（比如，函数调用的类型） -[文档](https://ts.yayujs.com/)
+
 ```ts
 {
   const res = { name: "Lucy", age: 18 };
@@ -66,11 +68,8 @@ const myPrint: Iprint<number> = print;
 }
 ```
 
-- 总结:使用 typeof 操作符来获取变量 res 的类型，结果与第一种（对象字面量形式的类型）相同 注意：typeof 只能用来查询变量或属性的类型，无法查询其他形式的类型（比如，函数调用的类型） -[文档](https://ts.yayujs.com/)
-
 2. keyof :获取对象中的所有键字面量类型组成的联合类型
-
-- [进阶 keyof](https://blog.csdn.net/lcl130/article/details/125214788)
+   [keyof 使用示例](https://blog.csdn.net/lcl130/article/details/125214788)
 
 ```ts
 type Person = {

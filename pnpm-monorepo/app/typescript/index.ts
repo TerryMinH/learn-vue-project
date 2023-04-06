@@ -1,40 +1,41 @@
-/*
- * @Author: TerryMin
- * @Date: 2022-08-19 11:00:27
- * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-24 13:24:02
- * @Description: file not
- */
-// 示例1
-interface Animal {
-  eat(): void;
-}
-
-interface Dog extends Animal {
-  bite(): void;
-}
-
-// A的类型为string
-type A = Dog extends Animal ? string : number;
-
-const a: A = "this is string";
-
-const dog: Dog = {
-  eat() {
-    console.log(11);
-  },
-  bite() {
-    console.log(33);
-  },
+// 大北京疫情，家中蔬菜总量类目
+const vegetablesNum = {
+  tomatoes: 12,
+  radishs: 10,
+  cabbages: 1,
 };
 
-type A1 = "x" extends "x" ? string : number; // string
-type A2 = "x" & "y" extends "x" ? string : number; // number
+type NewVegetables = {
+  [K in keyof typeof vegetablesNum]: {
+    [K2 in K]: typeof vegetablesNum[K2];
+  };
+}[keyof typeof vegetablesNum];
 
-type P<T> = T extends "x" ? string : number;
-type A3 = P<"x" | "y">; // ?
+const cookie2: NewVegetables = {
+  tomatoes: 123,
+  cabbages: 123,
+};
 
-type MyExtract<T, U> = T extends U ? T : never;
+type A1 = keyof typeof vegetablesNum;
+
+type T0 = Exclude<"a" | "b" | "c", "a">; // "b" | "c"
+
+export const locales = [
+  {
+    locale: "se",
+    language: "Swedish",
+  },
+  {
+    locale: "en",
+    language: "English",
+  },
+] as const;
+
+type Locale = typeof locales[number]["language"];
 
 
-// const a1: A2;
+let b: Object;
+b = "1"; // Success
+b = {}; // Success
+
+

@@ -1,30 +1,8 @@
-const objTarget = {
-  name: "terrymin",
-  age: 20,
-};
-var obj = new Proxy(objTarget, {
-  get: function (target, propKey, receiver) {
-    console.log(11, target, propKey, receiver);
-    return Reflect.get(target, propKey, receiver);
-  },
-  set: function (target, propKey, value, receiver) {
-    console.log(`setting ${propKey}!`);
-    return Reflect.set(target, propKey, value, receiver);
-  },
-  apply:()=>{
-    console.log('I am apply');
-  }
-});
-// obj.sex='boy';
-// console.log(obj.name);
-
-var target = function () { return 'I am the target'; };
-var handler = {
-  apply: function () {
-    return 'I am the proxy';
-  }
-};
-
-var p = new Proxy(target, handler);
-
-console.log(p());
+/*
+ * @Author: TerryMin
+ * @Date: 2022-08-19 11:36:25
+ * @LastEditors: TerryMin
+ * @LastEditTime: 2023-03-31 19:17:19
+ * @Description: file not
+ */
+const name='terrymin';

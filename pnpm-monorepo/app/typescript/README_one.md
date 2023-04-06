@@ -2,13 +2,14 @@
  * @Author: TerryMin
  * @Date: 2022-08-05 16:28:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-23 20:08:05
+ * @LastEditTime: 2023-03-29 13:52:20
  * @Description: file not
 -->
 
 # [typescript](https://typescript.bootcss.com/) 学习
 
 [typescript 基础学习](https://juejin.cn/post/7124117404187099172#heading-58)
+[TS 基本概念总结](https://juejin.cn/post/7088304364078497800#heading-4)
 
 1. [unknown 与 any 的最大区别](https://juejin.cn/post/7021676475434663966)
 
@@ -31,16 +32,38 @@ invokeAny(1); // throws "TypeError: callback is not a function"
 ```
 
 2. object Object 和 {} 类型
+   [object 区别](https://cloud.tencent.com/developer/article/1610691)
 
-object object 类型用于表示所有的非原始类型，即我们不能把 number、string、boolean、symbol 等 原始类型赋值给 object。在严格模式下，null 和 undefined 类型也不能赋给 object。object 指的是 non-primitive，可以理解为“随便一个对象”;
+object object 类型用于表示所有的非原始类型，原始类型: number、string、boolean、symbol、null 和 undefined。object 指的是 non-primitive，可以理解为“随便一个对象”;
 
-大 Object 代表所有拥有 toString、hasOwnProperty 方法的类型 所以所有原始类型、非原始类型都可以赋给 Object(严格模式下 null 和 undefined 不可以)
+大 Object 代表所有拥有 toString、hasOwnProperty 方法的 Object 实例类型。
 
-{}指的是 non-nullish，可以理解为“随便一个值”，可以是 1、"abc"、symbol("")等原始数据，但是不能是 null 和 undefined
+{}指的是 non-nullish 没有成员的空对象，可以是 1、"abc"、symbol("")等原始数据，但是不能是 null 和 undefined
+
+```js
+// object
+let obj1: object = { a: 1, b: 2 };
+obj1.a = 3; // error
+let obj2: { a: number, b: number } = { a: 1, b: 2 };
+obj2.a = 3; // ok
+let a: object;
+a = "1"; // Error Type '"1"' is not assignable to type 'object'
+a = {}; // ok
+
+// Object
+let b: Object;
+b = "1"; // Success
+b = {}; // Success
+
+// {}
+c = "1";
+c.prop = 123; // Error
+c = null; // Error
+```
 
 4. 交叉类型(&)、联合类型(|)、never 类型
 
-- 交叉类型：交叉类型取的多个类型的并集，但是如果 key 相同但是类型不同，则该 key 为 never 类型
+- 交叉类型：交叉类型取的多个类型的 并集，但是如果 key 相同但是类型不同，则该 key 为 never 类型
 - [联合类型](https://juejin.cn/post/6930628304491773966):产生一个包含所有类型的选择集类型
 
   - 原子类型不可以合并: 如果仅仅把基本类型、字面量类型、函数类型等原子类型合并成交叉类型，是没有任何用处的。因为任何类型都不能满足同时属于多种原子类型。
@@ -60,7 +83,7 @@ type Union = A | B;
 const c: Union = {
   name: "terrymin1",
   id: "rr",
-  age:22,
+  age: 22,
 };
 const b: Union = {
   name: "terrymin",
@@ -93,6 +116,23 @@ console.log(foo); // 输出："default string"
 
 const baz = 0 ?? 42;
 console.log(baz); // 输出：0
+```
+
+7. 类型守卫
+   类型守卫主要有以下几种方式:
+   typeof：用于判断 number，string，boolean 或 symbol 四种类型；
+   instanceof：用于判断一个实例是否属于某个类
+   in：用于判断一个属性/方法是否属于某个对象
+
+```js
+type Foo = string | number;
+const controlFn = (foo: Foo) => {
+  if (typeof foo === "string") {
+    // foo 收窄为string类型
+  } else if (typeof foo === "number") {
+    // foo 收窄为number类型
+  }
+};
 ```
 
 ## 模块、命名空间
