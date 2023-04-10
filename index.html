@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-05 16:13:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-04-06 10:25:23
+ * @LastEditTime: 2023-04-06 18:54:15
  * @Description: file not
 -->
 <!DOCTYPE html>
@@ -31,32 +31,29 @@
     </style>
   </head>
   <body>
-    <div id="contaier">
-      <div class="second-content">
-        <div class="three-content">内容</div>
-      </div>
-    </div>
-    <div onClick="Fn()">按钮点击</div>
+    <input id="input" value="这是一段可以复制的文字" />
+
+    <input id="pasteInput" placeholder="可以粘贴文字到这里" />
+
+    <button id="copy">复制文本</button>
+
+    <button id="paste">粘贴文本</button>
   </body>
   <script>
-    function Fn() {}
+    const button = document.querySelector("#copy");
+    button.addEventListener("click", () => {
+      const input = document.querySelector("#input");
+      input.select();
+      document.execCommand("copy");
+      console.log(document.execCommand("copy"));
+    });
 
-    function testIF() {
-      console.log("start");
-      for (var i = 0; i < 5; i++) {
-        if (i == 2) {
-          console.log(i);
-          return; // start 0 1
-          // break; // start 0 1 over
-          // continue; // start 0 1 3 4 over
-        }
-        console.log(33);
-        // console.log(i);
-      }
-      console.log("over");
-    }
-   
-    testIF();
-    console.log(22);
+    const buttonPaste = document.querySelector("#paste");
+    buttonPaste.addEventListener("click", () => {
+      const input = document.querySelector("#pasteInput");
+      input.focus();
+      console.log(document.execCommand("paste"));
+      document.execCommand("paste");
+    });
   </script>
 </html>
