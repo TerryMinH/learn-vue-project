@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-01-14 14:47:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-08 10:15:43
+ * @LastEditTime: 2023-04-10 11:30:20
  * @Description: file not
 -->
 
@@ -14,13 +14,11 @@
 
 <script setup>
 import { provide, getCurrentInstance, defineAsyncComponent, ref } from "vue";
-import { BaseComponent ,HookComponent} from "@/components";
+// import { BaseComponent ,HookComponent} from "@/components/index";
 
 const internalInstance = getCurrentInstance();
 // 搂一眼，看看注册的组件名字是啥
 console.log(internalInstance.appContext.components);
-
-// const ChildComponent=internalInstance.appContext.components['ChildComponent']
 
 // provide('location', 'North Pole1')
 // provide('geolocation', {
