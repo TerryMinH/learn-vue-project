@@ -1,41 +1,59 @@
-// 大北京疫情，家中蔬菜总量类目
-const vegetablesNum = {
-  tomatoes: 12,
-  radishs: 10,
-  cabbages: 1,
+type PlatformId = Array<
+  | "APP"
+  | "H5"
+  | "wechatProgram"
+  | "baiduProgram"
+  | "toutiaoProgram"
+  | "kuaishouProgram"
+>;
+const ids: PlatformId = ["APP"];
+type Property = "key1" | "key2";
+type Person = Record<Property, string>;
+const p: Person = {
+  key1: "hello 啊",
+  key2: "树哥",
 };
 
-type NewVegetables = {
-  [K in keyof typeof vegetablesNum]: {
-    [K2 in K]: typeof vegetablesNum[K2];
-  };
-}[keyof typeof vegetablesNum];
+interface A {
+  name: string;
+  age: number;
+}
+interface B {
+  name: string;
+  id: string;
+}
 
-const cookie2: NewVegetables = {
-  tomatoes: 123,
-  cabbages: 123,
+type Union = A | B;
+const c: Union = {
+  name: "terrymin1",
+  id: "rr",
+  age: 22,
+};
+const b: Union = {
+  name: "terrymin",
+  age: 45,
 };
 
-type A1 = keyof typeof vegetablesNum;
-
-type T0 = Exclude<"a" | "b" | "c", "a">; // "b" | "c"
-
-export const locales = [
-  {
-    locale: "se",
-    language: "Swedish",
-  },
-  {
-    locale: "en",
-    language: "English",
-  },
-] as const;
-
-type Locale = typeof locales[number]["language"];
+type Intersetion = A & B;
+const d: Intersetion = {
+  id: "yuie",
+  age: 32,
+  name: "terrymin",
+};
 
 
-let b: Object;
-b = "1"; // Success
-b = {}; // Success
+type VersionKeys =
+	| 'androidVersion'
+	| 'iosVersion'
+	| 'ipadVersion'
+	| 'vrVersion';
 
 
+
+  const res = { name: "Lucy", age: 18 };
+  type StuType = typeof res;
+  function fn(obj: StuType) {
+    // 这里写obj. 有 name 和 age 的提示了
+    console.log(obj.name);
+  }
+  fn(res);

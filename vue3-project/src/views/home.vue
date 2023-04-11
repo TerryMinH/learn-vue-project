@@ -2,14 +2,21 @@
  * @Author: TerryMin
  * @Date: 2022-01-14 14:47:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-04-10 11:30:20
+ * @LastEditTime: 2023-04-11 16:39:55
  * @Description: file not
 -->
 
 <template>
-  <BaseComponent />
-  <hr>
-  <HookComponent />
+  <div>
+    <h3>BaseComponent:</h3>
+    <BaseComponent />
+  </div>
+
+  <hr />
+  <div>
+    <h3>HookComponent:</h3>
+    <HookComponent />
+  </div>
 </template>
 
 <script setup>

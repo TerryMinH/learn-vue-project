@@ -2,15 +2,16 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:15
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-04-10 13:55:01
+ * @LastEditTime: 2023-04-11 20:07:05
  * @Description: file not
 -->
 
 # Vue3 API 学习
 
-1. [Ref 与 Reactive 区别](https://blog.csdn.net/cookcyq__/article/details/121618833)
+1. [Ref 与 Reactive 区别](https://juejin.cn/post/7192994086255591480)
 
-一 ref、 toRef 、 toRefs
+
+一 [ref、 toRef 、 toRefs](https://blog.csdn.net/cookcyq__/article/details/121618833)
 ref 的本质是拷贝，与原始数据没有引用关系.响应式数据发生改变，而原始数据并不会改变,界面会自动更新.
 
 toRef 的本质是引用，与原始数据有关联,并不会触发 UI 界面的更新
@@ -52,7 +53,7 @@ function change() {
 
 7. Vue 异步组件与动态组件
 
-- 异步组件:只在需要的时候才从服务器加载,一个可以让组件异步加载的方式；它一般会用于性能优化，比如减小首屏加载时间、加载资源大小。
+- 异步组件:只在需要的时候才从服务器加载,一个可以让组件异步加载的方式；它一般会用于性能优化，比如减小首屏加载时间、加载资源大小。(将每个组件生成一个对应的静态文件。正常是所有组件打包合并在一起生成一个js文件)
 - 动态组件：是 Vue 中一个特殊的 Html 元素：<component>，它拥有一个特殊的 is 属性，属性值可以是 已注册组件的名称 或 一个组件的选项对象，它是用于不同组件之间进行动态切换的。
 
 

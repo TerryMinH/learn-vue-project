@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-05 16:13:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-04-06 18:54:15
+ * @LastEditTime: 2023-04-11 13:54:27
  * @Description: file not
 -->
 <!DOCTYPE html>
@@ -31,29 +31,8 @@
     </style>
   </head>
   <body>
-    <input id="input" value="这是一段可以复制的文字" />
-
-    <input id="pasteInput" placeholder="可以粘贴文字到这里" />
-
-    <button id="copy">复制文本</button>
-
-    <button id="paste">粘贴文本</button>
+  <div onClick="fn()">点击</div>
   </body>
   <script>
-    const button = document.querySelector("#copy");
-    button.addEventListener("click", () => {
-      const input = document.querySelector("#input");
-      input.select();
-      document.execCommand("copy");
-      console.log(document.execCommand("copy"));
-    });
-
-    const buttonPaste = document.querySelector("#paste");
-    buttonPaste.addEventListener("click", () => {
-      const input = document.querySelector("#pasteInput");
-      input.focus();
-      console.log(document.execCommand("paste"));
-      document.execCommand("paste");
-    });
   </script>
 </html>

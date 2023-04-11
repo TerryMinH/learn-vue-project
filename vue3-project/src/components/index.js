@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-02-23 10:32:36
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-04-10 13:59:46
+ * @LastEditTime: 2023-04-11 16:44:48
  * @Description: https://juejin.cn/post/7137562715676999710
  */
 import { defineAsyncComponent } from "vue";
@@ -17,15 +17,9 @@ import { defineAsyncComponent } from "vue";
 export default (app) => {
   // 结构化组件的位置
   const context = import.meta.glob("./libs-component/**/*.vue");
-  console.log(888);
-  console.log(context);
   const REG = /(?<=libs-component\/).*?(?=.vue)/gi;
   for (const path in context) {
-    console.log(path);
-    console.log(path.match(REG));
     const component = path.match(REG);
-    const modulesConent = context[path];
-    console.log(modulesConent);
     component[0] &&
       app.component(
         component[0],
