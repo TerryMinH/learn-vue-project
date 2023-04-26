@@ -2,15 +2,15 @@
  * @Author: TerryMin
  * @Date: 2022-06-14 06:54:49
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-02 17:15:34
+ * @LastEditTime: 2023-04-19 18:43:13
  * @Description: Pinia基本使用](https://juejin.cn/post/7068113574043844622#heading-10)
 -->
 <template>
   <div>
-    <button @click="handleBtn(1)">点击事件</button>
+    <button @click="handleBtn(1)">点击事件1</button>
     <button @click="handleBtn(2)">点击事件2</button>
-    <button @click="handleBtn(3)">点击事件3</button>
-    <button @click="handleBtn(4)">重置</button>
+    <button @click="handleBtn(3)">重置</button>
+    <button @click="handleBtn(4)">终止监听</button>
   </div>
 
   <div>
@@ -37,6 +37,7 @@ const { count, userList } = storeToRefs(counterStore);
 
 let subscribe = null;
 onMounted(() => {
+  console.log(count.value);
   subscribe = counterStore.$subscribe((mutation, state) => {
     console.log(mutation);
     console.log(state);
@@ -55,6 +56,7 @@ const handleBtn = (type) => {
       });
       break;
     case 3:
+      console.log(counterStore);
       counterStore.$reset();
       break;
     case 4:
@@ -62,7 +64,6 @@ const handleBtn = (type) => {
       break;
   }
 };
-
 
 function subscribeNormal() {
   counterStore.subscribeAction("小李", 18, false);
@@ -72,6 +73,7 @@ function subscribeError() {
   counterStore.subscribeAction("小白", 17, true);
 }
 
+// 监听action的动作及结果
 const unsubscribe = counterStore.$onAction(
   ({
     name, // action 函数的名称

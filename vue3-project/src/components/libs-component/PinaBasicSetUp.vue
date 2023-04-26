@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-03-02 14:40:02
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-02 17:14:06
+ * @LastEditTime: 2023-04-19 19:49:11
  * @Description: [Pinia函数式处理](https://juejin.cn/post/7057439040911441957)
 -->
 <template>
@@ -29,8 +29,10 @@ import { useCounterStoreForSetup } from "@/stores/counterForSetup";
 // setup composition API模式
 const counterStoreForSetup = useCounterStoreForSetup();
 console.log(counterStoreForSetup);
+
 const { count } = storeToRefs(counterStoreForSetup);
 const { increment, doubleCount } = counterStoreForSetup;
+console.log(55,count);
 </script>
 
 <style lang="less" scoped>

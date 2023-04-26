@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-03-07 15:51:08
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-23 17:47:34
+ * @LastEditTime: 2023-04-19 18:51:25
  * @Description: file not
  */
 import { reactive, toRefs, computed } from "vue";
@@ -28,23 +28,23 @@ const login = async (user) => {
   console.log(store.state);
 };
 
-export const useUserStore = (obj) => {
+export const useAdd = (obj = {}) => {
   const paramsObj = reactive(obj);
   const changeNumber = () => {
     paramsObj.testNumber = 6;
   };
 
   const testComputed = computed(() => {
-    console.log(1111);
     return "www";
   });
 
   return {
-    ...toRefs(store),
+    // ...toRefs(store),
+    store,
     testComputed,
+    paramsObj,
     logout,
     login,
-    paramsObj,
     changeNumber,
   };
 };

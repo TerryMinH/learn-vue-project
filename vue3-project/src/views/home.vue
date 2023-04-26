@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-01-14 14:47:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-04-11 16:39:55
+ * @LastEditTime: 2023-04-19 17:50:19
  * @Description: file not
 -->
 
@@ -12,10 +12,14 @@
     <BaseComponent />
   </div>
 
-  <hr />
   <div>
     <h3>HookComponent:</h3>
     <HookComponent />
+  </div>
+
+  <div>
+    <h3>PiniaComponent:</h3>
+    <PiniaComponent />
   </div>
 </template>
 
@@ -25,7 +29,7 @@ import { provide, getCurrentInstance, defineAsyncComponent, ref } from "vue";
 
 const internalInstance = getCurrentInstance();
 // 搂一眼，看看注册的组件名字是啥
-console.log(internalInstance.appContext.components);
+// console.log(internalInstance.appContext.components);
 
 // provide('location', 'North Pole1')
 // provide('geolocation', {
