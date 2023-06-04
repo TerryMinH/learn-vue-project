@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-01-14 14:47:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-04-19 17:50:19
+ * @LastEditTime: 2023-05-31 19:14:46
  * @Description: file not
 -->
 
@@ -20,6 +20,11 @@
   <div>
     <h3>PiniaComponent:</h3>
     <PiniaComponent />
+  </div>
+
+  <div>
+    <h3>PinaBasicSetUp:</h3>
+    <PinaBasicSetUp />
   </div>
 </template>
 

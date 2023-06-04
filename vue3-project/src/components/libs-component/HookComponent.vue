@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-03-07 15:56:46
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-04-19 18:50:40
+ * @LastEditTime: 2023-05-04 15:34:01
  * @Description: file not
 -->
 
@@ -21,9 +21,9 @@
 import { toRefs, toRef, ref, reactive } from "vue";
 // import { useStorage } from "@vueuse/core";
 import { useAdd } from "@/hooks/useAdd";
-const obj = {
+const obj = reactive({
   testNumber: 5,
-};
+});
 // const obj1 = {
 //   testNumber: 8,
 // };
@@ -33,30 +33,20 @@ const obj = {
 
 // console.log(proxyObj);
 const useAddCenter = useAdd(obj);
-const { store, login, logout, changeNumber, paramsObj, testComputed } =
+const { store, login, logout, changeNumber, testComputed } =
   useAddCenter;
 
 const { state } = store;
 
-const ReactvieObj = toRefs(paramsObj);
+// const ReactvieObj = toRefs(paramsObj);
 
 // console.log(useAddCenter);
 // const nameTest = toRefs(state);
 
 const toggleLogin = async () => {
   console.log(state);
-  // console.log("toggleLogin", store, testStore);
-  await logout();
+  obj.testNumber=10;
+  // await logout();
   changeNumber();
-  // console.log(store.state.isAdmin);
-  // if (store.state.isAdmin) {
-  //   console.log(111);
-  //   await logout();
-  // } else {
-  //   console.log(222);
-  //   await login("ed", "ed");
-  // }
-  console.log("store", state);
-  // console.log("testStore", testStore);
 };
 </script>

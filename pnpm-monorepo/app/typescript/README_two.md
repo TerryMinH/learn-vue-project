@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-19 11:02:06
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-28 20:01:00
+ * @LastEditTime: 2023-05-17 10:56:10
  * @Description: file not
 -->
 
@@ -52,7 +52,7 @@ const myPrint: Iprint<number> = print;
 ```ts
 {
   const res = { name: "Lucy", age: 18 };
-  type StuType = typeof res;
+  type StuType = typeof res; // {name: string; age: number;}
   function fn(obj: StuType) {
     // 这里写obj. 有 name 和 age 的提示了
     console.log(obj.name);
@@ -94,7 +94,26 @@ let strAsLength: number = (someValue as string).length;
    [Record 中 extends](https://blog.csdn.net/qq_36503569/article/details/119383782)
    [extends 关键字一般用法](https://juejin.cn/post/6998736350841143326)
 
-5. in: in 可以理解为 for ... in，表示从 keyof T 中去遍历每一个类型
+```js
+interface Lengthwise {
+  length: number;
+}
+function loggingIdentity<T extends Lengthwise>(arg: T): T {
+  console.log(arg.length);
+  return arg;
+}
+loggingIdentity(3);  // Error, number doesn't have a .length property
+loggingIdentity({length: 10, value: 3});
+```
+
+5. in: in 用来遍历枚举类型:
+
+```js
+type Keys = "a" | "b" | "c"
+type Obj =  {
+  [p in Keys]: string
+} // -> { a: string, b: string, c: string }
+```
 
 6. infer 占位符式的关键字:表示在 extends 条件语句中以占位符出现的用来修饰数据类型的关键字，被修饰的数据类型等用到的时候才能被推断出来
 

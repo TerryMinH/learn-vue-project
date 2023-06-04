@@ -2,11 +2,12 @@
  * @Author: TerryMin
  * @Date: 2023-04-03 07:36:22
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-04-13 14:06:02
+ * @LastEditTime: 2023-05-22 15:38:33
  * @Description: file not
 -->
 
 # 代理配置
+一 whistle:
 
 1. whistle
    [whistle 官网](https://wproxy.org/whistle/quickstart.html)
@@ -15,3 +16,7 @@
    关闭 whistle： - w2 stop
 2. [whistle 使用教程](https://juejin.cn/post/6930415221185970189)
 3. [whistle 搜索过滤抓包数据的方法](https://github.com/avwo/help/issues/13)
+
+二 Charles:
+[Charles android机代理配置](https://blog.csdn.net/qq_39168470/article/details/117120873)
+

@@ -1,17 +1,12 @@
-type PlatformId = Array<
-  | "APP"
-  | "H5"
-  | "wechatProgram"
-  | "baiduProgram"
-  | "toutiaoProgram"
-  | "kuaishouProgram"
->;
-const ids: PlatformId = ["APP"];
-type Property = "key1" | "key2";
-type Person = Record<Property, string>;
-const p: Person = {
-  key1: "hello 啊",
-  key2: "树哥",
+/*
+ * @Author: TerryMin
+ * @Date: 2022-08-19 11:00:27
+ * @LastEditors: TerryMin
+ * @LastEditTime: 2023-05-31 17:04:39
+ * @Description: file not
+ */
+export const isArray = (value: unknown): boolean => {
+  return Object.prototype.toString.call(value) === "[object Array]";
 };
 
 interface A {
@@ -34,26 +29,4 @@ const b: Union = {
   age: 45,
 };
 
-type Intersetion = A & B;
-const d: Intersetion = {
-  id: "yuie",
-  age: 32,
-  name: "terrymin",
-};
-
-
-type VersionKeys =
-	| 'androidVersion'
-	| 'iosVersion'
-	| 'ipadVersion'
-	| 'vrVersion';
-
-
-
-  const res = { name: "Lucy", age: 18 };
-  type StuType = typeof res;
-  function fn(obj: StuType) {
-    // 这里写obj. 有 name 和 age 的提示了
-    console.log(obj.name);
-  }
-  fn(res);
+console.log(c);

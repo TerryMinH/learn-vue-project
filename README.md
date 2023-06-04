@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-02-17 11:41:32
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-08 16:47:49
+ * @LastEditTime: 2023-05-15 19:48:47
  * @Description: file not
 -->
 
@@ -15,5 +15,7 @@
 [Pinia](https://pinia.web3doc.top/)
 
 [vueUse](https://vueuse.org/guide/)
+
+[Vue Router](https://router.vuejs.org/zh/introduction.html)
 
 [Eslint 中文](http://eslint.cn/docs/rules/no-shadow)

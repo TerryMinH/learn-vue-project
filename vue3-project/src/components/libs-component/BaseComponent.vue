@@ -2,18 +2,16 @@
  * @Author: TerryMin
  * @Date: 2022-04-26 10:00:09
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-03-08 10:01:36
+ * @LastEditTime: 2023-04-27 16:32:54
  * @Description: file not
 -->
 <template>
   <div>
-    <button type="button" @click="changeBtn('1')">
-      按钮1
-    </button>
-    <button @click="changeBtn('2')"> 按钮2 </button>
+    <button type="button" @click="changeBtn('1')">按钮1</button>
+    <button @click="changeBtn('2')">按钮2</button>
   </div>
   <div class="content">
-  {{ newObj }}
+    {{ newObj }}
   </div>
 </template>
 
@@ -21,7 +19,13 @@
 import { ref, reactive, onMounted, toRefs, toRef, shallowReactive } from "vue";
 
 let obj = { name: "alice", age: 12 };
-let newObj = toRef(obj, 'name');
+let newObj = toRef(obj, "name");
+
+onMounted(() => {
+  const { name, data } = obj || {};
+  const { relateId } = data || {};
+  // console.log(name, relateId);
+});
 
 const changeBtn = (type) => {
   switch (type) {
@@ -31,7 +35,7 @@ const changeBtn = (type) => {
       break;
     case "2":
       newObj.value = "Tom";
-      console.log(obj,newObj);
+      console.log(obj, newObj);
       break;
   }
 };
