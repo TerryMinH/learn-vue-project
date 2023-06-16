@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-03-02 14:40:02
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-05-31 19:15:40
+ * @LastEditTime: 2023-06-08 16:14:19
  * @Description: [Pinia函数式处理](https://juejin.cn/post/7057439040911441957)
 -->
 <template>
@@ -39,7 +39,7 @@ console.log(55,count);
 .box-styl {
   margin: 10px;
   .section-box {
-    margin: 20px auto;
+    // margin: 20px auto;
     width: 300px;
     background-color: #d7ffed;
     border: 1px solid #000;

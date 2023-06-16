@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-01-14 14:47:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-05-31 19:14:46
+ * @LastEditTime: 2023-06-08 16:16:40
  * @Description: file not
 -->
 
@@ -18,14 +18,14 @@
   </div>
 
   <div>
-    <h3>PiniaComponent:</h3>
-    <PiniaComponent />
+    <h3>ElementPlusComponent:</h3>
+    <ElementPlusComponent />
   </div>
 
-  <div>
+  <!-- <div>
     <h3>PinaBasicSetUp:</h3>
     <PinaBasicSetUp />
-  </div>
+  </div> -->
 </template>
 
 <script setup>
