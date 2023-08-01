@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:47
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-02-22 17:36:53
+ * @LastEditTime: 2023-07-19 18:54:12
  * @Description: https://www.cnblogs.com/amor17/p/10157313.html
 -->
 <template>
@@ -49,11 +49,11 @@ export default {
   //   },
   // },
 
-  watch: {
-    isShow(newValue, oldValue) {
-      console.log(newValue, oldValue);
-    },
-  },
+  // watch: {
+  //   isShow(newValue, oldValue) {
+  //     console.log(newValue, oldValue);
+  //   },
+  // },
 
   mounted() {},
 

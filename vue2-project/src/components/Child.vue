@@ -2,21 +2,16 @@
  * @Author: TerryMin
  * @Date: 2023-02-22 17:53:00
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-04-04 15:47:26
+ * @LastEditTime: 2023-06-16 11:00:10
  * @Description: file not
 -->
 <template lang="">
   <div>
-    <div>子组件11</div>
-    <div v-for="(x,y,z) in object" :key="x">
-    <div>1.{{x}}</div>
-    <div>2.{{y}}</div>
-    <div>3.{{z}}</div>
+    <button @click="changeHobby">改值</button>
+    <div v-for="item in list" :key="item.code">
+      <input type="checkbox" v-model="item.state" />{{ item.hobby }}
     </div>
-    <hr>
-    <div v-for="index in inviteNum" :key="index">{{index-1}}:{{tab[index-1].name}}</div>
   </div>
-  
 </template>
 <script>
 export default {
@@ -24,22 +19,23 @@ export default {
   props: {
     msg: String,
   },
-  data(){
-    return{
-      object:{
-        a:'aa',
-        b:'bb'
-      },
-      tab:[
-        {name:'terrymin'},
-        {name:'张三'},
-        {name:'李四'},
+  data() {
+    return {
+      list: [
+        { hobby: "看书", code: 100 },
+        { hobby: "写字", code: 101 },
+        { hobby: "敲代码", code: 102 },
       ],
-      inviteNum:2
-    }
+    };
   },
   mounted() {
     // console.log(44);
+  },
+  methods: {
+    changeHobby() {
+      console.log(this);
+      this.$set(this.list, 2, { hobby: "玩魔方" });
+    },
   },
 };
 </script>

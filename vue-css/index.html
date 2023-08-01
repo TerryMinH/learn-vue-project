@@ -1,0 +1,71 @@
+<!--
+ * @Author: TerryMin
+ * @Date: 2022-08-05 16:13:51
+ * @LastEditors: TerryMin
+ * @LastEditTime: 2023-07-25 15:30:29
+ * @Description: file not
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .pic {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background: url("./img/award.png") no-repeat;
+        background-size: cover;
+        /* forwards当动画完成后，保持最后一帧的状态 */
+        animation: fade-away 2.5s linear forwards;
+      }
+      .text {
+        position: absolute;
+        line-height: 55px;
+        color: #fff;
+        font-size: 36px;
+        text-align: center;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        animation: show 2s cubic-bezier(0.74, -0.1, 0.86, 0.83) forwards;
+      }
+
+      @keyframes fade-away {
+        /* 背景图的明暗度动画 */
+        30% {
+          filter: brightness(1);
+        }
+        100% {
+          filter: brightness(0);
+        }
+      }
+      /* 文字的透明度动画 */
+      @keyframes show {
+        20% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="pic"></div>
+      <div class="text">
+        <p>如果生活中有什么使你感到快乐，那就去做吧</p>
+        <br />
+        <p>不要管别人说什么</p>
+      </div>
+    </div>
+  </body>
+
+  <script></script>
+</html>
