@@ -1,8 +1,8 @@
 <!--
  * @Author: TerryMin
- * @Date: 2022-10-12 07:26:39
+ * @Date: 2023-08-09 11:42:37
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-08-09 11:03:43
+ * @LastEditTime: 2023-08-09 13:42:16
  * @Description: file not
 -->
 <template>
@@ -23,10 +23,11 @@
 </template>
 
 <script>
-import * as tracking from "tracking";
 import dat from "dat.gui";
-import "@/assets/lib/data/face-min.js";
-// import "../assets/lib/data/stats-min.js";
+import tracking from "@/assets/lib/tracking-min.js";
+import "@/assets/lib/face-min.js";
+// import tracking from "@/assets/tracking/build/tracking-min.js";
+// import "@/assets/tracking/build/data/face-min.js";
 
 export default {
   name: "TrackFace",
@@ -41,17 +42,17 @@ export default {
   created() {},
 
   mounted() {
-    this.init();
+    // this.init();
   },
 
   methods: {
     init() {
       // console.log(window.tracking);
-      var video = document.getElementById("video");
-      var canvas = document.getElementById("canvas");
-      var context = canvas.getContext("2d");
+      let video = document.getElementById("video");
+      let canvas = document.getElementById("canvas");
+      let context = canvas.getContext("2d");
 
-      var tracker = new window.tracking.ObjectTracker("face"); // 设置追踪类型
+      let tracker = new window.tracking.ObjectTracker("face"); // 设置追踪类型
       tracker.setInitialScale(4);
       tracker.setStepSize(2);
       tracker.setEdgesDensity(0.1);
@@ -59,7 +60,7 @@ export default {
       window.tracking.track("#video", tracker, { camera: true });
 
       tracker.on("track", function (event) {
-        console.log(event);
+        // console.log(event);
         context.clearRect(0, 0, canvas.width, canvas.height);
 
         event.data.forEach(function (rect) {
@@ -80,7 +81,7 @@ export default {
         });
       });
 
-      // var gui = new dat.GUI();
+      // let gui = new dat.GUI();
       // gui.add(tracker, "edgesDensity", 0.1, 0.5).step(0.01);
       // gui.add(tracker, "initialScale", 1.0, 10.0).step(0.1);
       // gui.add(tracker, "stepSize", 1, 5).step(0.1);
