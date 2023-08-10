@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-08-09 11:42:37
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-08-09 13:42:16
+ * @LastEditTime: 2023-08-09 17:41:33
  * @Description: file not
 -->
 <template>
@@ -64,6 +64,8 @@ export default {
         context.clearRect(0, 0, canvas.width, canvas.height);
 
         event.data.forEach(function (rect) {
+          console.log('tana==>',rect.y / rect.x);
+
           context.strokeStyle = "#a64ceb";
           context.strokeRect(rect.x, rect.y, rect.width, rect.height);
           context.font = "11px Helvetica";
@@ -96,6 +98,6 @@ canvas {
   position: absolute;
   top: 0;
   left: 0;
-  border: #000000 5px solid;
+  border: #333 2px solid;
 }
 </style>
