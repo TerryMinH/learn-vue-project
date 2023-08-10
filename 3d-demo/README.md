@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-10-12 07:26:48
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-08-09 14:19:20
+ * @LastEditTime: 2023-08-10 15:50:14
  * @Description: file not
 -->
 
@@ -17,6 +17,10 @@ DeviceOrientation:
 - alpha（设备平放时，水平 Z 轴旋转的角度）
 - beta(设备平放时，绕横向 X 轴旋转的角度)
 - gamma（设备平放时，绕纵向 Y 轴旋转的角度）
+
+## threejs
+
+[threejs 坐标系](https://juejin.cn/post/7239308118474588217)
 
 ## 3D 素材:
 

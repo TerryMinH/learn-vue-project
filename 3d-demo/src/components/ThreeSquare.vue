@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-10-12 07:26:39
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-08-09 20:15:28
+ * @LastEditTime: 2023-08-10 19:55:59
  * @Description: file not
 -->
 <template>
@@ -11,84 +11,79 @@
 
 <script>
 import * as THREE from "three";
+import Bus from "@/utils/eventBus";
 
 export default {
   name: "ThreeSquare",
   data() {
-    return {};
+    return {
+      scene: null, // 场景
+      renderer: null, // 渲染器
+      camera: null, // 相机
+      axios: null,
+      rate: 0,
+    };
   },
   mounted() {
     this.createScene();
-    // this.createLine();
+
+    Bus.$on("PositionAxios", (paramters) => {
+      console.log(paramters);
+      console.log(this.cube.rotation);
+      this.rate = paramters.y / paramters.x;
+      this.axios = paramters;
+      console.log(this.rate);
+      this.animate();
+    });
   },
   methods: {
     // 创建立体几何体
     createScene() {
-      const scene = new THREE.Scene(); // 创建坐标系场景
-      console.log(scene);
-      const camera = new THREE.PerspectiveCamera( // 创建相机
+      this.scene = new THREE.Scene(); // 创建坐标系场景
+      // console.log(88, this.scene);
+
+      this.camera = new THREE.PerspectiveCamera( // 创建相机
         75,
         window.innerWidth / window.innerHeight,
         0.1,
         1000
       );
 
-      const renderer = new THREE.WebGLRenderer(); // 创建渲染器
-      renderer.setSize(window.innerWidth - 330, window.innerHeight - 10);
-      document.body.appendChild(renderer.domElement);
+      this.renderer = new THREE.WebGLRenderer(); // 创建渲染器
 
+      this.renderer.setSize(window.innerWidth - 330, window.innerHeight - 10);
+      document.body.appendChild(this.renderer.domElement);
       const geometry = new THREE.BoxGeometry(1, 1, 1); // 添加立方体
       console.log(geometry);
-      const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 }); // 设置立方体材质颜色
-      const cube = new THREE.Mesh(geometry, material); // 生成网格对象 包含几何体和材质
-      scene.add(cube); // 网格对象添加到场景中
-      console.log(cube);
-      console.log(material);
 
-      camera.position.z = 3;
+      const material = new THREE.MeshBasicMaterial({ color: 0xffffff }); // 设置立方体材质颜色
+      this.cube = new THREE.Mesh(geometry, material); // 生成网格对象 包含几何体和材质
 
-      function animate() {
-        requestAnimationFrame(animate);
+      this.scene.add(this.cube); // 网格对象添加到场景中
 
-        // cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
+      this.camera.position.z = 3;
 
-        renderer.render(scene, camera);
-      }
-
-      animate();
+      this.animate();
     },
 
-    // 划线
-    createLine() {
-      const scene = new THREE.Scene();
-
-      const renderer = new THREE.WebGLRenderer();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      document.body.appendChild(renderer.domElement);
-
-      const camera = new THREE.PerspectiveCamera(
-        45,
-        window.innerWidth / window.innerHeight,
-        1,
-        500
-      );
-      camera.position.set(0, 0, 100);
-      camera.lookAt(0, 0, 0);
-
-      const material = new THREE.LineBasicMaterial({ color: 0x0000ff });
-
-      const points = [];
-      points.push(new THREE.Vector3(-10, 0, 0));
-      points.push(new THREE.Vector3(0, 10, 0));
-      points.push(new THREE.Vector3(10, 0, 0));
-
-      const geometry = new THREE.BufferGeometry().setFromPoints(points);
-
-      const line = new THREE.Line(geometry, material);
-
-      scene.add(line);
-      renderer.render(scene, camera);
+    // 动画转动
+    animate() {
+      // 上下运动
+      if (this.rate > 1) {
+        if (this.cube.rotation.x > this.rate) {
+          return;
+        }
+        this.cube.rotation.x += 0.01;
+        requestAnimationFrame(this.animate);
+      } else {
+        // 左右运动
+        if (this.cube.rotation.y > this.rate) {
+          return;
+        }
+        this.cube.rotation.y += 0.01;
+        requestAnimationFrame(this.animate);
+      }
+      this.renderer.render(this.scene, this.camera);
     },
   },
 };

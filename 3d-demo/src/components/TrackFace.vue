@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-08-09 11:42:37
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-08-09 17:41:33
+ * @LastEditTime: 2023-08-10 19:55:36
  * @Description: file not
 -->
 <template>
@@ -28,6 +28,7 @@ import tracking from "@/assets/lib/tracking-min.js";
 import "@/assets/lib/face-min.js";
 // import tracking from "@/assets/tracking/build/tracking-min.js";
 // import "@/assets/tracking/build/data/face-min.js";
+import Bus from "@/utils/eventBus";
 
 export default {
   name: "TrackFace",
@@ -64,7 +65,8 @@ export default {
         context.clearRect(0, 0, canvas.width, canvas.height);
 
         event.data.forEach(function (rect) {
-          console.log('tana==>',rect.y / rect.x);
+          // console.log("tana==>", rect.y / rect.x);
+          Bus.$emit("PositionAxios", { x: rect.x, y: rect.y });
 
           context.strokeStyle = "#a64ceb";
           context.strokeRect(rect.x, rect.y, rect.width, rect.height);
