@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-08-09 11:42:37
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-08-10 19:55:36
+ * @LastEditTime: 2023-08-11 15:44:46
  * @Description: file not
 -->
 <template>
@@ -29,6 +29,7 @@ import "@/assets/lib/face-min.js";
 // import tracking from "@/assets/tracking/build/tracking-min.js";
 // import "@/assets/tracking/build/data/face-min.js";
 import Bus from "@/utils/eventBus";
+import { debounce } from "@/utils/utils-fn";
 
 export default {
   name: "TrackFace",
@@ -61,28 +62,40 @@ export default {
       window.tracking.track("#video", tracker, { camera: true });
 
       tracker.on("track", function (event) {
-        // console.log(event);
+        console.log(event);
         context.clearRect(0, 0, canvas.width, canvas.height);
 
-        event.data.forEach(function (rect) {
-          // console.log("tana==>", rect.y / rect.x);
-          Bus.$emit("PositionAxios", { x: rect.x, y: rect.y });
+        // 防抖函数
+        const updateThree3D = debounce((x, y) => {
+          Bus.$emit("PositionAxios", { x, y });
+        }, 2000);
 
-          context.strokeStyle = "#a64ceb";
-          context.strokeRect(rect.x, rect.y, rect.width, rect.height);
-          context.font = "11px Helvetica";
-          context.fillStyle = "#fff";
-          context.fillText(
-            "x: " + rect.x + "px",
-            rect.x + rect.width + 5,
-            rect.y + 11
-          );
-          context.fillText(
-            "y: " + rect.y + "px",
-            rect.x + rect.width + 5,
-            rect.y + 22
-          );
-        });
+        if (event.data) {
+          if (event.data.length === 1) {
+            event.data.forEach(function (rect) {
+              // console.log("tana==>", rect.y / rect.x);
+              const { x, y } = rect;
+              updateThree3D(x, y);
+
+              context.strokeStyle = "#a64ceb";
+              context.strokeRect(rect.x, rect.y, rect.width, rect.height);
+              context.font = "11px Helvetica";
+              context.fillStyle = "#fff";
+              context.fillText(
+                "x: " + rect.x + "px",
+                rect.x + rect.width + 5,
+                rect.y + 11
+              );
+              context.fillText(
+                "y: " + rect.y + "px",
+                rect.x + rect.width + 5,
+                rect.y + 22
+              );
+            });
+          } else {
+            console.log("保持人脸在相框正确部位");
+          }
+        }
       });
 
       // let gui = new dat.GUI();
