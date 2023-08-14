@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-10-12 07:26:48
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-08-11 15:42:52
+ * @LastEditTime: 2023-08-14 14:57:48
  * @Description: file not
 -->
 
@@ -11,7 +11,10 @@
 ## [threejs 文档](https://github.com/mrdoob/three.js/tree/master)
 
 - [threejs 坐标系](https://juejin.cn/post/7239308118474588217)
+- [threejs 模型旋转](https://segmentfault.com/a/1190000014943440)
+- [欧拉角与四元数](https://zhuanlan.zhihu.com/p/513687673)
 - [threejs 模型几何变换](https://blog.csdn.net/weixin_43081805/article/details/86165753#)
+- [BoxGeometry 面着色](https://cloud.tencent.com/developer/ask/sof/1270180)
 
 ## [Trackingjs](https://github.com/eduardolundgren/tracking.js)
 

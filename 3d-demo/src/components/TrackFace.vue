@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-08-09 11:42:37
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-08-11 15:44:46
+ * @LastEditTime: 2023-08-14 16:17:05
  * @Description: file not
 -->
 <template>
@@ -34,11 +34,8 @@ import { debounce } from "@/utils/utils-fn";
 export default {
   name: "TrackFace",
   components: {},
-  data: () => {
-    return {
-      showComp: false,
-      apps: null,
-    };
+  data() {
+    return {};
   },
 
   created() {},
@@ -49,7 +46,6 @@ export default {
 
   methods: {
     init() {
-      // console.log(window.tracking);
       let video = document.getElementById("video");
       let canvas = document.getElementById("canvas");
       let context = canvas.getContext("2d");
@@ -62,13 +58,13 @@ export default {
       window.tracking.track("#video", tracker, { camera: true });
 
       tracker.on("track", function (event) {
-        console.log(event);
+        // console.log(event);
         context.clearRect(0, 0, canvas.width, canvas.height);
 
         // 防抖函数
         const updateThree3D = debounce((x, y) => {
           Bus.$emit("PositionAxios", { x, y });
-        }, 2000);
+        }, 3000);
 
         if (event.data) {
           if (event.data.length === 1) {
