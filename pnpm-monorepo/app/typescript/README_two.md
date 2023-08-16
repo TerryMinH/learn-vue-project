@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-19 11:02:06
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-05-17 10:56:10
+ * @LastEditTime: 2023-08-16 14:54:08
  * @Description: file not
 -->
 
@@ -115,14 +115,31 @@ type Obj =  {
 } // -> { a: string, b: string, c: string }
 ```
 
-6. infer 占位符式的关键字:表示在 extends 条件语句中以占位符出现的用来修饰数据类型的关键字，被修饰的数据类型等用到的时候才能被推断出来
+6. [条件类型](https://blog.csdn.net/lcl130/article/details/125244779)
+
+```ts
+ T extends U ? X : Y; 注释: T U X Y 四个是占位符，分别表示四种类型; T extends U 表示 T类型能被赋值给U类型，这里还涉及到TS类型兼容性。
+
+```
+
+7. infer 占位符式的关键字:表示在 extends 条件语句中以占位符出现的用来修饰数据类型的关键字，被修饰的数据类型等用到的时候才能被推断出来。作用：推导泛型参数
 
 - 作用:获取参数、返回值、泛型的类型
 - 出现位置:参数、返回值、类型的泛型具体化类型上
-- 泛型与 infer 区别: 出现位置的不同:1 泛型出现在函数，接口，类中。2infer 出现在 extends 后的表达式中
+- 泛型与 infer 区别: 出现位置的不同:
+  1 泛型出现在函数，接口，类中。
+  2 infer 出现在 extends 后的表达式中
 - [infer 使用](https://blog.csdn.net/lcl130/article/details/125352331)
 
-7. [条件类型](https://blog.csdn.net/lcl130/article/details/125244779)
+```ts
+// [infer 使用示例](https://juejin.cn/post/6844904170353328135)
+type MyReturnType<T> = T extends (...args: any[]) => infer R ? R : T;
+
+type func = () => number;
+type variable = string;
+type funcReturnType = MyReturnType<func>; // funcReturnType 类型为 number
+type varReturnType = MyReturnType<variable>; // varReturnType 类型为 string
+```
 
 ## [内置工具类型实现](https://juejin.cn/post/6896043465801793550)
 
