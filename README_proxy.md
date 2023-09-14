@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-04-03 07:36:22
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-08-04 10:56:02
+ * @LastEditTime: 2023-09-13 13:54:56
  * @Description: file not
 -->
 
@@ -22,3 +22,5 @@
 [Charles android 机代理配置](https://blog.csdn.net/qq_39168470/article/details/117120873)
 
 三 [基于 Http-service 快速搭建本地静态服务](https://blog.csdn.net/weixin_45932733/article/details/115861292)
+
+1. http-server ./dist -p 8082 -c -1

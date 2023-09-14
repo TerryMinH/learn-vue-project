@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-19 11:00:27
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-08-16 15:03:50
+ * @LastEditTime: 2023-08-22 13:52:50
  * @Description: file not
  */
 type Person = {
@@ -21,7 +21,7 @@ type MyReturnType<T extends Function> = T extends (...args: any) => infer R
   ? R
   : never;
 
-const fn = (v: boolean) => {
+const fn = (v: boolean): number => {
   if (v) return 1;
   else return 2;
 };

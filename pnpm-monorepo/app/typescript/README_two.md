@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-19 11:02:06
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-08-16 14:54:08
+ * @LastEditTime: 2023-08-22 13:53:24
  * @Description: file not
 -->
 
@@ -58,6 +58,16 @@ const myPrint: Iprint<number> = print;
     console.log(obj.name);
   }
   fn(res);
+}
+
+{
+  const fn = (v: boolean): number => {
+    if (v) return 1;
+    else return 2;
+  };
+  type b = typeof fn; // (v: boolean) => number
+
+  type a = ReturnType<typeof fn>; //  number
 }
 
 {

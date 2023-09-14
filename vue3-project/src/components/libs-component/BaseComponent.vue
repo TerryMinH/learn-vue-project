@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-04-26 10:00:09
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-04-27 16:32:54
+ * @LastEditTime: 2023-08-21 19:42:13
  * @Description: file not
 -->
 <template>
@@ -11,7 +11,7 @@
     <button @click="changeBtn('2')">按钮2</button>
   </div>
   <div class="content">
-    {{ newObj }}
+    <div v-for="(item, index) in tableData.list">{{ item }}</div>
   </div>
 </template>
 
@@ -20,6 +20,15 @@ import { ref, reactive, onMounted, toRefs, toRef, shallowReactive } from "vue";
 
 let obj = { name: "alice", age: 12 };
 let newObj = toRef(obj, "name");
+
+const initData = () => {
+  return {
+    list: [1, 2, 31],
+  };
+};
+let tableData = reactive({
+  list: [1, 2, 31],
+});
 
 onMounted(() => {
   const { name, data } = obj || {};
@@ -30,8 +39,8 @@ onMounted(() => {
 const changeBtn = (type) => {
   switch (type) {
     case "1":
-      state1.foo++;
-      state1.nested.bar++;
+      console.log(99);
+      tableData.list = [4, 5, 6];
       break;
     case "2":
       newObj.value = "Tom";
