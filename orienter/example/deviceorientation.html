@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-09-13 17:15:49
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-09-14 11:39:16
+ * @LastEditTime: 2023-09-14 13:45:28
  * @Description: https://www.jianshu.com/p/931c0f20cdf9
 -->
 <!DOCTYPE html>
@@ -15,12 +15,17 @@
     <script type="text/javascript" src="../orienter.js"></script>
 
     <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
       .garden {
         position: relative;
-        width: 200px;
+        width: 100%;
         height: 200px;
         border: 5px solid #ccc;
         border-radius: 10px;
+        box-sizing: border-box;
       }
 
       .ball {
@@ -46,7 +51,6 @@
     </div>
 
     <pre class="output"></pre>
-    <div id="tip"></div>
   </body>
   <script>
     const vConsole = new window.VConsole();
@@ -54,10 +58,13 @@
     const ball = document.querySelector(".ball");
     const garden = document.querySelector(".garden");
     const output = document.querySelector(".output");
-    const maxX = garden.clientWidth - ball.clientWidth;
-    const maxY = garden.clientHeight - ball.clientHeight;
-    const tip = document.getElementById("tip");
+    const parentWidth = garden.clientWidth;
+    const parentHeight = garden.clientHeight;
+    const maxX = parentWidth - ball.clientWidth;
+    const maxY = parentHeight - ball.clientHeight;
 
+    const tip = document.getElementById("tip");
+    console.log(11, maxX, maxY, garden);
     // 首次进入IOS 13.3+需要授权
     if (typeof DeviceMotionEvent !== "undefined") {
       console.log("DeviceMotionEvent is not defined");
@@ -69,7 +76,7 @@
 
     // 按钮授权
     const handlePermission = () => {
-      console.log(34);
+      console.log("handlePermission");
       if (
         typeof DeviceMotionEvent !== "undefined" &&
         typeof DeviceMotionEvent.requestPermission === "function"
@@ -81,13 +88,13 @@
             // (optional) Do something after API prompt dismissed.
             if (response == "granted") {
               window.addEventListener("devicemotion", (e) => {
-                loadMotion();
+                window.addEventListener("deviceorientation", handleOrientation);
               });
             }
           })
           .catch(console.error);
       } else {
-        console.log("DeviceMotionEvent is not defined");
+        console.log("handlePermission DeviceMotionEvent is not defined");
       }
     };
     requestBtn.addEventListener("click", handlePermission);
@@ -116,11 +123,11 @@
       // x and y to [0,180]
       x += 90;
       y += 90;
-
+      console.log(x, y);
       // 10 is half the size of the ball
       // It center the positioning point to the center of the ball
-      ball.style.top = (maxX * x) / 180 - 10 + "px";
-      ball.style.left = (maxY * y) / 180 - 10 + "px";
+      ball.style.top = (maxX * x) / (parentWidth - 50) - 10 + "px";
+      ball.style.left = (maxY * y) / (parentHeight - 50) - 10 + "px";
     }
 
     // 重力感应
