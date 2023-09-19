@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-09-13 17:15:49
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-09-14 13:45:28
+ * @LastEditTime: 2023-09-14 14:22:25
  * @Description: https://www.jianshu.com/p/931c0f20cdf9
 -->
 <!DOCTYPE html>
@@ -12,7 +12,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>deviceorientation</title>
     <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
-    <script type="text/javascript" src="../orienter.js"></script>
 
     <style>
       body {
@@ -51,6 +50,7 @@
     </div>
 
     <pre class="output"></pre>
+    <div id="tip"></div>
   </body>
   <script>
     const vConsole = new window.VConsole();
@@ -123,7 +123,7 @@
       // x and y to [0,180]
       x += 90;
       y += 90;
-      console.log(x, y);
+      console.log(99, x, y);
       // 10 is half the size of the ball
       // It center the positioning point to the center of the ball
       ball.style.top = (maxX * x) / (parentWidth - 50) - 10 + "px";
@@ -136,21 +136,22 @@
     // };
     // window.addEventListener("devicemotion", handleMotion); // 这个事件主要是用来监听设备在位置和方向上的加速度变化信息
 
-    // const loadMotion = () => {
+    // function loadMotion() {
     //   const o = new Orienter();
 
     //   o.onOrient = function (obj) {
-    //     ball.style.top = (maxX * obj.b) / 180 - 10 + "px";
-    //     ball.style.left = (maxY * obj.g) / 180 - 10 + "px";
+    //     console.log(99, maxX);
+    //     ball.style.top = (maxX * obj.b) / (parentWidth - 50) - 10 + "px";
+    //     ball.style.left = (maxY * obj.g) / (parentHeight - 50) - 10 + "px";
     //     tip.innerHTML =
-    //       "alpha:" +
-    //       obj.a +
-    //       "<br>" +
     //       "beta:" +
     //       obj.b +
     //       "<br>" +
     //       "gamma:" +
     //       obj.g +
+    //       "<br>" +
+    //       "alpha:" +
+    //       obj.a +
     //       "<br>" +
     //       "longitude:" +
     //       obj.lon +
@@ -162,6 +163,6 @@
     //       obj.dir;
     //   };
     //   o.on();
-    // };
+    // }
   </script>
 </html>

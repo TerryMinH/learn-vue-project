@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-10-12 07:26:39
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-08-14 16:14:24
+ * @LastEditTime: 2023-09-18 16:45:17
  * @Description: file not
 -->
 <template>
@@ -65,8 +65,10 @@ export default {
       );
 
       this.renderer = new THREE.WebGLRenderer(); // 创建渲染器
+      console.log(window.innerWidth, window.innerHeight);
 
-      this.renderer.setSize(window.innerWidth - 330, window.innerHeight - 10);
+      this.renderer.setSize(window.innerWidth, window.innerHeight - 10);
+      // this.renderer.setSize(window.innerWidth - 330, window.innerHeight - 10);
       document.body.appendChild(this.renderer.domElement);
       const geometry = new THREE.BoxGeometry(1, 1, 1).toNonIndexed(); // 添加立方体
       console.log(geometry);
