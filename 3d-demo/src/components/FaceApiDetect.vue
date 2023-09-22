@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-10-12 07:26:39
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-09-18 15:27:44
+ * @LastEditTime: 2023-09-22 15:39:09
  * @Description: faceapi
 -->
 <template>
@@ -14,7 +14,7 @@
 <script>
 import * as faceapi from "face-api.js";
 export default {
-  name: "HelloWorld",
+  name: "FaceApiDetect",
   components: {},
   props: {
     msg: String,

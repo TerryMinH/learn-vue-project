@@ -2,13 +2,11 @@
  * @Author: TerryMin
  * @Date: 2022-10-12 07:26:48
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-09-22 14:54:15
+ * @LastEditTime: 2023-09-22 15:00:40
  * @Description: file not
 -->
 
 # 裸眼 3D
-
-1. 识别精度 和 算法
 
 ## [threejs 文档](https://github.com/mrdoob/three.js/tree/master)
 
@@ -33,6 +31,7 @@
 
 [裸眼 3D](https://developer.aliyun.com/article/896923)
 [陀螺仪感应示例](https://juejin.cn/post/6844903457384562701#heading-4)
+
 DeviceOrientation:
 
 - alpha（设备平放时，水平 Z 轴旋转的角度）

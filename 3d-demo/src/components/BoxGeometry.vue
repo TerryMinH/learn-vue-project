@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-10-12 07:26:39
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-09-22 10:43:15
+ * @LastEditTime: 2023-09-22 15:41:32
  * @Description: file not
 -->
 <template>
@@ -14,7 +14,7 @@ import * as THREE from "three";
 import Bus from "@/utils/eventBus";
 
 export default {
-  name: "ThreeSquare",
+  name: "BoxGeometry",
   data() {
     return {
       scene: null, // 场景

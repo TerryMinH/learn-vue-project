@@ -37,7 +37,7 @@ import {
   //   Box,
 } from "face-api.js";
 export default {
-  name: "HelloWorld",
+  name: "MediaCamera",
   components: {},
   props: {
     msg: String,

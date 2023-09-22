@@ -2,27 +2,27 @@
  * @Author: TerryMin
  * @Date: 2022-10-12 07:26:39
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-09-22 14:09:52
+ * @LastEditTime: 2023-09-22 15:41:45
  * @Description: file not
 -->
 <template>
   <div class="app-contanier">
     <TrackFace />
-    <ThreeSquare />
-    <!-- <FaceDetect /> -->
+    <BoxGeometry />
+    <!-- <MediaCamera /> -->
   </div>
 </template>
 
 <script>
 import TrackFace from "@/components/TrackFace.vue";
-import ThreeSquare from "@/components/ThreeSquare.vue";
-import FaceDetect from "@/components/FaceDetect.vue";
+import BoxGeometry from "@/components/BoxGeometry.vue";
+import MediaCamera from "@/components/MediaCamera.vue";
 export default {
   name: "App",
   components: {
     TrackFace,
-    ThreeSquare,
-    FaceDetect,
+    BoxGeometry,
+    MediaCamera,
   },
   data() {
     return {};
