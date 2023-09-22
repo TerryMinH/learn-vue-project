@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-10-12 07:26:39
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-08-06 16:14:50
+ * @LastEditTime: 2023-09-22 14:08:05
  * @Description: file not
 -->
 <template>
@@ -12,8 +12,11 @@
     <video
       ref="myVideo"
       id="video"
+      playsinline
+      webkit-playsinline="true"
       autoplay
-      style="width: 100%; height: 320px; border: 1px solid"
+      loop
+      muted
     ></video>
 
     <!--拍照按钮-->
@@ -61,8 +64,7 @@ export default {
     // this.init();
     this.initPhoto();
 
-    this.initViewFinder();
-    this.drawViewFinder();
+    // this.initViewFinder();
   },
 
   methods: {
@@ -120,7 +122,9 @@ export default {
       //    width: { min: 1024, ideal: 1280, max: 1920 },
       //    height: { min: 776, ideal: 720, max: 1080 }
       // }
-
+      this.width = 320;
+      this.height = 300;
+      console.log(889, this.width, this.height);
       //ideal（应用最理想的）值
       const constraints = {
         video: {
@@ -177,7 +181,6 @@ export default {
         },
       };
     },
-  
   },
 };
 </script>

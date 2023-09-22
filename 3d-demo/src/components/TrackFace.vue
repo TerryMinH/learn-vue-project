@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-08-09 11:42:37
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-08-14 16:17:05
+ * @LastEditTime: 2023-09-22 14:54:23
  * @Description: file not
 -->
 <template>
@@ -10,14 +10,15 @@
     <div class="demo-container">
       <video
         id="video"
-        width="320"
+        width="375"
         height="240"
         preload
         autoplay
         loop
         muted
+        playsinline
       ></video>
-      <canvas id="canvas" width="320" height="240"></canvas>
+      <canvas id="canvas" width="375" height="240"></canvas>
     </div>
   </div>
 </template>
@@ -29,7 +30,7 @@ import "@/assets/lib/face-min.js";
 // import tracking from "@/assets/tracking/build/tracking-min.js";
 // import "@/assets/tracking/build/data/face-min.js";
 import Bus from "@/utils/eventBus";
-import { debounce } from "@/utils/utils-fn";
+import { throttle } from "@/utils/utils-fn";
 
 export default {
   name: "TrackFace",
@@ -46,7 +47,6 @@ export default {
 
   methods: {
     init() {
-      let video = document.getElementById("video");
       let canvas = document.getElementById("canvas");
       let context = canvas.getContext("2d");
 
@@ -62,9 +62,9 @@ export default {
         context.clearRect(0, 0, canvas.width, canvas.height);
 
         // 防抖函数
-        const updateThree3D = debounce((x, y) => {
+        const updateThree3D = throttle((x, y) => {
           Bus.$emit("PositionAxios", { x, y });
-        }, 3000);
+        }, 2000);
 
         if (event.data) {
           if (event.data.length === 1) {
@@ -89,7 +89,7 @@ export default {
               );
             });
           } else {
-            console.log("保持人脸在相框正确部位");
+            console.log(`保持人脸在相框正确部位:脸部数量${event.data.length}`);
           }
         }
       });
@@ -109,6 +109,12 @@ canvas {
   position: absolute;
   top: 0;
   left: 0;
-  border: #333 2px solid;
+  border: 1px solid #fff;
+}
+
+#btn {
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
 }
 </style>

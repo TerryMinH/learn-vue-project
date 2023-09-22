@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-01-14 14:47:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-06-08 16:16:40
+ * @LastEditTime: 2023-09-19 19:24:50
  * @Description: file not
 -->
 
@@ -15,11 +15,6 @@
   <div>
     <h3>HookComponent:</h3>
     <HookComponent />
-  </div>
-
-  <div>
-    <h3>ElementPlusComponent:</h3>
-    <ElementPlusComponent />
   </div>
 
   <!-- <div>
