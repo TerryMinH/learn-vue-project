@@ -2,11 +2,9 @@
  * @Author: TerryMin
  * @Date: 2022-10-12 07:26:48
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-09-22 15:00:40
+ * @LastEditTime: 2023-09-22 17:27:40
  * @Description: file not
 -->
-
-# 裸眼 3D
 
 ## [threejs 文档](https://github.com/mrdoob/three.js/tree/master)
 

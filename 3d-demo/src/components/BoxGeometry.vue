@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-10-12 07:26:39
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-09-22 15:41:32
+ * @LastEditTime: 2023-10-10 19:49:42
  * @Description: file not
 -->
 <template>
@@ -40,7 +40,7 @@ export default {
 
       console.log("paramters==>", x, y, y / x);
 
-      this.targetRadian = Math.atan2(paramters.y, paramters.x) * 4;
+      this.targetRadian = Math.atan2(paramters.y, paramters.x) * 5;
       console.log(this.targetRadian);
       this.animate();
 
@@ -76,7 +76,7 @@ export default {
 
       this.renderer.setSize(window.innerWidth, window.innerHeight / 2);
       document.body.appendChild(this.renderer.domElement);
-      
+
       const geometry = new THREE.BoxGeometry(1, 1, 1).toNonIndexed(); // 添加1*1*1的立方体
       console.log("geometry:", geometry);
 
@@ -112,6 +112,7 @@ export default {
 
     // 动画转动
     animate() {
+      requestAnimationFrame(this.animate);
       this.cube.rotation.y = this.targetRadian;
       this.renderer.render(this.scene, this.camera);
 
