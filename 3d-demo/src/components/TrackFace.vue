@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-08-09 11:42:37
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-10-11 16:59:44
+ * @LastEditTime: 2023-10-16 11:06:32
  * @Description: file not
 -->
 <template>
@@ -51,9 +51,11 @@ export default {
       let context = canvas.getContext("2d");
 
       let tracker = new window.tracking.ObjectTracker("face"); // 设置追踪类型
-      tracker.setInitialScale(4);
-      tracker.setStepSize(2);
-      tracker.setEdgesDensity(0.1);
+
+      // 转头角度影响识别率
+      tracker.setInitialScale(3); // 设置开始块缩放的初始比例
+      tracker.setStepSize(1); // 设置区块步长
+      tracker.setEdgesDensity(0.15); // 设置边缘密度
 
       window.tracking.track("#video", tracker, { camera: true });
 
