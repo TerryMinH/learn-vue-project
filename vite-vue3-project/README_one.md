@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:15
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-11-14 11:10:41
+ * @LastEditTime: 2023-11-14 14:19:06
  * @Description: file not
 -->
 
@@ -57,7 +57,7 @@ function change() {
 - 动态组件：是 Vue 中一个特殊的 Html 元素：<component>，它拥有一个特殊的 is 属性，属性值可以是 已注册组件的名称 或 一个组件的选项对象，它是用于不同组件之间进行动态切换的。
 
 
-
+8. [解构](https://juejin.cn/post/7220681627977515066)
 
 # [Pinia 使用](https://pinia.vuejs.org/zh/core-concepts/getters.html)
 
