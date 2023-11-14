@@ -2,19 +2,19 @@
  * @Author: TerryMin
  * @Date: 2023-09-25 20:22:44
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-09-25 20:54:13
+ * @LastEditTime: 2023-11-08 14:06:44
  * @Description: file not
  */
-const wardList = [
-  { name: "terrymin", age: 12 },
-  { name: "terrymin1", age: 33 },
-];
-const obj1 = {
-  name: "ceshi",
-  age: 55,
-};
-for (const [key, value] of wardList.entries()) {
-  console.log(key);
-  console.log(12, value);
+class IndexVue {
+  #name = "terrymin";
+  constructor(options) {
+    this.sdk = "we";
+    this.options = options;
+  }
+  importSdk(name) {
+    console.log(name);
+  }
 }
-// console.log(Object.entries(wardList));
+const instance = new IndexVue({ sex: "boy" });
+
+instance.importSdk("ShangeHai");

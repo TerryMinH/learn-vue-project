@@ -2,29 +2,32 @@
  * @Author: TerryMin
  * @Date: 2022-08-19 11:00:27
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-08-22 13:52:50
+ * @LastEditTime: 2023-11-04 08:06:43
  * @Description: file not
  */
-type Person = {
+interface A {
   name: string;
   age: number;
-  gender: string;
-  test: {
-    name: string;
-  };
+}
+interface B {
+  name: string;
+  id: string;
+}
+
+type Union = A | B;
+const c: Union = {
+  name: "terrymin1",
+  id: "rr",
+  age: 22,
+};
+const b: Union = {
+  name: "terrymin",
+  age: 45,
 };
 
-// 3 Pick从某个类型中挑出一些属性出来
-type P1 = Pick<Person, "test">; // { name: string; age: number; }
-
-type MyReturnType<T extends Function> = T extends (...args: any) => infer R
-  ? R
-  : never;
-
-const fn = (v: boolean): number => {
-  if (v) return 1;
-  else return 2;
+type Intersetion = A & B;
+const d: Intersetion = {
+  id: "yuie",
+  age: 32,
+  name: "terrymin",
 };
-type b = typeof fn;
-
-type a = MyReturnType<typeof fn>;

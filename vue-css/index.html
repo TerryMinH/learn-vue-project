@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-05 16:13:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-10-12 13:51:22
+ * @LastEditTime: 2023-11-13 20:23:55
  * @Description: file not
 -->
 <!DOCTYPE html>
@@ -11,29 +11,38 @@
     <meta charset="utf-8" />
     <title>菜鸟教程(runoob.com)</title>
   </head>
+  <style>
+    #parent {
+      height: 100px;
+      width: 100%;
+      /* position:absolute; */
+      background-color: #999;
+      color: red;
+    }
+  </style>
   <body>
-    <div>
-      <input id="text" type="text" value="Runoob" />
-      <button id="sendMessage">发送消息</button>
-    </div>
-    <iframe
-      id="receiver"
-      src="https://c.runoob.com/runoobtest/postMessage_receiver.html"
-      width="300"
-      height="360"
-    >
-      <p>你的浏览器不支持 iframe。</p>
-    </iframe>
-    <script>
-      window.onload = function () {
-        var receiver = document.getElementById("receiver").contentWindow;
-        var btn = document.getElementById("sendMessage");
-        btn.addEventListener("click", function (e) {
-          e.preventDefault();
-          var val = document.getElementById("text").value;
-          receiver.postMessage("Hello " + val + "！", "https://c.runoob.com");
-        });
-      };
-    </script>
+    <!-- <div id="parent" style="position:relative;font-size: 20px">父元素</div> -->
+    <div id="parent" style="font-size: 20px">父元素</div>
   </body>
+
+  <script>
+    const ele = document.getElementById("parent");
+    console.log(ele);
+    ele.addEventListener("launch", (e) => {
+      console.log(e);
+    });
+    class WxOpenLaunch {
+      #name = "terrymin";
+      constructor(options) {
+        this.sdk = "we";
+        this.options = options;
+      }
+      get homeId() {
+        console.log(222);
+      }
+    }
+    
+    const instance=new WxOpenLaunch();
+    instance.homeId
+  </script>
 </html>

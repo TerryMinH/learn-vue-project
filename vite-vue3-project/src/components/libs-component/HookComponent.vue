@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-03-07 15:56:46
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-05-04 15:34:01
+ * @LastEditTime: 2023-11-14 11:16:05
  * @Description: file not
 -->
 
@@ -24,24 +24,11 @@ import { useAdd } from "@/hooks/useAdd";
 const obj = reactive({
   testNumber: 5,
 });
-// const obj1 = {
-//   testNumber: 8,
-// };
-// let nameTest = ref("terrymin");
-
-// const proxyObj = ref(obj1);
-
-// console.log(proxyObj);
 const useAddCenter = useAdd(obj);
 const { store, login, logout, changeNumber, testComputed } =
   useAddCenter;
 
 const { state } = store;
-
-// const ReactvieObj = toRefs(paramsObj);
-
-// console.log(useAddCenter);
-// const nameTest = toRefs(state);
 
 const toggleLogin = async () => {
   console.log(state);
