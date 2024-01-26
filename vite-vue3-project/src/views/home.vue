@@ -2,14 +2,14 @@
  * @Author: TerryMin
  * @Date: 2022-01-14 14:47:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-09-19 19:24:50
+ * @LastEditTime: 2023-12-24 09:32:12
  * @Description: file not
 -->
 
 <template>
   <div>
     <h3>BaseComponent:</h3>
-    <BaseComponent />
+    <BaseComponent :msg="message" />
   </div>
 
   <div>
@@ -17,15 +17,16 @@
     <HookComponent />
   </div>
 
-  <!-- <div>
+  <div>
     <h3>PinaBasicSetUp:</h3>
     <PinaBasicSetUp />
-  </div> -->
+  </div>
 </template>
 
 <script setup>
 import { provide, getCurrentInstance, defineAsyncComponent, ref } from "vue";
 // import { BaseComponent ,HookComponent} from "@/components/index";
+const message = ref("hello world!");
 
 const internalInstance = getCurrentInstance();
 // 搂一眼，看看注册的组件名字是啥

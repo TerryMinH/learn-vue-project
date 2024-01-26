@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:47
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-07-19 18:52:23
+ * @LastEditTime: 2023-11-22 09:50:36
  * @Description: file not
 -->
 <template>
@@ -99,6 +99,8 @@ export default {
 
   mounted() {
     console.log(this);
+    console.log(this.GLOBAL);
+    console.log(this.changeData);
   },
 
   computed: {},
@@ -121,7 +123,6 @@ export default {
       this.value = "";
       console.log(this.value);
       this.isScrollPopShow = true;
-      console.log($);
       if ($) {
         $(".my-element").append("Some appended text.");
       }

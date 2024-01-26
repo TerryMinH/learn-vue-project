@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-19 11:02:06
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-08-22 13:53:24
+ * @LastEditTime: 2023-12-23 16:11:30
  * @Description: file not
 -->
 
@@ -78,7 +78,7 @@ const myPrint: Iprint<number> = print;
 }
 ```
 
-2. keyof :获取对象中的所有键字面量类型组成的联合类型
+2. keyof :获取对象中的所有键字面量**类型**组成的联合类型
    [keyof 使用示例](https://blog.csdn.net/lcl130/article/details/125214788)
 
 ```ts

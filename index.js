@@ -2,19 +2,32 @@
  * @Author: TerryMin
  * @Date: 2023-09-25 20:22:44
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-11-08 14:06:44
+ * @LastEditTime: 2023-12-11 17:58:52
  * @Description: file not
  */
-class IndexVue {
-  #name = "terrymin";
-  constructor(options) {
-    this.sdk = "we";
-    this.options = options;
+const formatUrl = (arg) => {
+  const { urlStr = "", addObj = {}, removeArray = [] } = arg;
+  const url = new URL(urlStr);
+  console.log(url);
+  const { searchParams } = url;
+  if (addObj && typeof addObj === "object") {
+    for (const key in addObj) {
+      if (addObj[key]) {
+        searchParams.append(key, addObj[key]);
+      }
+    }
   }
-  importSdk(name) {
-    console.log(name);
+  if (removeArray && Array.isArray(removeArray)) {
+    removeArray.forEach((item) => {
+      searchParams.delete(item);
+    });
   }
-}
-const instance = new IndexVue({ sex: "boy" });
+  return url.href;
+};
 
-instance.importSdk("ShangeHai");
+console.log(
+  formatUrl({
+    urlStr: "http://36.155.98.104/unify-login-web/#/login",
+    addObj: { umsLoginName: "terry" },
+  })
+);

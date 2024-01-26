@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:15
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-11-14 14:19:06
+ * @LastEditTime: 2023-11-14 20:00:22
  * @Description: file not
 -->
 
@@ -61,4 +61,7 @@ function change() {
 
 # [Pinia 使用](https://pinia.vuejs.org/zh/core-concepts/getters.html)
 
-1. 基本使用示例
+1. storeToRefs:直接结构store实例会 使数据丢失响应式,storeToRefs只能把state里面的数据变为单独的响应式 的 ref 但是不能结构 actions中的方法;
+
+
+# [Vue Router](https://router.vuejs.org/zh/guide/)

@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-05 16:13:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-11-13 20:23:55
+ * @LastEditTime: 2023-11-30 14:22:16
  * @Description: file not
 -->
 <!DOCTYPE html>
@@ -26,23 +26,13 @@
   </body>
 
   <script>
-    const ele = document.getElementById("parent");
-    console.log(ele);
-    ele.addEventListener("launch", (e) => {
-      console.log(e);
-    });
-    class WxOpenLaunch {
-      #name = "terrymin";
-      constructor(options) {
-        this.sdk = "we";
-        this.options = options;
-      }
-      get homeId() {
-        console.log(222);
-      }
+    async function testAsync() {
+      return "hello async";
     }
-    
-    const instance=new WxOpenLaunch();
-    instance.homeId
+    const result = testAsync();
+    console.log(result);
+    result.then((res) => {
+      console.log(res);
+    });
   </script>
 </html>
