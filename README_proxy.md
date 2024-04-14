@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2023-04-03 07:36:22
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-10-23 15:22:38
+ * @LastEditTime: 2024-02-04 20:12:03
  * @Description: file not
 -->
 
@@ -19,11 +19,12 @@
 3. [whistle 搜索过滤抓包数据的方法](https://github.com/avwo/help/issues/13)
 
 二 Charles:
-[Charles android 机代理配置](https://blog.csdn.net/qq_39168470/article/details/117120873)
+[Charles android 机代理配置](https://blog.csdn.net/qq_45564088/article/details/121864553)
 
 1. Charles ssl证书安装:
    1.1 手机连接代理后 在手机默认浏览器输入 chls.pro/ssl 安装证书
    1.2 以华为手机为例：设置—>安全—>更多安全设置—>加密和凭据—>从存储设备安装—>搜索Charles即可找到下载的安装包—>点击证书，为其命名为Charles，选择“VPN和应用”—>点击“确定”即可
+   1.3 https://blog.csdn.net/qq_45564088/article/details/121864553
 
 
 

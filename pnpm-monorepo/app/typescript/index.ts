@@ -2,54 +2,30 @@
  * @Author: TerryMin
  * @Date: 2022-08-19 11:00:27
  * @LastEditors: TerryMin
- * @LastEditTime: 2024-01-23 10:03:12
+ * @LastEditTime: 2024-03-24 09:21:40
  * @Description: file not
  */
-interface A {
-  name: string;
-  age: number;
-}
-interface B {
-  name: string;
-  id: string;
-}
-
-type Union = A | B;
-const c: Union = {
-  name: "terrymin1",
-  id: "rr",
-};
-const b: Union = {
-  name: "terrymin",
-  age: 45,
+type stringKey = Record<string, boolean>;
+const accessDict: stringKey = {
+  create: false, // 创建
+  receive: false, // 接收
 };
 
-type Intersetion = A & B;
-const d: Intersetion = {
-  id: "yuie",
-  age: 32,
-  name: "terrymin",
+export type SeasonDataExtraItemType = {
+  isActiveB: string;
 };
 
-const COLORS = {
-  red: "red",
-  blue: "blue",
+export type AveragingTeamType = {
+  seasonList: Array<SeasonDataExtraItemType>;
+  moduleName?: string;
 };
 
-// 首先通过typeof操作符获取color变量的类型，然后通过keyof操作符获取该类型的所有键，
-// 即字符串字面量联合类型 'red' | 'blue'
+const averageData1: Pick<AveragingTeamType, "seasonList"> = {
+  seasonList: [],
+};
 
-interface Person {
-  name: string;
-  age: number;
-  location: string;
-}
+const averageData2: Array<SeasonDataExtraItemType> = [
+    
+];
 
-type K1 = keyof Person; // "name" | "age" | "location"
-type K2 = keyof Person[]; // number | "length" | "push" | "concat" | ...
-type K3 = keyof { [x: string]: Person }; // string | number
-
-const k: K2 = 2;
-
-type Dog = { [y: symbol]: number };
-type dog = keyof Dog;
+console.log(averageData1, averageData2);

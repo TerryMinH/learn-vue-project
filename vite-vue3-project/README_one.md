@@ -2,14 +2,13 @@
  * @Author: TerryMin
  * @Date: 2021-12-11 15:17:15
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-11-14 20:00:22
+ * @LastEditTime: 2024-04-13 09:47:49
  * @Description: file not
 -->
 
 # Vue3 API 学习
 
 1. [Ref 与 Reactive 区别](https://juejin.cn/post/7192994086255591480)
-
 
 一 [ref、 toRef 、 toRefs](https://blog.csdn.net/cookcyq__/article/details/121618833)
 ref 的本质是拷贝，与原始数据没有引用关系.响应式数据发生改变，而原始数据并不会改变,界面会自动更新.
@@ -53,15 +52,20 @@ function change() {
 
 7. Vue 异步组件与动态组件
 
-- 异步组件:只在需要的时候才从服务器加载,一个可以让组件异步加载的方式；它一般会用于性能优化，比如减小首屏加载时间、加载资源大小。(将每个组件生成一个对应的静态文件。正常是所有组件打包合并在一起生成一个js文件)
+- 异步组件:只在需要的时候才从服务器加载,一个可以让组件异步加载的方式；它一般会用于性能优化，比如减小首屏加载时间、加载资源大小。(将每个组件生成一个对应的静态文件。正常是所有组件打包合并在一起生成一个 js 文件)
 - 动态组件：是 Vue 中一个特殊的 Html 元素：<component>，它拥有一个特殊的 is 属性，属性值可以是 已注册组件的名称 或 一个组件的选项对象，它是用于不同组件之间进行动态切换的。
-
 
 8. [解构](https://juejin.cn/post/7220681627977515066)
 
+9. Vue 中 h() 函数
+
+- 其实不是一个实际的 DOM 元素。它更准确的名字可能是 createNodeDescription，因为它所包含的信息会告诉 Vue 页面上需要渲染什么样的节点，包括及其子节点的描述信息。我们把这样的节点描述为“虚拟节点 (virtual node)”，也常简写它为 VNode 。“虚拟 DOM”是我们对由 Vue 组件树建立起来的整个 VNode 树的称呼。
+- [h() 函数学习和使用](https://blog.csdn.net/ganyingxie123456/article/details/135848963)
+
+
+
 # [Pinia 使用](https://pinia.vuejs.org/zh/core-concepts/getters.html)
 
-1. storeToRefs:直接结构store实例会 使数据丢失响应式,storeToRefs只能把state里面的数据变为单独的响应式 的 ref 但是不能结构 actions中的方法;
-
+1. storeToRefs:直接解构 store 实例会 使数据丢失响应式,storeToRefs 只能把 state 里面的数据变为单独的响应式 的 ref 但是不能结构 actions 中的方法;
 
 # [Vue Router](https://router.vuejs.org/zh/guide/)

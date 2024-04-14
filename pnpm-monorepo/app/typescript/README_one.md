@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-05 16:28:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2024-01-23 10:09:33
+ * @LastEditTime: 2024-03-10 10:29:04
  * @Description: file not
 -->
 
@@ -117,6 +117,12 @@ console.log(foo); // 输出："default string"
 
 const baz = 0 ?? 42;
 console.log(baz); // 输出：0
+```
+
+- [非空断言操作符 !](https://blog.csdn.net/zxl1990_ok/article/details/125228518)
+
+```js
+ x! 将从 x 值域中排除 null 和 undefined
 ```
 
 7. 类型守卫

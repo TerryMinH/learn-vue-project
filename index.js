@@ -2,32 +2,22 @@
  * @Author: TerryMin
  * @Date: 2023-09-25 20:22:44
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-12-11 17:58:52
+ * @LastEditTime: 2024-03-11 16:33:00
  * @Description: file not
  */
-const formatUrl = (arg) => {
-  const { urlStr = "", addObj = {}, removeArray = [] } = arg;
-  const url = new URL(urlStr);
-  console.log(url);
-  const { searchParams } = url;
-  if (addObj && typeof addObj === "object") {
-    for (const key in addObj) {
-      if (addObj[key]) {
-        searchParams.append(key, addObj[key]);
-      }
-    }
-  }
-  if (removeArray && Array.isArray(removeArray)) {
-    removeArray.forEach((item) => {
-      searchParams.delete(item);
-    });
-  }
-  return url.href;
+const obj = {
+  name: 1,
 };
+// const instance = obj.name && 22;
+// const instance2 = obj.name ? 22 : obj.name && 1;
+// console.log(instance);
+// console.log(instance2);
 
-console.log(
-  formatUrl({
-    urlStr: "http://36.155.98.104/unify-login-web/#/login",
-    addObj: { umsLoginName: "terry" },
-  })
-);
+// const instance3 = obj.name ? 22 : 33;
+// if (obj.name) {
+//   console.log(22);
+// } else {
+//   console.log(33);
+// }
+// console.log(instance3);
+console.log(obj.name ? 1 : 2);

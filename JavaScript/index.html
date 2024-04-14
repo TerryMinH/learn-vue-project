@@ -2,37 +2,37 @@
  * @Author: TerryMin
  * @Date: 2022-08-05 16:13:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2023-11-30 14:22:16
+ * @LastEditTime: 2024-03-07 13:56:11
  * @Description: file not
 -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>菜鸟教程(runoob.com)</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
   </head>
-  <style>
-    #parent {
-      height: 100px;
-      width: 100%;
-      /* position:absolute; */
-      background-color: #999;
-      color: red;
-    }
-  </style>
-  <body>
-    <!-- <div id="parent" style="position:relative;font-size: 20px">父元素</div> -->
-    <div id="parent" style="font-size: 20px">父元素</div>
-  </body>
-
+  <body></body>
   <script>
-    async function testAsync() {
-      return "hello async";
+    class MyClass {
+      constructor() {
+        // ...
+      }
+      get prop() {
+        return "getter";
+      }
+      set prop(value) {
+        console.log(this);
+        console.log("setter: " + value);
+      }
     }
-    const result = testAsync();
-    console.log(result);
-    result.then((res) => {
-      console.log(res);
-    });
+
+    let inst = new MyClass();
+    console.log(inst);
+    inst.prop = 123;
+    // setter: 123
+
+    inst.prop;
+    // 'getter'
   </script>
 </html>
