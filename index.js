@@ -2,22 +2,12 @@
  * @Author: TerryMin
  * @Date: 2023-09-25 20:22:44
  * @LastEditors: TerryMin
- * @LastEditTime: 2024-03-11 16:33:00
+ * @LastEditTime: 2024-05-12 15:33:26
  * @Description: file not
  */
-const obj = {
-  name: 1,
-};
-// const instance = obj.name && 22;
-// const instance2 = obj.name ? 22 : obj.name && 1;
-// console.log(instance);
-// console.log(instance2);
+const months = ["Jan", "Mar", "Apr", "May"];
 
-// const instance3 = obj.name ? 22 : 33;
-// if (obj.name) {
-//   console.log(22);
-// } else {
-//   console.log(33);
-// }
-// console.log(instance3);
-console.log(obj.name ? 1 : 2);
+// 在索引 1 处添加一个元素
+const months2 = months.toSpliced(1, 0, "Feb");
+console.log(months2); 
+console.log(months); 
