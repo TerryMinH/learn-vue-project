@@ -124,6 +124,18 @@
     const months2 = months.toSpliced(1, 0, "Feb");
     console.log(months2);
     console.log(months);
+
+    // 创建一个8-byte的ArrayBuffer
+    var b = new ArrayBuffer(8);
+    console.log(b);
+    // 创建一个b的引用，类型是Int32，起始位置在0，结束位置为缓冲区尾部
+    var v1 = new Int32Array(b);
+    console.log(v1);
+    // 创建一个b的引用，类型是Uint8，起始位置在2，结束位置为缓冲区尾部
+    var v2 = new Uint8Array(b, 2);
+    console.log(v2);
+    // 创建一个b的引用，类型是Int16，起始位置在2，总长度为2
+    var v3 = new Int16Array(b, 2, 2);
+    console.log(v3);
   </script>
 </html>
-

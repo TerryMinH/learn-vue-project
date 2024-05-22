@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2022-08-05 16:13:51
  * @LastEditors: TerryMin
- * @LastEditTime: 2024-03-07 13:56:11
+ * @LastEditTime: 2024-05-22 07:54:47
  * @Description: file not
 -->
 <!DOCTYPE html>
@@ -14,25 +14,15 @@
   </head>
   <body></body>
   <script>
-    class MyClass {
-      constructor() {
-        // ...
-      }
-      get prop() {
-        return "getter";
-      }
-      set prop(value) {
-        console.log(this);
-        console.log("setter: " + value);
-      }
-    }
+    const str = "A";
+    const code = str.charCodeAt();
+    const codeStr = String.fromCharCode(code);
+    console.log(code, codeStr);
 
-    let inst = new MyClass();
-    console.log(inst);
-    inst.prop = 123;
-    // setter: 123
-
-    inst.prop;
-    // 'getter'
+    const str1 = "17621481287";
+    const encodedData = encodeURIComponent(btoa(str1)); // 编码字符串
+    const decodedData = atob(decodeURIComponent(encodedData)); // 解码字符串
+    console.log(encodedData);
+    console.log(decodedData);
   </script>
 </html>
